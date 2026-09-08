@@ -11,7 +11,7 @@
 		BuildCost="0"
 		BuildTime="0.5"
 		CommandSet="EmptyCommandSet"
-		KindOf="PRELOAD SELECTABLE CAN_ATTACK ATTACK_NEEDS_LINE_OF_SIGHT CAN_CAST_REFLECTIONS INFANTRY PATH_THROUGH_INFANTRY LINE_OF_SIGHT_IGNORES_BUILDINGS NOT_AUTOACQUIRABLE UNATTACKABLE"
+		KindOf="PRELOAD SELECTABLE CAN_ATTACK ATTACK_NEEDS_LINE_OF_SIGHT CAN_CAST_REFLECTIONS INFANTRY PATH_THROUGH_INFANTRY LINE_OF_SIGHT_IGNORES_BUILDINGS"
 		RadarPriority="UNIT"
 		ThreatLevel="1"
 		ProductionQueueType="INFANTRY"
@@ -832,8 +832,8 @@
 			</AIUpdate>
 		</AI>
 		<Body>
-			<ActiveBody
-				id="ModuleTag_Body"
+			<ImmortalBody
+				id="ModuleTag_ImmortalBody"
 				MaxHealth="1.0" />
 		</Body>
 		<Geometry
