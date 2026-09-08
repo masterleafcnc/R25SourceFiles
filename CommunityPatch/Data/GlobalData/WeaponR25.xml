@@ -469,7 +469,8 @@
 					Relationship="ALLIES"
 					Rule="ANY"
 					Exclude="AIRCRAFT INFANTRY"
-					Include="VEHICLE">
+					Include="VEHICLE"
+					RejectStatusBitFlags="IN_STASIS">
 					<!-- MCVs are phaseable, including the scrin family unpacking objects for
 					     the few seconds they are on the ground. keep in sync with the
 					     ObjectFilter of SpecialPower_PhaseField in SpecialPowerTemplates.xml -->
