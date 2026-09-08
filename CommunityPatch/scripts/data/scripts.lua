@@ -3633,7 +3633,7 @@ function GrantPhaseModifier(self, other)
 
 	-- this unit was phased by this specific dummy object, add it to a subtable and increment the timesPhased counter.
 	local dummyObjectId = getObjectId(other)
-	if phasedUnit ~= nil and EvaluateCondition("NAMED_NOT_DESTROYED", phasedUnit.stringRef) then
+	if phasedUnit ~= nil and EvaluateCondition("NAMED_NOT_DESTROYED", phasedUnit.stringRef) and not EvaluateCondition("UNIT_HAS_OBJECT_STATUS", phasedUnit.stringRef, 46) then
 		if phasedUnit.dummyObjects[dummyObjectId] == nil then
 			phasedUnit.dummyObjects[dummyObjectId] = true
 			phasedUnit.timesPhased = phasedUnit.timesPhased + 1
