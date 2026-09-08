@@ -118,6 +118,7 @@
 	
 	<WeaponTemplate
 		id="ZoneRaiderSonicRifle"
+		ForbiddenFiringObjectStatus="USER_PARALYZED"
 		Name="ZoneRaiderSonicRifle"
 		AttackRange="310.0"
 		WeaponSpeed="600.0"
@@ -168,6 +169,7 @@
 
 	<WeaponTemplate
 		id="ZoneRaiderSonicRifleEnhanced"
+		ForbiddenFiringObjectStatus="USER_PARALYZED"
 		Name="ZoneRaiderSonicRifleEnhanced"
 		AttackRange="372.0"
 		WeaponSpeed="600.0"

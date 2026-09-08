@@ -133,6 +133,7 @@
 
 	<WeaponTemplate
 		id="ZoneTrooperMachineGun1"
+		ForbiddenFiringObjectStatus="USER_PARALYZED"
 		Name="ZoneTrooperMachineGun1"
 		AttackRange="325.0"
 		WeaponSpeed="999999.0"
@@ -186,6 +187,7 @@
 	<!-- extra weapons for zone troopers LaserIds -->
 	<WeaponTemplate
 		id="ZoneTrooperMachineGun2"
+		ForbiddenFiringObjectStatus="USER_PARALYZED"
 		Name="ZoneTrooperMachineGun2"
 		AttackRange="325.0"
 		WeaponSpeed="999999.0"
@@ -238,6 +240,7 @@
 
 	<WeaponTemplate
 		id="ZoneTrooperMachineGun3"
+		ForbiddenFiringObjectStatus="USER_PARALYZED"
 		Name="ZoneTrooperMachineGun3"
 		AttackRange="325.0"
 		WeaponSpeed="999999.0"
@@ -290,6 +293,7 @@
 
 	<WeaponTemplate
 		id="ZoneTrooperMachineGun4"
+		ForbiddenFiringObjectStatus="USER_PARALYZED"
 		Name="ZoneTrooperMachineGun4"
 		AttackRange="325.0"
 		WeaponSpeed="999999.0"
@@ -344,6 +348,7 @@
 
 	<WeaponTemplate
 		id="ZoneTrooperMachineGun1Enhanced"
+		ForbiddenFiringObjectStatus="USER_PARALYZED"
 		Name="ZoneTrooperMachineGun1Enhanced"
 		AttackRange="360.0"
 		WeaponSpeed="999999.0"
@@ -396,6 +401,7 @@
 
 	<WeaponTemplate
 		id="ZoneTrooperMachineGun2Enhanced"
+		ForbiddenFiringObjectStatus="USER_PARALYZED"
 		Name="ZoneTrooperMachineGun2Enhanced"
 		AttackRange="360.0"
 		WeaponSpeed="999999.0"
@@ -448,6 +454,7 @@
 
 	<WeaponTemplate
 		id="ZoneTrooperMachineGun3Enhanced"
+		ForbiddenFiringObjectStatus="USER_PARALYZED"
 		Name="ZoneTrooperMachineGun3Enhanced"
 		AttackRange="360.0"
 		WeaponSpeed="999999.0"
@@ -500,6 +507,7 @@
 
 	<WeaponTemplate
 		id="ZoneTrooperMachineGun4Enhanced"
+		ForbiddenFiringObjectStatus="USER_PARALYZED"
 		Name="ZoneTrooperMachineGun4Enhanced"
 		AttackRange="360.0"
 		WeaponSpeed="999999.0"
