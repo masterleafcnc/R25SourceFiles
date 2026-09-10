@@ -1,4 +1,4 @@
--- ============================ SCRIPT VERSION R25i ============================
+-- ============================ SCRIPT VERSION R25j ============================
 -- Note that global vars cannot be accessed via subfunctions!!
 squadtable = {} -- tracks all squad objects on map
 commandeertable = {} -- tracks units commandeered by avatar 
