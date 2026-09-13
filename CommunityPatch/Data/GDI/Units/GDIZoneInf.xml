@@ -1804,7 +1804,7 @@
 	<!-- LINE_OF_SIGHT_IGNORES_BUILDINGS prevents banner carrier sharing xp -->
 	<GameObject
 		id="GDIZoneTrooperGarrisoned"
-		KindOf="SELECTABLE CAN_ATTACK CAN_CAST_REFLECTIONS INFANTRY PRELOAD ATTACK_NEEDS_LINE_OF_SIGHT PATH_THROUGH_INFANTRY LINE_OF_SIGHT_IGNORES_BUILDINGS NOT_AUTOACQUIRABLE UNATTACKABLE"
+		KindOf="SELECTABLE CAN_ATTACK CAN_CAST_REFLECTIONS INFANTRY PRELOAD ATTACK_NEEDS_LINE_OF_SIGHT PATH_THROUGH_INFANTRY LINE_OF_SIGHT_IGNORES_BUILDINGS"
 		ReviveText=""
 		RecruitText=""
 		Description="Desc:GDIZoneTrooper"
@@ -2930,7 +2930,7 @@
 		<Body>
 			<ActiveBody
 				id="ModuleTag_Body"
-				MaxHealth="1.0" />
+				MaxHealth="99999" />
 		</Body>
 		<Geometry
 			IsSmall="True">
