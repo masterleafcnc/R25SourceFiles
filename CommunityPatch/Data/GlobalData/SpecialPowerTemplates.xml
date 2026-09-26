@@ -596,7 +596,7 @@
 		RadiusCursorRadius="0"
 		PreventConditions=""
 		RequiredConditions=""
-		DisallowedTargetModelStates=""
+		DisallowedTargetModelStates="DESTROYED"
 		RequiredTargetObjectStatus=""
 		DisallowedTargetObjectStatus="INSIDE_GARRISON CLONED USER_PARALYZED"
 		MaxCastRange="1000000"
@@ -621,7 +621,7 @@
 			StatusBitFlags=""
 			RejectStatusBitFlags=""
 			AcceptModelCondition=""
-			RejectModelCondition="">
+			RejectModelCondition="DESTROYED">
 			<IncludeThing>NODBeamCannon</IncludeThing>
 			<IncludeThing>NODFlameTank</IncludeThing>
 			<IncludeThing>NODAttackBike</IncludeThing>
@@ -819,8 +819,9 @@
 		id="SpecialPower_AvatarCommandeerParalyzeBeamCannon"
 		TargetType="OBJECT"
 		MaxCastRange="100"
-		Flags="NEEDS_OBJECT_FILTER"
-		DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON">
+		Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS NO_FORBIDDEN_MODEL_STATES"
+		DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON DESTROYED"
+		DisallowedTargetModelStates="DYING">
 		<ObjectFilter>
 			<IncludeThing>NODBeamCannon</IncludeThing>
 			<IncludeThing>MarkedOfKaneBeamCannon</IncludeThing>
@@ -834,8 +835,9 @@
 		id="SpecialPower_AvatarCommandeerParalyzeBike"
 		TargetType="OBJECT"
 		MaxCastRange="100"
-		Flags="NEEDS_OBJECT_FILTER"
-		DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON">
+		Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS NO_FORBIDDEN_MODEL_STATES"
+		DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON DESTROYED"
+		DisallowedTargetModelStates="DYING">
 		<ObjectFilter>
 			<IncludeThing>NODAttackBike</IncludeThing>
 			<IncludeThing>MarkedOfKaneAttackBike</IncludeThing>
@@ -849,8 +851,9 @@
 		id="SpecialPower_AvatarCommandeerParalyzeStealthTank"
 		TargetType="OBJECT"
 		MaxCastRange="100"
-		Flags="NEEDS_OBJECT_FILTER"
-		DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON">
+		Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS NO_FORBIDDEN_MODEL_STATES"
+		DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON DESTROYED"
+		DisallowedTargetModelStates="DYING">
 		<ObjectFilter>
 			<IncludeThing>NODStealthTank</IncludeThing>
 			<IncludeThing>MarkedOfKaneStealthTank</IncludeThing>
@@ -863,8 +866,9 @@
 		id="SpecialPower_AvatarCommandeerParalyzeFlameTank"
 		TargetType="OBJECT"
 		MaxCastRange="100"
-		Flags="NEEDS_OBJECT_FILTER"
-		DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON">
+		Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS NO_FORBIDDEN_MODEL_STATES"
+		DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON DESTROYED"
+		DisallowedTargetModelStates="DYING">
 		<ObjectFilter>
 			<IncludeThing>NODFlameTank</IncludeThing>
 			<IncludeThing>BlackHandFlameTank</IncludeThing>
@@ -877,8 +881,9 @@
 	<SpecialPowerTemplate
 		id="SpecialPower_AvatarCommandeerGetInRangeBeam"
 		TargetType="OBJECT"
-		Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS"
-		DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON"
+		Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS NO_FORBIDDEN_MODEL_STATES"
+		DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON DESTROYED"
+		DisallowedTargetModelStates="DYING"
 		WaypointModeTerminal="false">
 		<ObjectFilter>
 			<IncludeThing>NODBeamCannon</IncludeThing>
@@ -892,8 +897,9 @@
 	<SpecialPowerTemplate
 		id="SpecialPower_AvatarCommandeerGetInRangeFlame"
 		TargetType="OBJECT"
-		Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS"
-		DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON"
+		Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS NO_FORBIDDEN_MODEL_STATES"
+		DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON DESTROYED"
+		DisallowedTargetModelStates="DYING"
 		WaypointModeTerminal="false">
 		<ObjectFilter>
 			<IncludeThing>NODFlameTank</IncludeThing>
@@ -906,8 +912,9 @@
 	<SpecialPowerTemplate
 		id="SpecialPower_AvatarCommandeerGetInRangeBike"
 		TargetType="OBJECT"
-		Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS"
-		DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON"
+		Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS NO_FORBIDDEN_MODEL_STATES"
+		DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON DESTROYED"
+		DisallowedTargetModelStates="DYING"
 		WaypointModeTerminal="false">
 		<ObjectFilter>
 			<IncludeThing>NODAttackBike</IncludeThing>
@@ -921,8 +928,9 @@
 	<SpecialPowerTemplate
 		id="SpecialPower_AvatarCommandeerGetInRangeStealth"
 		TargetType="OBJECT"
-		Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS"
-		DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON"
+		Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS NO_FORBIDDEN_MODEL_STATES"
+		DisallowedTargetObjectStatus="CLONED USER_PARALYZED INSIDE_GARRISON DESTROYED"
+		DisallowedTargetModelStates="DYING"
 		WaypointModeTerminal="false">
 		<ObjectFilter>
 			<IncludeThing>NODStealthTank</IncludeThing>
@@ -937,7 +945,9 @@
 		id="SpecialPower_AvatarCommandeerDestroyBeamCannon"
 		TargetType="OBJECT"
 		MaxCastRange="100"
-		Flags="NEEDS_OBJECT_FILTER">
+		DisallowedTargetModelStates="DYING"
+		DisallowedTargetObjectStatus="DESTROYED"
+		Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS NO_FORBIDDEN_MODEL_STATES">
 		<ObjectFilter>
 			<IncludeThing>NODBeamCannon</IncludeThing>
 			<IncludeThing>MarkedOfKaneBeamCannon</IncludeThing>
@@ -951,7 +961,9 @@
 		id="SpecialPower_AvatarCommandeerDestroyBike"
 		TargetType="OBJECT"
 		MaxCastRange="100"
-		Flags="NEEDS_OBJECT_FILTER">
+		DisallowedTargetModelStates="DYING"
+		DisallowedTargetObjectStatus="DESTROYED"
+		Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS NO_FORBIDDEN_MODEL_STATES">
 		<ObjectFilter>
 			<IncludeThing>NODAttackBike</IncludeThing>
 			<IncludeThing>MarkedOfKaneAttackBike</IncludeThing>
@@ -965,7 +977,9 @@
 		id="SpecialPower_AvatarCommandeerDestroyStealthTank"
 		TargetType="OBJECT"
 		MaxCastRange="100"
-		Flags="NEEDS_OBJECT_FILTER">
+		DisallowedTargetModelStates="DYING"
+		DisallowedTargetObjectStatus="DESTROYED"
+		Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS NO_FORBIDDEN_MODEL_STATES">
 		<ObjectFilter>
 			<IncludeThing>NODStealthTank</IncludeThing>
 			<IncludeThing>MarkedOfKaneStealthTank</IncludeThing>
@@ -978,7 +992,9 @@
 		id="SpecialPower_AvatarCommandeerDestroyFlameTank"
 		TargetType="OBJECT"
 		MaxCastRange="100"
-		Flags="NEEDS_OBJECT_FILTER">
+		DisallowedTargetModelStates="DYING"
+		DisallowedTargetObjectStatus="DESTROYED"
+		Flags="NEEDS_OBJECT_FILTER TARGET_NEEDS_OBJECT_STATUS NO_FORBIDDEN_MODEL_STATES">
 		<ObjectFilter>
 			<IncludeThing>NODFlameTank</IncludeThing>
 			<IncludeThing>BlackHandFlameTank</IncludeThing>
