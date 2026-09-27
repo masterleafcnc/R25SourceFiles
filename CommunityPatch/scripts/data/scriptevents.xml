@@ -1008,7 +1008,6 @@
 		<ScriptedEvent Name="IsItAnEnemyEvent" />
 		<ScriptedEvent Name="EradicatorHexapodEvent" />
 		<ScriptedEvent Name="UpgradeInGarrison" />
-		<!--<ScriptedEvent Name="GarrisonedInAStructure" />-->
     </Events>
     
     <EventList Name="BaseScriptFunctions">
@@ -2238,12 +2237,12 @@
 	<EventList Name="BuildingPowerFunctions" Inherit="BaseScriptFunctions">
 		<EventHandler EventName="OnPowerOutage" ScriptFunctionName="onBuildingPowerOutage" DebugSingleStep="false"/>
 		<EventHandler EventName="OnPowerRestore" ScriptFunctionName="onBuildingPowerRestored" DebugSingleStep="false"/>
-		<!--
-		<EventHandler EventName="SpecialOne" ScriptFunctionName="OnSpecialPowerUsed" DebugSingleStep="false"/>
-		<EventHandler EventName="SpecialTwo" ScriptFunctionName="OnSpecialPowerUsed" DebugSingleStep="false"/>
-		<EventHandler EventName="SpecialThree" ScriptFunctionName="OnSpecialPowerUsed" DebugSingleStep="false"/
-		ONLY TRIGGERS THE SPECIAL POWER, DOEESNT SHOW THE RADIUS
-		<EventHandler EventName="OnSelected" ScriptFunctionName="BuildingSelecteed" DebugSingleStep="false"/>> -->
+	</EventList>
+
+	<!-- R25 production structuree event lists -->
+
+	<EventList Name="GDIRefineryFunctions_R25" Inherit="BuildingPowerFunctions">
+		<EventHandler EventName="OnDestroyed" ScriptFunctionName="DisableGDIRefineryGeometry" DebugSingleStep="false"/>
 	</EventList>
 	
 	<!--<EventList Name="GDIRefineryFunctions" Inherit="BaseScriptFunctions">

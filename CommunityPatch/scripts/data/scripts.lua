@@ -4206,6 +4206,13 @@ function OnHordeMemberCreated_R24(self)
 	ExecuteAction("UNIT_SET_MODELCONDITION_FOR_DURATION", self, "USER_59", 5, 100)
 end
 
+-- ############################# R25 Disable Building Geometry Fix ###################################
+
+function DisableGeometryOnDeath(self)
+	ObjectSetGeometryActive(self, "Geom_Tower", false)
+	ObjectSetGeometryActive(self, "Geom_Orig", false)
+end
+
 -- ############################# MOBA FUNCTIONS ###################################
 
 -- Randomly selects a hero to build
