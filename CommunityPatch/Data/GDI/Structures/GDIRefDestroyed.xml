@@ -1052,66 +1052,114 @@
 				InitialHealth="100.0" />
 		</Body>
 		<Geometry
-			IsSmall="false">
-			<Shape 
-				Type= "BOX"
-				MajorRadius = "18.3775"
-				MinorRadius = "18.3773"
-				Height = "4.70465" >
+			IsSmall="False">
+			<Shape
+				Type="BOX"
+				ContactPointGeneration="NONE"
+				Name="Geom_Orig"
+				MajorRadius="72"
+				MinorRadius="50"
+				Height="24"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="True">
 				<Offset
-					x = "0.0"
-					y = "0.0"
-					z = "0.0" />
+					x="0"
+					y="0"
+					z="0" />
 			</Shape>
-			<Shape 
-				Type= "BOX"
-				MajorRadius = "8.74401"
-				MinorRadius = "12.3495"
-				Height = "41.2188" >
+			<Shape
+				Type="CYLINDER"
+				ContactPointGeneration="NONE"
+				Name="Geom_Tower"
+				MajorRadius="18"
+				MinorRadius="18"
+				Height="90"
+				FrontAngle="0d"
+				Active="True"
+				UsedForHealthBox="True">
 				<Offset
-					x = "0.0"
-					y = "0.0"
-					z = "0.0" />
-			</Shape>
-			<Shape 
-				Type= "BOX"
-				MajorRadius = "9.44857"
-				MinorRadius = "4.62317"
-				Height = "9.20792" >
-				<Offset
-					x = "15.7154"
-					y = "3.33786e-006"
-					z = "25.5002" />
+					x="-44"
+					y="16"
+					z="0" />
 			</Shape>
 			<ContactPoint>
-				<Pos x= "-7.28801" y = "-5.06412" z = "0.0" />
+				<Pos
+					x="-49"
+					y="45"
+					z="35" />
 			</ContactPoint>
 			<ContactPoint>
-				<Pos x= "8.86416" y = "-5.06412" z = "37.4835" />
+				<Pos
+					x="63"
+					y="45"
+					z="0" />
 			</ContactPoint>
 			<ContactPoint>
-				<Pos x= "8.86416" y = "11.088" z = "0.0" />
+				<Pos
+					x="63"
+					y="-45"
+					z="10" />
 			</ContactPoint>
 			<ContactPoint>
-				<Pos x= "-7.28801" y = "11.0881" z = "37.4835" />
+				<Pos
+					x="63"
+					y="45"
+					z="0" />
 			</ContactPoint>
 			<ContactPoint>
-				<Pos x= "-7.28801" y = "-5.06412" z = "37.4835" />
+				<Pos
+					x="-34"
+					y="-45"
+					z="35" />
 			</ContactPoint>
 			<ContactPoint>
-				<Pos x= "8.86416" y = "-5.06412" z = "0.0" />
+				<Pos
+					x="63"
+					y="45"
+					z="0" />
 			</ContactPoint>
 			<ContactPoint>
-				<Pos x= "8.86416" y = "11.0881" z = "37.4835" />
+				<Pos
+					x="-34"
+					y="-45"
+					z="35" />
 			</ContactPoint>
 			<ContactPoint>
-				<Pos x= "-7.28801" y = "11.088" z = "0.0" />
+				<Pos
+					x="-49"
+					y="45"
+					z="0" />
 			</ContactPoint>
 		</Geometry>
 		<ShadowInfo
-			Type="VOLUME" />
+			Type="VOLUME"
+			Texture=""
+			AdditionalTexture=""
+			SizeX="0"
+			SizeY="0"
+			OffsetX="0"
+			OffsetY="0"
+			OpacityStart="0"
+			OpacityFadeInTime="0s"
+			OpacityPeak="1"
+			OpacityFadeOutTime="0s"
+			OpacityEnd="0"
+			MaxHeight="20"
+			SunAngle="0"
+			OverrideLODVisibility="False"
+			UseHouseColor="False"
+			IsRotatingWithObject="True"
+			LocalPlayerOnly="False" />
 		<VisionInfo
-			VisionRange="375"
-			ShroudClearingRange="500" />
+			VisionRange="100"
+			ShroudClearingRange="400"
+			VisionSide="100%"
+			VisionRear="100%"
+			VisionBonusTestRadius="100"
+			VisionBonusTestSegments="8"
+			VisionBonusPercentPerFoot="0%"
+			MaxVisionBonusPercent="50%"
+			MinVisionBonusPercent="-50%" />
 	</GameObject>
 </AssetDeclaration>
