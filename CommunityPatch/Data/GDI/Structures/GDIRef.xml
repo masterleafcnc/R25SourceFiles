@@ -1303,6 +1303,7 @@
 				KillSpawnsOnCaptured="False">
 				<SpawnTemplate>GDIHarvester</SpawnTemplate>
 			</SpawnBehavior>
+		
 			<SlowDeath
 				id="73542D4A"
 				SinkRate="4"
@@ -1310,7 +1311,7 @@
 				ModifierBonusPerOverkillPercent="0%"
 				SinkDelay="3s"
 				SinkDelayVariance="0s"
-				DestructionDelay="8s"
+				DestructionDelay="0.20s"
 				DestructionDelayVariance="0s"
 				DecayBeginTime="0s"
 				FlingForce="0"
@@ -1324,9 +1325,6 @@
 				DeathObjectStatusBits=""
 				ShadowWhenDead="False"
 				Fade="False">
-				<Sound
-					Type="INITIAL"
-					List="HumanFaction_MediumBuilding_DieMS" />
 				<DieMuxData
 					ExemptStatus=""
 					RequiredStatus=""
@@ -1336,6 +1334,13 @@
 					DeathTypes="ALL"
 					DeathTypesForbidden="" />
 			</SlowDeath>
+			<!--
+			<DestroyDie
+                id="ModuleTag_Die">
+                <DieMuxData
+                    DeathTypes="ALL" />
+            </DestroyDie>
+		-->
 			<FXListBehavior
 				id="C74C39D8">
 				<DieMuxData
@@ -1510,6 +1515,20 @@
 					DeathTypes="SUICIDED"
 					DeathTypesForbidden="" />
 			</CreateObjectDie>
+
+			<CreateObjectDie
+				id="ModuleTag_CreatedDestroyedBuilding"
+				CreationList="OCL_GDIDestroyedRefinery">
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus=""
+					DamageAmountRequired="-1"
+					MinKillerAngle="0.9999999d"
+					MaxKillerAngle="-0.9999999d"
+					DeathTypes="SUICIDED"
+					DeathTypesForbidden="" />
+			</CreateObjectDie>
+
 			<StatusBitsUpgrade
 				id="A99285D7"
 				RequiresAllTriggers="False"
@@ -1625,7 +1644,7 @@
 				AutoAcquireEnemiesWhenIdle="NO"
 				StopChaseDistance="500"
 				HoldGroundCloseRangeDistance="0"
-				AILuaEventsList="GDIRefineryFunctions_R25"
+				AILuaEventsList="BuildingPowerFunctions"
 				MinCowerTime="0s"
 				MaxCowerTime="0s"
 				RampageTime="0s"

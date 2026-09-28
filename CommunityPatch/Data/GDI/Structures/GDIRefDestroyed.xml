@@ -1,122 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
-<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+<?xml version="1.0" encoding="us-ascii"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<GameObject
-		id="SteelTalonsRefinery"
-		KindOf="SELECTABLE IMMOBILE CAN_CAST_REFLECTIONS STRUCTURE SUPPLY_GATHERING_CENTER NOT_AUTOACQUIRABLE FS_MONEY_STORAGE COVER AUTO_ACQUIRABLE_BY_AI"
-		Description="Desc:GDIRefinery"
-		TypeDescription="Type:GDIRefinery"
-		RadarPriority="STRUCTURE"
-		BuildCompletion="INVALID"
-		FenceWidth="0"
-		FenceXOffset="0"
-		RemoveTerrainRadius="0"
-		EmotionRange="0"
-		PlacementViewAngle="315d"
-		BuildFadeInOnCreateTimeSeconds="0s"
-		FactoryExitWidth="0"
-		FactoryExtraBibWidth="0"
-		Side="SteelTalons"
-		EditorName="SteelTalonsRefinery"
-		EditorSorting="STRUCTURE"
-		BountyValue="0"
-		BuildTime="30"
-		BuildFadeInOnCreateTime="0"
-		EnergyProduction="-15"
-		EnergyBonus="0"
-		CommandSet="GDIRefineryCommandSet"
-		SelectPortrait="Portrait_GDIRefinery"
-		ButtonImage="Portrait_GDIRefinery"
-		VoicePriority="0"
-		MinZIncreaseForVoiceMoveToHigherGround="-1"
-		CrowdResponse=""
-		CampnessValue="2000"
-		CampnessValueRadius="300"
-		Scale="1"
-		HealthBoxScale="1.5"
-		HealthBoxHeightOffset="10"
-		OcclusionDelay="0"
-		LiveCameraPitch="0"
-		FormationWidth="1"
-		FormationDepth="1"
-		InstanceScaleFuzziness="0"
-		ThreatRadius="-1"
-		RamPower="0"
-		RamZMult="1"
-		ShockwaveResistance="0"
-		CommandPoints="0"
-		CommandPointBonus="0"
-		VoiceAttackChargeTimeout="0"
-		MaxDistanceForEngaged="0"
-		EngagedStateTimeout="0"
-		ThreatLevel="1"
-		SlopeLimitIndex="0"
-		PathfindDiameter="-1"
-		SupplyOverride="0"
-		DisplayMeleeDamage="-1"
-		DisplayRangedDamage="-1"
-		HeroSortOrder="2147483647"
-		FiringArc="360"
-		CamouflageDetectionMultiplier="1"
-		SelectionPriority="2147483647"
-		ProductionQueueType="MAIN_STRUCTURE"
-		BuildPlacementTypeFlag="MAIN_STRUCTURE"
-		BuildOnRequiredObjectKindOf=""
-		UnitCategory="STRUCTURE"
-		WeaponCategory="NONE"
-		HasFiredRecentlyTime="2s"
-		UnitTypeIcon=""
-		ReinvisibilityDelay="4s"
-		CaptureTime="0s"
-		BuildCost="3000"
-		RefundValue="700"
-		ThreatValue="0"
-		MaxSimultaneousOfType="0"
-		TransportSlotCount="1"
-		IsTrainable="False"
-		IsForbidden="False"
-		IsPrerequisite="False"
-		IsGrabbable="False"
-		IsHarvestable="False"
-		StructureRubbleHeight="0"
-		ForceLuaRegistration="False"
-		ShowHealthInSelectionDecal="False"
-		KeepSelectableWhenDead="False"
-		IsAutoBuilt="False"
-		CanPathThroughGates="True"
-		ShouldClearShotsOnIdle="False"
-		BuildInProximityToSamePlayerStucture="True">
-		<DisplayName>Name:GDIRefinery</DisplayName>
-		<GameDependency
-			RequiredModelConditionsAny=""
-			ForbiddenModelConditions=""
-			RequiredObjectStatusAny="">
-			<ObjectFilter
-				Rule="ANY"
-				Relationship=""
-				Alignment="NONE"
-				Include=""
-				Exclude=""
-				StatusBitFlags=""
-				RejectStatusBitFlags=""
-				AcceptModelCondition=""
-				RejectModelCondition="">
-				<IncludeThing>SteelTalonsConstructionYard</IncludeThing>
-				<IncludeThing>SteelTalonsCrane</IncludeThing>
-			</ObjectFilter>
-		</GameDependency>
+		id="GDIRefineryDestroyed"
+		Side="GDI"
+		EditorSorting="MISC_MAN_MADE"
+		KindOf="IMMOBILE NO_COLLIDE UNATTACKABLE NOT_AUTOACQUIRABLE CAN_CAST_REFLECTIONS"
+		EditorName="GDIRefineryDestroyed">
+		<DisplayName>GDIRefineryDestroyed</DisplayName>
 		<ArmorSet
-			Armor="GDIRefineryArmor"
-			DamageFX="FactionStructureDamageFX"
-			Conditions="" />
-		<ArmorSet
-			Armor="GDIRefinerySonicRepulsionFieldArmor"
-			DamageFX="NormalDamageFX"
-			Conditions="PLAYER_UPGRADE" />
-		<SkirmishAIInformation
-			BaseBuildingLocation="TIBERIUM"
-			ConquerMetricsOverrideDamageType="UNDEFINED"
-			ConquerMetricsOverrideAntiMask="ANTI_GROUND"
-			UnitBuilderStandardCombatUnit="False" />
+			Armor="GDITerraformingStationArmor"
+			DamageFX="FactionStructureDamageFX" />
 		<Draws>
 			<ScriptedModelDraw
 				id="50DF2C46"
@@ -341,12 +234,12 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING"
+					ConditionsYes="RUBBLE"
 					PortraitImage=""
 					ButtonImage=""
 					RetainSubObjects="False">
 					<Model
-						Name="W3DContainer:GBREFINERY_D3"
+						Name="W3DContainer:GBRefinery_D3"
 						ExtraMesh="False" />
 				</ModelConditionState>
 				<ModelConditionState
@@ -356,7 +249,7 @@
 					ButtonImage=""
 					RetainSubObjects="False">
 					<Model
-						Name="W3DContainer:GBREFINERY"
+						Name="W3DContainer:GBREFINERY2"
 						ExtraMesh="False" />
 					<ParticleSysBone
 						BoneName="FXSmokeStackA"
@@ -440,9 +333,6 @@
 						FollowBone="True"
 						OnlyIfOnWater="False"
 						OnlyIfOnLand="False" />
-					<Script>
-						CurDrawableHideSubObject("Bar_01")
-					</Script>
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_TRANSITION"
@@ -493,9 +383,6 @@
 						AnimationMustCompleteBlend="False"
 						UseWeaponTiming="False"
 						FadingIn="False" />
-					<Script>
-						CurDrawableHideSubObject("Bar_01")
-					</Script>
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
@@ -524,18 +411,17 @@
 					<Script>
             Prev = CurDrawablePrevAnimationState();
             if Prev == "STATE_Damaged" then CurDrawableSetTransitionAnimState("TRANS_DamagedToReallyDamaged") end;
-			CurDrawableHideSubObject("Bar_01")
           </Script>
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING"
+					ConditionsYes="RUBBLE"
 					StateName="STATE_Dying"
 					EnteringStateFX=""
 					FrameForPristineBonePositions="0"
 					ShareAnimation="False"
 					AllowRepeatInRandomPick="False"
-					SimilarRestart="False">
+					SimilarRestart="False">		
 					<Animation
 						AnimationName="GBREFINERY_D3A"
 						AnimationMode="ONCE"
@@ -853,7 +739,7 @@
 					ButtonImage=""
 					RetainSubObjects="False">
 					<Model
-						Name="W3DContainer:GBREFINERYXD3"
+						Name="W3DContainer:GBRefineryXD3"
 						ExtraMesh="False" />
 				</ModelConditionState>
 				<AnimationState
@@ -1075,7 +961,7 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="USER_6 DYING"
+					ConditionsYes="USER_6 RUBBLE"
 					PortraitImage=""
 					ButtonImage=""
 					RetainSubObjects="False">
@@ -1142,695 +1028,90 @@
 			</ScriptedModelDraw>
 		</Draws>
 		<Behaviors>
-			<AttributeModifierPoolUpdate
-				id="513BC476" />
-			<FireWeaponWhenDead
-				id="DDED328F"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				DelayTime="0s"
-				DeathWeapon="CatalystBuildingDeathWeapon"
-				FocusFireKindOfFlag=""
-				InitiallyActive="True"
-				ActiveDuringConstruction="False"
-				ContinueToBezierDestination="False">
-				<DieMuxData
-					ExemptStatus=""
-					RequiredStatus=""
-					DamageAmountRequired="-1"
-					MinKillerAngle="0.9999999d"
-					MaxKillerAngle="-0.9999999d"
-					DeathTypes="CATALYST"
-					DeathTypesForbidden="" />
-			</FireWeaponWhenDead>
-			<TemporarilyDefectUpdate
-				id="3473AFD2"
-				DefectionFrameCount="100" />
-			<ModelConditionUpgrade
-				id="931C692F"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				AddConditionFlags="USER_6"
-				RemoveConditionFlags=""
-				AddTempConditionFlag="TOPPLED"
-				TempConditionTime="0s">
-				<TriggeredBy>Upgrade_SonicRepulsionField</TriggeredBy>
-			</ModelConditionUpgrade>
-			<CreateObjectDie
-				id="36031C5A"
-				CreationList="FactionStructureTiberiumFieldOCL">
-				<DieMuxData
-					ExemptStatus=""
-					RequiredStatus=""
-					DamageAmountRequired="-1"
-					MinKillerAngle="0.9999999d"
-					MaxKillerAngle="-0.9999999d"
-					DeathTypes="ALL"
-					DeathTypesForbidden="SUICIDED" />
-			</CreateObjectDie>
-			<DistributedMoney
-				id="BBA9F939"
-				Capacity="2000"
-				OnDieSpawnPercentage="25%"
-				RedistributeMoneyOnDeathType="SUICIDED" />
-			<SupplyCenterCreate />
-			<SupplyCenterDockUpdate
-				id="B1E09186"
-				NumberApproachPositions="-1"
-				MinDockTime="9s"
-				ObjectsInLineWeight="9s"
-				AllowsPassthrough="True"
-				GoToRallyPointAfterDock="True"
-				ShouldDockInReverse="True"
-				ValueMultiplier="1"
-				BonusScience="INVALID"
-				BonusScienceMultiplier="0"
-				DistributedDeposit="True">
-				<ForVoiceRetreatThisIsASafeHarborToObjectFilter
-					Rule="NONE"
-					Relationship=""
-					Alignment="NONE"
-					Include="HARVESTER"
-					Exclude=""
-					StatusBitFlags=""
-					RejectStatusBitFlags=""
-					AcceptModelCondition=""
-					RejectModelCondition="" />
-			</SupplyCenterDockUpdate>
-			<ModelConditionUpgrade
-				id="51FB9B65"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				AddConditionFlags="USER_1"
-				RemoveConditionFlags=""
-				AddTempConditionFlag="TOPPLED"
-				TempConditionTime="0s">
-				<TriggeredBy>Upgrade_GDIFaction</TriggeredBy>
-			</ModelConditionUpgrade>
-			<ModelConditionUpgrade
-				id="FB621CB4"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				AddConditionFlags="USER_1"
-				RemoveConditionFlags=""
-				AddTempConditionFlag="TOPPLED"
-				TempConditionTime="0s">
-				<TriggeredBy>Upgrade_SteelTalonsFaction</TriggeredBy>
-			</ModelConditionUpgrade>
-			<ModelConditionUpgrade
-				id="386A933E"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				AddConditionFlags="USER_1"
-				RemoveConditionFlags=""
-				AddTempConditionFlag="TOPPLED"
-				TempConditionTime="0s">
-				<TriggeredBy>Upgrade_ZOCOMFaction</TriggeredBy>
-			</ModelConditionUpgrade>
-			<QueueProductionExitUpdate
-				id="01734524"
-				PlacementViewAngle="0d"
-				ExitDelay="0"
-				InitialBurst="0"
-				AllowAirborneCreation="False"
-				NoExitPath="False"
-				CanRallyToSlaughter="False"
-				ClearAlliesFromDestination="True">
-				<UnitCreatePoint
-					x="37.5"
-					y="-18.9"
-					z="0" />
-				<NaturalRallyPoint
-					x="104"
-					y="-18.9"
-					z="0" />
-			</QueueProductionExitUpdate>
-			<SpawnBehavior
-				id="EB2D043D"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				SpawnNumberData="1"
-				SpawnReplaceDelayData="9999s"
-				InitialBurst="0"
-				DamageTypesToPropagateToSlaves="ALL"
-				FadeInTime="1s"
-				InitialDelay="2s"
-				IsOneShotData="True"
-				CanReclaimOrphans="False"
-				AggregateHealth="False"
-				ExitByBudding="False"
-				SpawnedRequireSpawner="False"
-				RespectCommandLimit="False"
-				KillSpawnBasedOnModelConditionState="False"
-				ShareUpgrades="False"
-				SpawnInsideBuilding="False"
-				CombineOnCreate="False"
-				KillSpawnsOnDisabled="False"
-				PassExperienceToSpawned="False"
-				KillSpawnsOnCaptured="False">
-				<SpawnTemplate>SteelTalonsHeavyHarvester</SpawnTemplate>
-			</SpawnBehavior>
-
+			<LifetimeUpdate
+				id="ModuleTag_LifetimeUpdate"
+				MinLifetime="0s"
+				MaxLifetime="0s" />
+		
 			<SlowDeath
-				id="73542D4A"
-				SinkRate="4"
-				ProbabilityModifier="10"
-				ModifierBonusPerOverkillPercent="0%"
-				SinkDelay="3s"
-				SinkDelayVariance="0s"
-				DestructionDelay="0.20s"
-				DestructionDelayVariance="0s"
-				DecayBeginTime="0s"
-				FlingForce="0"
-				FlingForceVariance="0"
-				FlingPitch="0d"
-				FlingPitchVariance="0d"
-				DeathFlags=""
-				FadeTime="0s"
-				FadeDelay="0s"
-				DeathTypes=""
-				DeathObjectStatusBits=""
-				ShadowWhenDead="False"
-				Fade="False">
-				<DieMuxData
-					ExemptStatus=""
-					RequiredStatus=""
-					DamageAmountRequired="-1"
-					MinKillerAngle="0.9999999d"
-					MaxKillerAngle="-0.9999999d"
-					DeathTypes="ALL"
-					DeathTypesForbidden="" />
-			</SlowDeath>
-			<!--
-			<DestroyDie
-                id="ModuleTag_Die">
-                <DieMuxData
-                    DeathTypes="ALL" />
-            </DestroyDie>
-		-->
-			<FXListBehavior
-				id="C74C39D8">
-				<DieMuxData
-					ExemptStatus=""
-					RequiredStatus=""
-					DamageAmountRequired="-1"
-					MinKillerAngle="0.9999999d"
-					MaxKillerAngle="-0.9999999d"
-					DeathTypes="ALL"
-					DeathTypesForbidden="" />
-				<Event
-					Index="onTransitionToDamaged"
-					FX="FX_BuildDamaged_Large"
-					MinThreshold="0"
-					MaxThreshold="0"
-					Direction="Default"
-					OrientToObject="True"
-					ForceUseDoFXObj="False" />
-				<Event
-					Index="onTransitionToReallyDamaged"
-					FX="FX_BuildDamaged_Large"
-					MinThreshold="0"
-					MaxThreshold="0"
-					Direction="Default"
-					OrientToObject="True"
-					ForceUseDoFXObj="False" />
-				<Event
-					Index="onTransitionToRubble"
-					FX="FX_BuildRubble_Large"
-					MinThreshold="0"
-					MaxThreshold="0"
-					Direction="Default"
-					OrientToObject="True"
-					ForceUseDoFXObj="False" />
-			</FXListBehavior>
-			<StructureUnpackUpdate
-				id="C65142A8"
-				UnpackTime="1.5s" />
-			<ArmorUpgrade
-				id="D7169F09"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="false"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				ArmorSetFlag="PLAYER_UPGRADE"
-				KillArmorUpgrade="False"
-				IgnoreArmorUpgrade="False">
-				<TriggeredBy>Upgrade_SonicRepulsionField</TriggeredBy>
-			</ArmorUpgrade>
-			<StatusBitsUpgrade
-				id="BA874D9A"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				StatusToSet="RIDER1"
-				StatusToClear=""
-				ApplyToContained="False">
-				<TriggeredBy>Upgrade_SonicRepulsionField</TriggeredBy>
-			</StatusBitsUpgrade>
-			<RepairUpdate
-				id="41FDEB2A"
-				RepopThreshold="0.2"
-				HealAmountPerSecond="90"
-				Toggleable="True"
-				RepairableWhenDead="False">
-				<PercentOfBuildCostToRebuildInfo
-					Pristine="50%"
-					Damaged="50%"
-					ReallyDamaged="50%"
-					Rubble="50%" />
-				<SelfAudio
-					SelfRepairFromDamageLoop=""
-					SelfRepairFromRubbleLoop="" />
-			</RepairUpdate>
-			
-			<HordeTransportContain
-				id="ModuleTag_Contain"
-				ObjectStatusOfContained=""
-				ContainMax="0"
-				Slots="0"
-				AllowEnemiesInside="false"
-				AllowAlliesInside="false"
-				AllowNeutralInside="false"
-				AllowOwnPlayerInsideOverride="false"
-				ShowPips="false"
-				EnterSound=""
-				ExitSound=""
-				KillPassengersOnDeath="false">
-				<PassengerFilter
-					Rule="NONE"
-					Include="" />
+				id="ModuleTag_Death"
+				SinkDelay="3.0s"
+				SinkRate="4.0"
+				DestructionDelay="8.0s">
+				<Sound
+					Type="INITIAL"
+					List="HumanFaction_MediumBuilding_DieMS" />
 				<DieMuxData
 					DeathTypes="ALL" />
-				<PassengerData
-					BonePrefix="ROOTTRANSFORM">
-					<Filter
-						Rule="NONE"
-						Include="" />
-				</PassengerData>
-			</HordeTransportContain>
-			
-			<EngineerContain
-				id="E2BE8599"
-				ReplaceWith=""
-				NameOfVoiceToUseForFriendlyEnter="VoiceEngineerRepair"
-				NameOfVoiceToUseForHostileEnter="VoiceCaptureBuilding" 
-				FXForRepair="FX_Building_Repaired"
-				FXForCapture="FX_Building_Captured"
-				FXForCaptureAndReplace="FX_Building_Captured"
-				EvaEventForRepair="BuildingRepaired"
-				EvaEventForCapture="EnemyBuildingCaptured">
-				<CanEnterFilter
-					Rule="NONE"
-					Relationship=""
-					Alignment="NONE"
-					Include=""
-					Exclude=""
-					StatusBitFlags=""
-					RejectStatusBitFlags=""
-					AcceptModelCondition=""
-					RejectModelCondition="">
-					<IncludeThing>GDIEngineer</IncludeThing>
-					<IncludeThing>NODSaboteur</IncludeThing>
-					<IncludeThing>AlienAssimilator</IncludeThing>
-					<IncludeThing>SteelTalonsCombatEngineer</IncludeThing>
-					<IncludeThing>ZOCOMEngineer</IncludeThing>
-					<IncludeThing>BlackHandSaboteur</IncludeThing>
-					<IncludeThing>MarkedOfKaneSaboteur</IncludeThing>
-					<IncludeThing>Traveler59Assimilator</IncludeThing>
-				</CanEnterFilter>
-			</EngineerContain>
-			<CreateObjectDie
-				id="34FD1923"
-				CreationList="OCL_GenericSteelTalonsBuildingDestruction"
-				UpgradeForbidden="">
-				<DieMuxData
-					ExemptStatus=""
-					RequiredStatus=""
-					DamageAmountRequired="-1"
-					MinKillerAngle="0.9999999d"
-					MaxKillerAngle="-0.9999999d"
-					DeathTypes="ALL"
-					DeathTypesForbidden="SUICIDED DETONATED" />
-			</CreateObjectDie>
-			<CreateObjectDie
-				id="4BF392A4"
-				CreationList="OCL_GenericSteelTalonsBuildingSuicide">
-				<DieMuxData
-					ExemptStatus=""
-					RequiredStatus=""
-					DamageAmountRequired="-1"
-					MinKillerAngle="0.9999999d"
-					MaxKillerAngle="-0.9999999d"
-					DeathTypes="SUICIDED"
-					DeathTypesForbidden="" />
-			</CreateObjectDie>
-
-			<CreateObjectDie
-				id="ModuleTag_CreatedDestroyedBuilding"
-				CreationList="OCL_GDIDestroyedRefinery">
-				<DieMuxData
-					ExemptStatus=""
-					RequiredStatus=""
-					DamageAmountRequired="-1"
-					MinKillerAngle="0.9999999d"
-					MaxKillerAngle="-0.9999999d"
-					DeathTypes="SUICIDED"
-					DeathTypesForbidden="" />
-			</CreateObjectDie>
-
-			<StatusBitsUpgrade
-				id="A99285D7"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				StatusToSet="DOES_CONTAIN_TIBERIUM"
-				StatusToClear=""
-				ApplyToContained="False">
-				<TriggeredBy>Upgrade_BlackHandFaction</TriggeredBy>
-			</StatusBitsUpgrade>
-			<StatusBitsUpgrade
-				id="AE9552F0"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				StatusToSet="DOES_CONTAIN_TIBERIUM"
-				StatusToClear=""
-				ApplyToContained="False">
-				<TriggeredBy>Upgrade_GDIFaction</TriggeredBy>
-			</StatusBitsUpgrade>
-			<StatusBitsUpgrade
-				id="C3EA57C0"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				StatusToSet="DOES_CONTAIN_TIBERIUM"
-				StatusToClear=""
-				ApplyToContained="False">
-				<TriggeredBy>Upgrade_NODFaction</TriggeredBy>
-			</StatusBitsUpgrade>
-			<StatusBitsUpgrade
-				id="CC50B09D"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				StatusToSet="DOES_CONTAIN_TIBERIUM"
-				StatusToClear=""
-				ApplyToContained="False">
-				<TriggeredBy>Upgrade_AlienFaction</TriggeredBy>
-			</StatusBitsUpgrade>
-			<StatusBitsUpgrade
-				id="6DE1E323"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				StatusToSet="DOES_CONTAIN_TIBERIUM"
-				StatusToClear=""
-				ApplyToContained="False">
-				<TriggeredBy>Upgrade_SteelTalonsFaction</TriggeredBy>
-			</StatusBitsUpgrade>
-			<StatusBitsUpgrade
-				id="D808DAD9"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				StatusToSet="DOES_CONTAIN_TIBERIUM"
-				StatusToClear=""
-				ApplyToContained="False">
-				<TriggeredBy>Upgrade_Reaper17Faction</TriggeredBy>
-			</StatusBitsUpgrade>
-			<StatusBitsUpgrade
-				id="28389CC2"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				StatusToSet="DOES_CONTAIN_TIBERIUM"
-				StatusToClear=""
-				ApplyToContained="False">
-				<TriggeredBy>Upgrade_ZOCOMFaction</TriggeredBy>
-			</StatusBitsUpgrade>
-			<StatusBitsUpgrade
-				id="8C28319D"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				StatusToSet="DOES_CONTAIN_TIBERIUM"
-				StatusToClear=""
-				ApplyToContained="False">
-				<TriggeredBy>Upgrade_MarkedOfKaneFaction</TriggeredBy>
-			</StatusBitsUpgrade>
-			<StatusBitsUpgrade
-				id="AD99787E"
-				RequiresAllTriggers="False"
-				RequiresAllConflictingTriggers="False"
-				Permanent="False"
-				WaypointMode="False"
-				WaypointModeTerminal="True"
-				StatusToSet="DOES_CONTAIN_TIBERIUM"
-				StatusToClear=""
-				ApplyToContained="False">
-				<TriggeredBy>Upgrade_Traveler59Faction</TriggeredBy>
-			</StatusBitsUpgrade>
+			</SlowDeath>
 		</Behaviors>
-		<AI>
-			<AIUpdate
-				id="4B2D0C2A"
-				AutoAcquireEnemiesWhenIdle="NO"
-				StopChaseDistance="500"
-				HoldGroundCloseRangeDistance="0"
-				AILuaEventsList="BuildingPowerFunctions"
-				MinCowerTime="0s"
-				MaxCowerTime="0s"
-				RampageTime="0s"
-				BurningDeathTime="0s"
-				TimeToEjectPassengersOnRampage="0"
-				ComboLocomotorSet="NORMAL"
-				ComboLocoAttackDistance="80"
-				IdleTargetTime="0s"
-				MaxCombineChildren="1"
-				SpawnOffsetRadius="0"
-				StandGround="False"
-				CanAttackWhileContained="False"
-				RampageRequiresAflame="False"
-				FadeOnPortals="False" />
-		</AI>
 		<Body>
 			<ActiveBody
-				id="B313F576"
-				MaxHealth="10000"
-				MaxHealthDamaged="0"
-				MaxHealthReallyDamaged="0"
-				InitialHealth="-1"
-				RecoveryTime="0"
-				DodgePercent="0"
-				EnteringDamagedTransitionTime="0s"
-				EnteringReallyDamagedTransitionTime="0s"
-				GrabFX=""
-				GrabDamage="200"
-				HealingBuffFX=""
-				DamagedAttributeModifier=""
-				ReallyDamagedAttributeModifier=""
-				CheerRadius="200"
-				BurningDeathFX=""
-				SecondChanceUpgrade=""
-				SecondChanceHeal="0"
-				UseDefaultDamageSettings="True"
-				RemoveUpgradesOnDeath="False"
-				BurningDeathBehavior="False">
-				<DamageTrigger
-					HealthLevelBelowPercent="66"
-					RemoveUpgrade="Upgrade_SonicRepulsionField"
-					RemoveStatus="" />
-			</ActiveBody>
+				id="ModuleTag_Body"
+				MaxHealth="100.0"
+				InitialHealth="100.0" />
 		</Body>
 		<Geometry
-			IsSmall="False">
-			<Shape
-				Type="BOX"
-				ContactPointGeneration="NONE"
-				Name="Geom_Orig"
-				MajorRadius="72"
-				MinorRadius="50"
-				Height="24"
-				FrontAngle="0d"
-				Active="True"
-				UsedForHealthBox="True">
+			IsSmall="false">
+			<Shape 
+				Type= "BOX"
+				MajorRadius = "18.3775"
+				MinorRadius = "18.3773"
+				Height = "4.70465" >
 				<Offset
-					x="0"
-					y="0"
-					z="0" />
+					x = "0.0"
+					y = "0.0"
+					z = "0.0" />
 			</Shape>
-			<Shape
-				Type="CYLINDER"
-				ContactPointGeneration="NONE"
-				Name="Geom_Tower"
-				MajorRadius="18"
-				MinorRadius="18"
-				Height="90"
-				FrontAngle="0d"
-				Active="True"
-				UsedForHealthBox="True">
+			<Shape 
+				Type= "BOX"
+				MajorRadius = "8.74401"
+				MinorRadius = "12.3495"
+				Height = "41.2188" >
 				<Offset
-					x="-44"
-					y="16"
-					z="0" />
+					x = "0.0"
+					y = "0.0"
+					z = "0.0" />
+			</Shape>
+			<Shape 
+				Type= "BOX"
+				MajorRadius = "9.44857"
+				MinorRadius = "4.62317"
+				Height = "9.20792" >
+				<Offset
+					x = "15.7154"
+					y = "3.33786e-006"
+					z = "25.5002" />
 			</Shape>
 			<ContactPoint>
-				<Pos
-					x="-49"
-					y="45"
-					z="35" />
+				<Pos x= "-7.28801" y = "-5.06412" z = "0.0" />
 			</ContactPoint>
 			<ContactPoint>
-				<Pos
-					x="63"
-					y="45"
-					z="0" />
+				<Pos x= "8.86416" y = "-5.06412" z = "37.4835" />
 			</ContactPoint>
 			<ContactPoint>
-				<Pos
-					x="63"
-					y="-45"
-					z="10" />
+				<Pos x= "8.86416" y = "11.088" z = "0.0" />
 			</ContactPoint>
 			<ContactPoint>
-				<Pos
-					x="63"
-					y="45"
-					z="0" />
+				<Pos x= "-7.28801" y = "11.0881" z = "37.4835" />
 			</ContactPoint>
 			<ContactPoint>
-				<Pos
-					x="-34"
-					y="-45"
-					z="35" />
+				<Pos x= "-7.28801" y = "-5.06412" z = "37.4835" />
 			</ContactPoint>
 			<ContactPoint>
-				<Pos
-					x="63"
-					y="45"
-					z="0" />
+				<Pos x= "8.86416" y = "-5.06412" z = "0.0" />
 			</ContactPoint>
 			<ContactPoint>
-				<Pos
-					x="-34"
-					y="-45"
-					z="35" />
+				<Pos x= "8.86416" y = "11.0881" z = "37.4835" />
 			</ContactPoint>
 			<ContactPoint>
-				<Pos
-					x="-49"
-					y="45"
-					z="0" />
+				<Pos x= "-7.28801" y = "11.088" z = "0.0" />
 			</ContactPoint>
 		</Geometry>
-		<AudioArrayVoice>
-			<AudioEntry
-				EvaEvent="BuildingStolen"
-				AudioType="voiceDefectingAway" />
-			<AudioEntry
-				EvaEvent="EnemyBuildingCaptured"
-				AudioType="voiceDefectingTowards" />
-			<AudioEntry
-				Sound="AudioEvent:GDI_RefinerySelect"
-				AudioType="voiceSelect" />
-		</AudioArrayVoice>
-		<AudioArraySound>
-			<AudioEntry
-				Sound="AudioEvent:GDI_BuildingPlaced"
-				AudioType="soundUnderConstruction" />
-			<AudioEntry
-				Sound="Multisound:HumanFaction_MediumBuilding_LightDamageMS"
-				AudioType="soundOnDamaged" />
-			<AudioEntry
-				Sound="Multisound:HumanFaction_MediumBuilding_HeavyDamageMS"
-				AudioType="soundOnReallyDamaged" />
-		</AudioArraySound>
-		<EvaEvents
-			EvaEventSoldOwner="StructureSold"
-			EvaEventDamagedOwner="StructureUnderAttack"
-			EvaEventSecondDamageFarFromFirstScanRange="200"
-			EvaEventSecondDamageFarFromFirstTimeoutMS="31000"
-			EvaEventRepairingOwner="StructureRepairing"
-			EvaEnemyObjectSightedEvent="EnemyCampSighted"
-			EvaEventAvailableForProduction="NewConstructionOptions"
-			EvaEventProductionStarted="BuildingConstructionStarted"
-			EvaEventProductionComplete="BuildingConstructionComplete"
-			EvaEventPlacementFailed="StructurePlacementFailed"
-			EvaEventCannotBuildDueToFullBuildQueue="StructureCannotBuildDueToFullBuildQueue"
-			EvaEventBuildOnHold="BuildOnHold"
-			EvaEventBuildCancelled="BuildCancelled"
-			EvaEventManuallyPoweredOff="BuildingManuallyPoweredDown"
-			EvaEventManuallyPoweredOn="BuildingManuallyPoweredUp" />
 		<ShadowInfo
-			Type="VOLUME"
-			Texture=""
-			AdditionalTexture=""
-			SizeX="0"
-			SizeY="0"
-			OffsetX="0"
-			OffsetY="0"
-			OpacityStart="0"
-			OpacityFadeInTime="0s"
-			OpacityPeak="1"
-			OpacityFadeOutTime="0s"
-			OpacityEnd="0"
-			MaxHeight="20"
-			SunAngle="0"
-			OverrideLODVisibility="False"
-			UseHouseColor="False"
-			IsRotatingWithObject="True"
-			LocalPlayerOnly="False" />
+			Type="VOLUME" />
 		<VisionInfo
-			VisionRange="100"
-			ShroudClearingRange="400"
-			VisionSide="100%"
-			VisionRear="100%"
-			VisionBonusTestRadius="100"
-			VisionBonusTestSegments="8"
-			VisionBonusPercentPerFoot="0%"
-			MaxVisionBonusPercent="50%"
-			MinVisionBonusPercent="-50%" />
-		<ProjectedBuildabilityInfo
-			Radius="250"
-			BuildPlacementTypes="MAIN_STRUCTURE OTHER_STRUCTURE"
-			StatusToReject=""
-			ModelConditionsToReject="" />
+			VisionRange="375"
+			ShroudClearingRange="500" />
 	</GameObject>
 </AssetDeclaration>
