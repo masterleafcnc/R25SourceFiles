@@ -1311,12 +1311,12 @@
 
 			<SlowDeath
 				id="73542D4A"
-				SinkRate="4"
+				SinkRate="99999"
 				ProbabilityModifier="10"
 				ModifierBonusPerOverkillPercent="0%"
-				SinkDelay="3s"
+				SinkDelay="0.05s"
 				SinkDelayVariance="0s"
-				DestructionDelay="0.20s"
+				DestructionDelay="8s"
 				DestructionDelayVariance="0s"
 				DecayBeginTime="0s"
 				FlingForce="0"
