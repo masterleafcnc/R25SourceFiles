@@ -1309,7 +1309,7 @@
 				SinkRate="99999"
 				ProbabilityModifier="10"
 				ModifierBonusPerOverkillPercent="0%"
-				SinkDelay="0.2s"
+				SinkDelay="0.05s"
 				SinkDelayVariance="0s"
 				DestructionDelay="8s"
 				DestructionDelayVariance="0s"
