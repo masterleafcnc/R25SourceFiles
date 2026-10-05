@@ -238,10 +238,9 @@
 				UpgradeToGive="Upgrade_Pack"/>
 			<SlowDeath
 				id="ModuleTag_Death"
-				SinkDelay="3.0s"
-				SinkRate="4.0"
-				DestructionDelay="8.0s">
-				<Sound Type="INITIAL" List="ALI_Building_Die" />
+				SinkDelay="0.05s"
+				SinkRate="99999"
+				DestructionDelay="8s">
 				<DieMuxData
 					DeathTypes="ALL" />
 			</SlowDeath>
@@ -333,6 +332,19 @@
 				id="ModuleTag_CreateOccupiedSuicide"
 				CreationList="OCL_ConyardReaper17BuildingSuicide" >
 				<DieMuxData DeathTypes="SUICIDED" />
+			</CreateObjectDie>
+
+			<CreateObjectDie
+				id="ModuleTag_CreatedDestroyedBuilding"
+				CreationList="OCL_AlienDestroyedDronePlatform">
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus=""
+					DamageAmountRequired="-1"
+					MinKillerAngle="0.9999999d"
+					MaxKillerAngle="-0.9999999d"
+					DeathTypes="SUICIDED"
+					DeathTypesForbidden="" />
 			</CreateObjectDie>
 			<StructureUnpackUpdate
 				id="StructureUnpackUpdate"

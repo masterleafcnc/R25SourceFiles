@@ -831,10 +831,9 @@
 				UnpackTime="2.0s" />
 			<SlowDeath
 				id="ModuleTag_Death"
-				SinkDelay="4.0s"
-				SinkRate="4.0"
-				DestructionDelay="8.0s">
-				<Sound Type="INITIAL" List="ALI_Building_Die" />
+				SinkDelay="0.05s"
+				SinkRate="99999"
+				DestructionDelay="8s">
 				<DieMuxData
 					DeathTypes="ALL" />
 			</SlowDeath>
@@ -904,6 +903,19 @@
 				id="ModuleTag_CreateOccupiedSuicide"
 				CreationList="OCL_GenericAlienBuildingSuicide" >
 				<DieMuxData DeathTypes="SUICIDED" />
+			</CreateObjectDie>
+
+			<CreateObjectDie
+				id="ModuleTag_CreatedDestroyedBuilding"
+				CreationList="OCL_AlienDestroyedWarpBeacon">
+				<DieMuxData
+					ExemptStatus=""
+					RequiredStatus=""
+					DamageAmountRequired="-1"
+					MinKillerAngle="0.9999999d"
+					MaxKillerAngle="-0.9999999d"
+					DeathTypes="SUICIDED"
+					DeathTypesForbidden="" />
 			</CreateObjectDie>
 
       <StancesBehavior

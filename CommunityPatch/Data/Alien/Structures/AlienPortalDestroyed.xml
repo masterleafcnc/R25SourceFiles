@@ -1,37 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
-<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="us-ascii"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<GameObject
-		id="AlienPortal"
-		inheritFrom="BaseStructure"
-		SelectPortrait="Portrait_ALIENPortal"
-		ButtonImage="Portrait_ALIENPortal"
+		id="AlienPortalDestroyed"
 		Side="ALIEN"
-		EditorSorting="STRUCTURE"
-		TransportSlotCount="1"
-		BuildCost="600"
-		BuildTime="6"
-		PlacementViewAngle="315d"
-		CommandSet="AlienPortalCommandSet"
-		KindOf="STRUCTURE SELECTABLE IMMOBILE CAN_CAST_REFLECTIONS FS_FACTORY AUTO_RALLYPOINT AUTO_ACQUIRABLE_BY_AI NOT_AUTOACQUIRABLE COVER FS_BARRACKS"
-		RadarPriority="STRUCTURE"
-		ProductionQueueType="MAIN_STRUCTURE"
-		BuildPlacementTypeFlag="MAIN_STRUCTURE"
-		EditorName="AlienPortal"
-		Description="Desc:ALIENPortal"
-		CampnessValue="2000"
-		CampnessValueRadius="300"
-		TypeDescription="Type:AlienPortal"
-		EnergyProduction="-5">
-		<DisplayName
-			xai:joinAction="Replace" xmlns:xai="uri:ea.com:eala:asset:instance">NAME:ALIENPortal</DisplayName>
-		<GameDependency>
-			<RequiredObject>AlienPowerProjector</RequiredObject>
-		</GameDependency>
+		EditorSorting="MISC_MAN_MADE"
+		KindOf="IMMOBILE NO_COLLIDE UNATTACKABLE NOT_AUTOACQUIRABLE CAN_CAST_REFLECTIONS"
+		EditorName="AlienPortalDestroyed">
+		<DisplayName>AlienPortalDestroyed</DisplayName>
 		<ArmorSet
-			Armor="AlienPortalArmor"
+			Armor="GDITerraformingStationArmor"
 			DamageFX="FactionStructureDamageFX" />
-		<SkirmishAIInformation
-			BaseBuildingLocation="FRONT" />
 		<Draws>
 			<ScriptedModelDraw
 				id="ModuleTag_Draw"
@@ -307,153 +285,28 @@
 			</ScriptedModelDraw>	
 		</Draws>
 		<Behaviors>
-			<AttributeModifierPoolUpdate id="DefaultAttributeModifierPoolUpdate"/>
-			<FireWeaponWhenDead
-				id="ModuleTag_CatalystDeathWeapon"
-				InitiallyActive="true"
-				DeathWeapon="CatalystBuildingDeathWeapon"
-				ContinueToBezierDestination="false"
-			>
-				<DieMuxData DeathTypes="CATALYST" />
-			</FireWeaponWhenDead>
-      <TemporarilyDefectUpdate
-        id="ModuleTag_TemporarilyDefect"
-        DefectionFrameCount="100" />
-			<FXListBehavior
-				id="ModuleTag_FXList">
-				<DieMuxData
-					DeathTypes="ALL" />
-				<Event
-					Index="onTransitionToDamaged"
-					FX="FX_AlienBuildingDamagedM" />
-				<Event
-					Index="onTransitionToReallyDamaged"
-					FX="FX_AlienBuildingDamagedM" />
-				<Event
-					Index="onTransitionToRubble"
-					FX="FX_AlienBuildingRubbleM" />
-			</FXListBehavior>
-			<ProductionUpdate
-				id="ModuleTag_06"
-				GiveNoXP="true"
-				Type="INFANTRY" />
-			<QueueProductionExitUpdate
-				id="ModuleTag_07"
-				PlacementViewAngle="45d"
-				ExitDelay="5">
-				<UnitCreatePoint
-					x="0.0"
-					y="0.0" />
-				<NaturalRallyPoint
-					x="68.0"
-					y="0.0" />
-			</QueueProductionExitUpdate>
-			<StructureUnpackUpdate
-				UnpackTime="2.0s" />
+			<LifetimeUpdate
+				id="ModuleTag_LifetimeUpdate"
+				MinLifetime="0s"
+				MaxLifetime="0s" />
+		
 			<SlowDeath
 				id="ModuleTag_Death"
-				SinkDelay="0.05s"
-				SinkRate="99999"
-				DestructionDelay="8s">
+				SinkDelay="4.0s"
+				SinkRate="4.0"
+				DestructionDelay="8.0s">
+				<Sound
+					Type="INITIAL"
+					List="ALI_Building_Die" />
 				<DieMuxData
 					DeathTypes="ALL" />
 			</SlowDeath>
-			
-			<RepairUpdate
-		id="ModuleTag_RepairUpdate">
-		<PercentOfBuildCostToRebuildInfo></PercentOfBuildCostToRebuildInfo>
-		<SelfAudio></SelfAudio>
-	</RepairUpdate>
-			
-		<HordeTransportContain
-				id="ModuleTag_Contain"
-				ObjectStatusOfContained=""
-				ContainMax="0"
-				Slots="0"
-				AllowEnemiesInside="false"
-				AllowAlliesInside="false"
-				AllowNeutralInside="false"
-				AllowOwnPlayerInsideOverride="false"
-				ShowPips="false"
-				EnterSound=""
-				ExitSound=""
-				KillPassengersOnDeath="false">
-				<PassengerFilter
-					Rule="NONE"
-					Include="" />
-				<DieMuxData
-					DeathTypes="ALL" />
-				<PassengerData
-					BonePrefix="ROOTTRANSFORM">
-					<Filter
-						Rule="NONE"
-						Include="" />
-				</PassengerData>
-			</HordeTransportContain>
-			
-		<EngineerContain 
-		id="ModuleTag_EngineerContain"
-		NameOfVoiceToUseForFriendlyEnter="VoiceEngineerRepair"
-		NameOfVoiceToUseForHostileEnter="VoiceCaptureBuilding" 
-		EvaEventForRepair="BuildingRepaired"
-		EvaEventForCapture="EnemyBuildingCaptured"
-		FXForRepair="FX_Building_Repaired" 
-		FXForCapture="FX_Building_Captured"
-		FXForCaptureAndReplace="FX_Building_Captured"
-		ImmediatelyEnabled="true">
-		<CanEnterFilter Rule="NONE">
-			<IncludeThing>GDIEngineer</IncludeThing>
-			<IncludeThing>NODSaboteur</IncludeThing>
-			<IncludeThing>AlienAssimilator</IncludeThing>
-			<IncludeThing>SteelTalonsCombatEngineer</IncludeThing>
-			<IncludeThing>ZOCOMEngineer</IncludeThing>
-			<IncludeThing>BlackHandSaboteur</IncludeThing>
-			<IncludeThing>MarkedOfKaneSaboteur</IncludeThing>
-      <IncludeThing>Traveler59Assimilator</IncludeThing>
-    </CanEnterFilter>
-	</EngineerContain>
-	
-	<CreateObjectDie 
-		id="ModuleTag_CreateOccupiedDie"
-		CreationList="OCL_GenericAlienBuildingDestruction" >
-		<DieMuxData
-			DeathTypes="ALL"
-			DeathTypesForbidden="DETONATED SUICIDED" 
-		/>
-		<UpgradeForbidden>Upgrade_NoSpawnUponDestruction</UpgradeForbidden>
-	</CreateObjectDie>
-	
-		<CreateObjectDie 
-		id="ModuleTag_CreateOccupiedSuicide"
-		CreationList="OCL_GenericAlienBuildingSuicide" >
-		<DieMuxData DeathTypes="SUICIDED" />
-	</CreateObjectDie>
-
-			<CreateObjectDie
-				id="ModuleTag_CreatedDestroyedBuilding"
-				CreationList="OCL_AlienDestroyedPortal">
-				<DieMuxData
-					ExemptStatus=""
-					RequiredStatus=""
-					DamageAmountRequired="-1"
-					MinKillerAngle="0.9999999d"
-					MaxKillerAngle="-0.9999999d"
-					DeathTypes="SUICIDED"
-					DeathTypesForbidden="" />
-			</CreateObjectDie>
-			<StancesBehavior
-				id="ModuleTag_Stance"
-				StanceTemplate="Generic" />
 		</Behaviors>
-		<AI>
-			<AIUpdate
-				id="ModuleTag_AI"
-				AutoAcquireEnemiesWhenIdle="NO"/>
-		</AI>
 		<Body>
 			<ActiveBody
 				id="ModuleTag_Body"
-				MaxHealth="3000.0" />
+				MaxHealth="100.0"
+				InitialHealth="100.0" />
 		</Body>
 		<Geometry
 			IsSmall="false">
@@ -487,41 +340,10 @@
 					z="0" />
 			</ContactPoint>
 		</Geometry>
-		<AudioArrayVoice>
-			<AudioEntry EvaEvent="BuildingStolen" AudioType="voiceDefectingAway" />
-			<AudioEntry EvaEvent="EnemyBuildingCaptured" AudioType="voiceDefectingTowards" />
-			<AudioEntry
-				Sound="AudioEvent:ALI_Portal_Select"
-				AudioType="voiceSelect" />
-		</AudioArrayVoice>
-		<AudioArraySound>
-			<AudioEntry Sound="AudioEvent:ALI_Building_LightDamage" AudioType="soundOnDamaged" />
-			<AudioEntry Sound="AudioEvent:ALI_Building_HeavyDamage" AudioType="soundOnReallyDamaged" />
-			<AudioEntry Sound="AudioEvent:ALI_Building_Placed" AudioType="soundUnderConstruction" />
-		</AudioArraySound>
 		<ShadowInfo
 			Type="VOLUME" />
 		<VisionInfo
 			VisionRange="200"
 			ShroudClearingRange="400" />
-		<ProjectedBuildabilityInfo
-			Radius="0"
-			BuildPlacementTypes="MAIN_STRUCTURE OTHER_STRUCTURE" />
-			
-		<EvaEvents
-			EvaEventProductionStarted="BuildingConstructionStarted" 
-			EvaEventProductionComplete="BuildingConstructionComplete" 
-			EvaEventDamagedOwner="StructureUnderAttack" 	
-			EvaEventSoldOwner="StructureSold"
-			EvaEventRepairingOwner="StructureRepairing"
-			EvaEnemyObjectSightedEvent="EnemyCampSighted"
-			EvaEventAvailableForProduction="NewConstructionOptions"
-			EvaEventPlacementFailed="StructurePlacementFailed" 
-			EvaEventCannotBuildDueToFullBuildQueue="StructureCannotBuildDueToFullBuildQueue" 
-			EvaEventBuildOnHold="BuildOnHold"
-			EvaEventBuildCancelled="BuildCancelled" 
-			EvaEventManuallyPoweredOff="BuildingManuallyPoweredDown"
-			EvaEventManuallyPoweredOn="BuildingManuallyPoweredUp" />	
-			
 	</GameObject>
 </AssetDeclaration>
