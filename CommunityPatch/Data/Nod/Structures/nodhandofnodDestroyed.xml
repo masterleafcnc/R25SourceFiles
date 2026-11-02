@@ -73,16 +73,6 @@
 					</Script>	
 				</AnimationState>
 				-->
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="BUILD_PLACEMENT_CURSOR">
-					<Script>
-						CurDrawableHideSubObject("BLACKDISCIPLES_GLOWS")
-						CurDrawableHideSubObject("BLACKDISCIPLESUPGRD")
-						CurDrawableHideSubObject("CONFUPGRD")
-						CurDrawableHideSubObject("GLOWS")
-					</Script>	
-				</AnimationState>	
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="STRUCTURE_UNPACKING"
@@ -158,6 +148,16 @@
 						Name="W3DContainer:NBHANDD3_SN2"
 						ExtraMesh="False" />
 				</ModelConditionState>				
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="BUILD_PLACEMENT_CURSOR">
+					<Script>
+						CurDrawableHideSubObject("BLACKDISCIPLES_GLOWS")
+						CurDrawableHideSubObject("BLACKDISCIPLESUPGRD")
+						CurDrawableHideSubObject("CONFUPGRD")
+						CurDrawableHideSubObject("GLOWS")
+					</Script>
+				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="STRUCTURE_UNPACKING"

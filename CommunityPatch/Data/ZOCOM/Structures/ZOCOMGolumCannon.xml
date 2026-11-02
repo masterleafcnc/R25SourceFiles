@@ -577,6 +577,7 @@
 			</CreateObjectDie>
 			<EngineerContain
 				id="D16751DE"
+				ImmediatelyEnabled="true"
 				ReplaceWith=""
 				NameOfVoiceToUseForFriendlyEnter="VoiceEngineerRepair"
 				NameOfVoiceToUseForHostileEnter="VoiceCaptureBuilding" 
