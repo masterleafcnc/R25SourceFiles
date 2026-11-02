@@ -4211,15 +4211,23 @@ end
 
 -- R25j Structure placement functions
 function StructureIsUnpacking(self)
+	local objId = getObjectId(self)
+	objectReferences[objId] = objectReferences[objId] or SetObjectReference(self)
+	local stringRef = objectReferences[objId]
+
 	--print("structure is unpacking")
 	-- sets RIDER4 status to true
-	ExecuteAction("UNIT_CHANGE_OBJECT_STATUS", SetObjectReference(self), 44, 1)
+	ExecuteAction("UNIT_CHANGE_OBJECT_STATUS", stringRef, 44, 1)
 end
 
 function StructureIsUnpackingEnd(self)
+	local objId = getObjectId(self)
+	objectReferences[objId] = objectReferences[objId] or SetObjectReference(self)
+	local stringRef = objectReferences[objId]
+
 	--print("structure is unpacking end")
 	-- sets RIDER4 status to false
-	ExecuteAction("UNIT_CHANGE_OBJECT_STATUS", SetObjectReference(self), 44, 0)
+	ExecuteAction("UNIT_CHANGE_OBJECT_STATUS", stringRef, 44, 0)
 end
 
 
@@ -4385,28 +4393,45 @@ StructureGeometryTable = {
 
 -- -RIDER4, check if the structure is destroyed and if it is disable its geometry by name 
 function DisableGeometryOnDeath(self)
+	local objId = getObjectId(self)
 	-- shared event lists also reach objects that are not in the table, skip those
 	local numOfGeometry = StructureGeometryTable[getObjectName(self)]
 	-- do object check and reference a table to disable geometries 
-	if numOfGeometry and EvaluateCondition("UNIT_HAS_OBJECT_STATUS", SetObjectReference(self), 44) then
-		-- apply model state to begin the rubble animation 
-		ExecuteAction("UNIT_SET_MODELCONDITION_FOR_DURATION", self, "USER_10", 9999, 100)
-		for i = 1, numOfGeometry, 1 do 
-			ObjectSetGeometryActive(self, tostring("Geom_" .. i), false)
+	if numOfGeometry then
+		objectReferences[objId] = objectReferences[objId] or SetObjectReference(self)
+		local stringRef = objectReferences[objId]
+		if EvaluateCondition("UNIT_HAS_OBJECT_STATUS", stringRef, 44) then
+			-- apply model state to begin the rubble animation
+			ExecuteAction("UNIT_SET_MODELCONDITION_FOR_DURATION", self, "USER_10", 9999, 100)
+			for i = 1, numOfGeometry, 1 do
+				if self ~= nil then
+					ObjectSetGeometryActive(self, tostring("Geom_" .. i), false)
+				end
+			end
+			--print("structure geometry disabled.")
 		end
-		--print("structure geometry disabled.")
 	end
+	-- clear after death processing, even when geometry changes are skipped
+	objectReferences[objId] = nil
 end
 
 function ShockwaveArtilleryGrantUpgrade(self)
+	local objId = getObjectId(self)
+	objectReferences[objId] = objectReferences[objId] or SetObjectReference(self)
+	local stringRef = objectReferences[objId]
+
 	--print("shockwave missile ready to fire")
-	if not EvaluateCondition("UNIT_HAS_UPGRADE",SetObjectReference(self), "Upgrade_ShockwaveReady") then
+	if not EvaluateCondition("UNIT_HAS_UPGRADE", stringRef, "Upgrade_ShockwaveReady") then
 		ObjectGrantUpgrade(self, "Upgrade_ShockwaveReady")
 	end
 end
 
 function ShockwaveArtilleryRemoveUpgrade(self)
-	if EvaluateCondition("UNIT_HAS_UPGRADE",SetObjectReference(self), "Upgrade_ShockwaveReady") then
+	local objId = getObjectId(self)
+	objectReferences[objId] = objectReferences[objId] or SetObjectReference(self)
+	local stringRef = objectReferences[objId]
+
+	if EvaluateCondition("UNIT_HAS_UPGRADE", stringRef, "Upgrade_ShockwaveReady") then
 		ObjectRemoveUpgrade(self, "Upgrade_ShockwaveReady")
 	end
 end
