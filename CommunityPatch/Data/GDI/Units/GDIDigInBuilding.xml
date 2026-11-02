@@ -353,7 +353,7 @@
 		<Behaviors>
 			<SlowDeath
 				id="1673247C"
-				SinkRate="99999"
+				SinkRate="1000"
 				ProbabilityModifier="10"
 				ModifierBonusPerOverkillPercent="0%"
 				SinkDelay="0.05s"

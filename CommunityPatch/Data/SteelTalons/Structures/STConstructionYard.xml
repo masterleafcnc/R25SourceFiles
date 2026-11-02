@@ -334,7 +334,7 @@
 			<SlowDeath
 				id="ModuleTag_Death"
 				SinkDelay="0.05s"
-				SinkRate="99999"
+				SinkRate="1000"
 				DestructionDelay="8s">
 				<DieMuxData
 					ExemptStatus="RIDER4"

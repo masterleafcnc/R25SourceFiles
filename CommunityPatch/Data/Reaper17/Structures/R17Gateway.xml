@@ -1046,7 +1046,7 @@
 			</AssignSlavesTargetObjectSpecialPower>
 			<SlowDeath
 				id="73542D4A"
-				SinkRate="99999"
+				SinkRate="1000"
 				ProbabilityModifier="10"
 				ModifierBonusPerOverkillPercent="0%"
 				SinkDelay="0.05s"
