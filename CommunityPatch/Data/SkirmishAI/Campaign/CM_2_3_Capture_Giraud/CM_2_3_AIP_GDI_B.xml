@@ -89,7 +89,7 @@
 	<States State="GDICommando" Difficulty="MEDIUM HARD BRUTAL"/>
 	<States State="GDIHuskCapture" Difficulty="HARD BRUTAL"/>
 
-	<States State="2_3_GDIUnitPreferences" Difficulty="MEDIUM HARD BRUTAL"/>
+	<States State="2_3_GDIUnitPreferences" Difficulty="EASY MEDIUM HARD BRUTAL"/>
 
 	<BudgetStates State="CM_2_3_Budget_Standard" Difficulty="MEDIUM HARD BRUTAL"/>
 	<BudgetStates State="CM_2_3_TechPreferenceByTimeBudget" Difficulty="MEDIUM HARD BRUTAL"/>
