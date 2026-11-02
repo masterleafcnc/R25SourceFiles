@@ -2327,16 +2327,6 @@
 		<EventHandler EventName="OnSpecialPower1Ready" ScriptFunctionName="ShockwaveArtilleryGrantUpgrade" DebugSingleStep="false"/>
 		<EventHandler EventName="OnSpecialPower1ReadyEnd" ScriptFunctionName="ShockwaveArtilleryRemoveUpgrade" DebugSingleStep="false"/>
 	</EventList>
-
-	<EventList Name="GDIRefineryFunctions_R25" Inherit="BuildingPowerFunctions">
-		<EventHandler EventName="OnDestroyed" ScriptFunctionName="DisableGDIRefineryGeometry" DebugSingleStep="false"/>
-	</EventList>
-	
-	<!--<EventList Name="GDIRefineryFunctions" Inherit="BaseScriptFunctions">
-		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnGDIRefineryCreated" DebugSingleStep="false"/>
-		<EventHandler EventName="OnPowerOutage" ScriptFunctionName="onBuildingPowerOutage" DebugSingleStep="false"/>
-		<EventHandler EventName="OnPowerRestore" ScriptFunctionName="onBuildingPowerRestored" DebugSingleStep="false"/>
-	</EventList> -->
 	
     <EventList Name="InfantryFunctions" Inherit="BaseScriptFunctions">
 		<!-- These are events that will apply to all infantry.  Any infantry units should inherit this set. jba -->
