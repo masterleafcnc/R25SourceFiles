@@ -266,6 +266,11 @@
 				<TriggeredBy>Upgrade_MarkedOfKaneLiquidTiberiumCore</TriggeredBy>
 			</SubObjectsUpgrade>
 		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AIUpdate"
+				AutoAcquireEnemiesWhenIdle="NO" />
+		</AI>
 		<Body>
 			<ActiveBody
 				id="ModuleTag_Body"

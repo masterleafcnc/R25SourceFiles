@@ -309,6 +309,11 @@
 				<TriggeredBy>Upgrade_ShockwaveReady</TriggeredBy>
 			</ModelConditionUpgrade>
 		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AIUpdate"
+				AutoAcquireEnemiesWhenIdle="NO" />
+		</AI>
 		<Body>
 			<ActiveBody
 				id="ModuleTag_Body"

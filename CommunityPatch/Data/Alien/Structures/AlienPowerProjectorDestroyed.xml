@@ -617,6 +617,11 @@
 				<TriggeredBy>Upgrade_Traveler59FusionCore</TriggeredBy>
 			</SubObjectsUpgrade>
 		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AIUpdate"
+				AutoAcquireEnemiesWhenIdle="NO" />
+		</AI>
 		<Body>
 			<ActiveBody
 				id="ModuleTag_Body"

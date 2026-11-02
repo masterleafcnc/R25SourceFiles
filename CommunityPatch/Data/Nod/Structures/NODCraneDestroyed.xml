@@ -167,6 +167,11 @@
 					DeathTypes="ALL" />
 			</SlowDeath>
 		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AIUpdate"
+				AutoAcquireEnemiesWhenIdle="NO" />
+		</AI>
 		<Body>
 			<ActiveBody
 				id="ModuleTag_Body"
