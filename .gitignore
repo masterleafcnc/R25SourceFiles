@@ -45,3 +45,13 @@ CommunityPatch/Data/MPSettings.xml
 /CommunityPatch/Art/Models
 /CommunityPatch/Art/Textures
 CommunityPatch/Data/StaticArt.xml
+CommunityPatch/Assets Removed/Static/GameObject.CDMTowerDestroyed.asset
+CommunityPatch/Assets Removed/Static/GameObject.ElectroMagneticPulseControlCenterDestroyed.asset
+CommunityPatch/Assets Removed/Static/GameObject.MutantHovelDestroyed.asset
+CommunityPatch/Assets Removed/Static/GameObject.TiberiumSiloDestroyed.asset
+CommunityPatch/Assets Removed/Static/GameObject.TiberiumSpikeDestroyed.asset
+CommunityPatch/Assets Removed/Static/ObjectCreationList.OCL_DestroyedCDMTower.asset
+CommunityPatch/Assets Removed/Static/ObjectCreationList.OCL_DestroyedElectroMagneticPulseControlCenter.asset
+CommunityPatch/Assets Removed/Static/ObjectCreationList.OCL_DestroyedMutantHovel.asset
+CommunityPatch/Assets Removed/Static/ObjectCreationList.OCL_DestroyedTiberiumSilo.asset
+CommunityPatch/Assets Removed/Static/ObjectCreationList.OCL_DestroyedTiberiumSpike.asset

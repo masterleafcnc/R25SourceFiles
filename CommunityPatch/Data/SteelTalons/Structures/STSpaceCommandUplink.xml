@@ -404,7 +404,7 @@
 				SpecialPowerAIType="SPECIAL_POWER_ENEMY_TYPE_KILLER_STRUCTURES"
 				SpecialPowerRadius="99999"
 				ReinforceDistance="1500"
-				UnitKindOf="UNIQUE_UNIT META_UNIT"
+				UnitKindOf="UNIQUE_UNIT METAUNIT"
 				EnemyUnitExclude="AIRCRAFT CIVILIAN_BUILDING HUSK"
 				RandomizeTargetLocation="False" />
 			
