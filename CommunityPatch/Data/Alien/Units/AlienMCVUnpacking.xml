@@ -35,12 +35,6 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING">
-					<Model
-						Name="" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="REALLYDAMAGED">
 					<Model
 						Name="W3DContainer:AUDronShipR_SKN" />
@@ -241,9 +235,9 @@
 			<!-- Normal Dying -->
 			<SlowDeath
 				id="ModuleTag_SlowDeath"
-				SinkDelay="5s"
+				SinkDelay="0s"
 				SinkRate="0.5"
-				DestructionDelay="5s">
+				DestructionDelay="0.01s">
 				<OCL
 					Type="INITIAL">
 					<OCL>OCL_ALIENDroneShipInitialDebris</OCL>
