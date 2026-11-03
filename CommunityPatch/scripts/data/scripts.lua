@@ -4217,7 +4217,9 @@ function StructureIsUnpacking(self)
 
 	--print("structure is unpacking")
 	-- sets RIDER4 status to true
-	ExecuteAction("UNIT_CHANGE_OBJECT_STATUS", stringRef, 44, 1)
+	if stringRef and not EvaluateCondition("UNIT_HAS_OBJECT_STATUS", stringRef, 44) then
+		ExecuteAction("UNIT_CHANGE_OBJECT_STATUS", stringRef, 44, 1)
+	end
 end
 
 function StructureIsUnpackingEnd(self)
@@ -4227,7 +4229,9 @@ function StructureIsUnpackingEnd(self)
 
 	--print("structure is unpacking end")
 	-- sets RIDER4 status to false
-	ExecuteAction("UNIT_CHANGE_OBJECT_STATUS", stringRef, 44, 0)
+	if stringRef and EvaluateCondition("UNIT_HAS_OBJECT_STATUS", stringRef, 44) then
+		ExecuteAction("UNIT_CHANGE_OBJECT_STATUS", stringRef, 44, 0)
+	end
 end
 
 
@@ -4400,7 +4404,7 @@ function DisableGeometryOnDeath(self)
 	if numOfGeometry then
 		objectReferences[objId] = objectReferences[objId] or SetObjectReference(self)
 		local stringRef = objectReferences[objId]
-		if EvaluateCondition("UNIT_HAS_OBJECT_STATUS", stringRef, 44) then
+		if stringRef and EvaluateCondition("UNIT_HAS_OBJECT_STATUS", stringRef, 44) then
 			-- apply model state to begin the rubble animation
 			ExecuteAction("UNIT_SET_MODELCONDITION_FOR_DURATION", self, "USER_10", 9999, 100)
 			for i = 1, numOfGeometry, 1 do
@@ -4421,7 +4425,7 @@ function ShockwaveArtilleryGrantUpgrade(self)
 	local stringRef = objectReferences[objId]
 
 	--print("shockwave missile ready to fire")
-	if not EvaluateCondition("UNIT_HAS_UPGRADE", stringRef, "Upgrade_ShockwaveReady") then
+	if stringRef and not EvaluateCondition("UNIT_HAS_UPGRADE", stringRef, "Upgrade_ShockwaveReady") then
 		ObjectGrantUpgrade(self, "Upgrade_ShockwaveReady")
 	end
 end
@@ -4431,7 +4435,7 @@ function ShockwaveArtilleryRemoveUpgrade(self)
 	objectReferences[objId] = objectReferences[objId] or SetObjectReference(self)
 	local stringRef = objectReferences[objId]
 
-	if EvaluateCondition("UNIT_HAS_UPGRADE", stringRef, "Upgrade_ShockwaveReady") then
+	if stringRef and EvaluateCondition("UNIT_HAS_UPGRADE", stringRef, "Upgrade_ShockwaveReady") then
 		ObjectRemoveUpgrade(self, "Upgrade_ShockwaveReady")
 	end
 end
