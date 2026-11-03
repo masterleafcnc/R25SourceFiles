@@ -206,6 +206,16 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING USER_2"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name=""
+						ExtraMesh="False" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="DAMAGED USER_2"
 					PortraitImage=""
 					ButtonImage=""
@@ -257,22 +267,22 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING USER_2"
-					PortraitImage=""
-					ButtonImage=""
-					RetainSubObjects="False">
-					<Model
-						Name=""
-						ExtraMesh="False" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="USER_2"
 					PortraitImage=""
 					ButtonImage=""
 					RetainSubObjects="False">
 					<Model
 						Name="W3DContainer:NUVERT_UPG_SKN"
+						ExtraMesh="False" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name=""
 						ExtraMesh="False" />
 				</ModelConditionState>
 				<ModelConditionState
@@ -325,16 +335,6 @@
 						FollowBone="True"
 						OnlyIfOnWater="False"
 						OnlyIfOnLand="False" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING"
-					PortraitImage=""
-					ButtonImage=""
-					RetainSubObjects="False">
-					<Model
-						Name=""
-						ExtraMesh="False" />
 				</ModelConditionState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
@@ -527,6 +527,10 @@
 						AnimationMustCompleteBlend="False"
 						UseWeaponTiming="False"
 						FadingIn="False" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
@@ -870,6 +874,10 @@
 						AnimationMustCompleteBlend="False"
 						UseWeaponTiming="False"
 						FadingIn="False" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"

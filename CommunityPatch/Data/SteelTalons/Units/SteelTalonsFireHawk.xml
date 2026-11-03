@@ -186,6 +186,12 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING USER_5">
+					<Model
+						Name="" />		
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="DAMAGED USER_5">
 					<Model
 						Name="W3DContainer:GUFireHwk_SKN" />
@@ -217,12 +223,6 @@
 						BoneName="ROOTTRANSFORM"
 						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
 						FollowBone="true" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING USER_5">
-					<Model
-						Name="" />		
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
@@ -340,6 +340,12 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Model
+						Name="" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="DAMAGED">
 					<Model
 						Name="W3DContainer:GUFireHwk_SKN" />
@@ -368,12 +374,6 @@
 						BoneName="ROOTTRANSFORM"
 						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
 						FollowBone="true" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING">
-					<Model
-						Name="" />
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
@@ -788,6 +788,10 @@
 						CurDrawableHideSubObject("Plane04")
 						CurDrawableHideSubObject("exhaust02")
 					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"

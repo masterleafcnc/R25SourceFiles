@@ -659,6 +659,28 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING USER_6"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name=""
+						ExtraMesh="False" />
+					<Texture
+						Original="GUHamhead"
+						New="GUHamhead_UGCA_D" />	
+					<Texture
+						Original="GUHamHead_SPM"
+						New="GUHamHead_UGCA_SPM" />
+					<Texture
+						Original="GUHamHead_NRM"
+						New="GUHamhead_UGCA_NRM" />
+						<Texture
+						Original="HC_GUHamhead"
+						New="HC_GUHamhead_UGCA" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="DAMAGED USER_6"
 					PortraitImage=""
 					ButtonImage=""
@@ -759,7 +781,7 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING USER_6"
+					ConditionsYes="DYING"
 					PortraitImage=""
 					ButtonImage=""
 					RetainSubObjects="False">
@@ -768,16 +790,7 @@
 						ExtraMesh="False" />
 					<Texture
 						Original="GUHamhead"
-						New="GUHamhead_UGCA_D" />	
-					<Texture
-						Original="GUHamHead_SPM"
-						New="GUHamHead_UGCA_SPM" />
-					<Texture
-						Original="GUHamHead_NRM"
-						New="GUHamhead_UGCA_NRM" />
-						<Texture
-						Original="HC_GUHamhead"
-						New="HC_GUHamhead_UGCA" />
+						New="GUHamheadD" />	
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
@@ -872,19 +885,6 @@
 						<Texture
 						Original="HC_GUHamhead"
 						New="HC_GUHamhead_UGCA" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING"
-					PortraitImage=""
-					ButtonImage=""
-					RetainSubObjects="False">
-					<Model
-						Name=""
-						ExtraMesh="False" />
-					<Texture
-						Original="GUHamhead"
-						New="GUHamheadD" />	
 				</ModelConditionState>
 				<AnimationState
 					ParseCondStateType="PARSE_DEFAULT"
@@ -1101,6 +1101,10 @@
 						AnimationMustCompleteBlend="False"
 						UseWeaponTiming="False"
 						FadingIn="False" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
 				</AnimationState>
 			</TruckDraw>
 		</Draws>

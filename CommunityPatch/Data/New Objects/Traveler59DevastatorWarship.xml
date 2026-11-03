@@ -411,6 +411,12 @@
 												
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Model
+						Name="" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="DAMAGED">
 					<Model
 						Name="W3DContainer:AUDevWar_SKN" />
@@ -520,12 +526,6 @@
 						FXParticleSystemTemplate="AlienDamageFlyingIchor"
 						FollowBone="true" />
 				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING">
-					<Model
-						Name="" />
-				</ModelConditionState>
 
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
@@ -574,6 +574,10 @@
                         ParseCondStateType="PARSE_NORMAL"
                         ConditionsYes="FORMATION_PREVIEW">
             </AnimationState>
+                    <AnimationState
+                        ParseCondStateType="PARSE_NORMAL"
+                        ConditionsYes="DYING">
+                    </AnimationState>
 			</ScriptedModelDraw>
 
 			<ScriptedModelDraw		

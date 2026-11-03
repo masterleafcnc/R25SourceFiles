@@ -767,6 +767,12 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Model
+						Name="" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="DAMAGED"
 					PortraitImage=""
 					ButtonImage=""
@@ -958,12 +964,6 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING">
-					<Model
-						Name="" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="USER_5 USER_6"
 					PortraitImage=""
 					ButtonImage=""
@@ -1045,6 +1045,10 @@
 					ShareAnimation="False"
 					AllowRepeatInRandomPick="False"
 					SimilarRestart="False" />
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+				</AnimationState>
 			</ScriptedModelDraw>
 			<ScriptedModelDraw
 				id="E100F908"

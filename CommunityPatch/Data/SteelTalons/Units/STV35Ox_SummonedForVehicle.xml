@@ -110,6 +110,12 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Model
+						Name="" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="DAMAGED">
 					<Model
 						Name="W3DContainer:GUDropShip_SKN" />
@@ -150,12 +156,6 @@
 						BoneName="FX_Rfan"
 						FXParticleSystemTemplate="oxdamagesmoke"
 						FollowBone="true" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING">
-					<Model
-						Name="" />
 				</ModelConditionState>
 				<!--
 				<ModelConditionState
@@ -241,6 +241,10 @@
 						AnimationName="GUDropShip_FLYA"
 						AnimationMode="LOOP"
 						AnimationBlendTime="15" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
