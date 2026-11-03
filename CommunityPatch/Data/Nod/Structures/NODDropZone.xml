@@ -66,15 +66,9 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING USER_10">
-					<Model
-						Name="W3DContainer:NBDrpZnD3_SN" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="DYING">
 					<Model
-						Name="W3DContainer:NBDrpZnD2_SN" />
+						Name="W3DContainer:NBDrpZnD3_SN" />
 				</ModelConditionState>
 				<!-- BUILDUP ANIMATION -->
 				<AnimationState
@@ -97,20 +91,6 @@
 						AnimationName="NBDrpZnD2_AN"
 						AnimationMode="MANUAL" />
 				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING USER_10">
-					<Animation
-						AnimationName="NBDrpZnD3_AN"
-						AnimationMode="ONCE" />
-					<ParticleSysBone
-						BoneName="NONE"
-						FXParticleSystemTemplate="Des_Large"
-						FollowBone="false" />
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE" />
 				<!-- REALLY DAMAGED ANIMATION -->
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
@@ -128,6 +108,17 @@
 				</Script>
 				</AnimationState>
 				<!-- DYING ANIMATION -->
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Animation
+						AnimationName="NBDrpZnD3_AN"
+						AnimationMode="ONCE" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="Des_Large"
+						FollowBone="false" />
+				</AnimationState>
 				<!-- Transitions -->
 				<AnimationState
 					ParseCondStateType="PARSE_TRANSITION"
@@ -283,6 +274,13 @@
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Animation
+						AnimationName="NBDrpZnX_D3"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="ACTIVELY_CONSTRUCTING"
 					StateName="STATE_Open"
 					Flags="START_FRAME_LAST">
@@ -300,13 +298,6 @@
 					StateName="TRANS_ClosedToOpen">
 					<Animation
 						AnimationName="NBDrpZnX_OPN"
-						AnimationMode="ONCE" />
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING USER_10">
-					<Animation
-						AnimationName="NBDrpZnX_D3"
 						AnimationMode="ONCE" />
 				</AnimationState>
 				<AnimationState
@@ -429,22 +420,11 @@
 			</QueueProductionExitUpdate>
 			<SlowDeath
 				id="ModuleTag_Death"
-				SinkDelay="0.05s"
-				SinkRate="1000"
-				DestructionDelay="8s">
-				<DieMuxData
-					ExemptStatus="RIDER4"
-					DeathTypes="ALL" />
-			</SlowDeath>
-			<!-- normal slow death if structure is destroyed while unpacking, RIDER4 is set while structure has STRUCTURE_UNPACKING model state -->
-			<SlowDeath
-				id="ModuleTag_DeathUnpacking"
 				SinkDelay="3.0s"
 				SinkRate="4.0"
 				DestructionDelay="8.0s">
 				<Sound Type="INITIAL" List="HumanFaction_MediumBuilding_DieMS" />
 				<DieMuxData
-					RequiredStatus="RIDER4"
 					DeathTypes="ALL" />
 			</SlowDeath>
 			<FXListBehavior
@@ -558,20 +538,6 @@
 				CreationList="OCL_GenericNODBuildingSuicide" >
 				<DieMuxData DeathTypes="SUICIDED" />
 			</CreateObjectDie>
-
-			<!-- dont create a destroyed building if object is destroyed while unpacking, instead disable geometry. -->
-			<CreateObjectDie
-				id="ModuleTag_CreatedDestroyedBuilding"
-				CreationList="OCL_NODDestroyedDropZone">
-				<DieMuxData
-					ExemptStatus="RIDER4"
-					RequiredStatus=""
-					DamageAmountRequired="-1"
-					MinKillerAngle="0.9999999d"
-					MaxKillerAngle="-0.9999999d"
-					DeathTypes="ALL"
-					DeathTypesForbidden="" />
-			</CreateObjectDie>
 			<StancesBehavior
 				id="ModuleTag_Stance"
 				StanceTemplate="Generic" />
@@ -585,7 +551,6 @@
 		<AI>
 			<AIUpdate
 				id="ModuleTag_AI"
-				AILuaEventsList="StructureUnpackingFunctions"
 				AutoAcquireEnemiesWhenIdle="NO"></AIUpdate>
 		</AI>
 		<Body>

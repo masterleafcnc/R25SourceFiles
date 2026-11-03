@@ -53,15 +53,9 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE USER_10">
-					<Model
-						Name="W3DContainer:GBIonCan_D3SN" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="RUBBLE">
 					<Model
-						Name="W3DContainer:GBIonCan_D2SN" />
+						Name="W3DContainer:GBIonCan_D3SN" />
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
@@ -97,7 +91,7 @@
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE USER_10"
+					ConditionsYes="RUBBLE"
 					StateName="STATE_Rubble"
 					Flags="START_FRAME_LAST">
 					<Animation
@@ -110,9 +104,6 @@
 						end
 					</Script>
 				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE" />
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="REALLYDAMAGED"
@@ -136,7 +127,6 @@
 						AnimationMode="ONCE"
 						AnimationBlendTime="0" />
 				</AnimationState>
-				
 				<AnimationState
 					ParseCondStateType="PARSE_TRANSITION"
 					StateName="TRANS_IntoRubble">
@@ -149,6 +139,7 @@
 						FXParticleSystemTemplate="Des_Medium"
 						FollowBone="false" />
 				</AnimationState>
+				
 			</ScriptedModelDraw>
 			<!-- DRAW CANNON -->
 			<ScriptedModelDraw
@@ -311,22 +302,11 @@
 		
 			<SlowDeath
 				id="ModuleTag_Death"
-				SinkDelay="0.05s"
-				SinkRate="1000"
-				DestructionDelay="9.0s">
-				<DieMuxData
-					ExemptStatus="RIDER4"
-					DeathTypes="ALL" />
-			</SlowDeath>
-			<!-- normal slow death if structure is destroyed while unpacking, RIDER4 is set while structure has STRUCTURE_UNPACKING model state -->
-			<SlowDeath
-				id="ModuleTag_DeathUnpacking"
 				SinkDelay="3s"
 				SinkRate="6.0"
 				DestructionDelay="9.0s">
 				<Sound Type="INITIAL" List="HumanFaction_MediumBuilding_DieMS" />
 				<DieMuxData
-					RequiredStatus="RIDER4"
 					DeathTypes="ALL" />
 			</SlowDeath>
 			<FXListBehavior
@@ -469,20 +449,6 @@
 				CreationList="OCL_GenericSteelTalonsBuildingSuicide" >
 				<DieMuxData DeathTypes="SUICIDED" />
 			</CreateObjectDie>
-
-			<!-- dont create a destroyed building if object is destroyed while unpacking, instead disable geometry. -->
-			<CreateObjectDie
-				id="ModuleTag_CreatedDestroyedBuilding"
-				CreationList="OCL_GDIDestroyedIonCannonControl">
-				<DieMuxData
-					ExemptStatus="RIDER4"
-					RequiredStatus=""
-					DamageAmountRequired="-1"
-					MinKillerAngle="0.9999999d"
-					MaxKillerAngle="-0.9999999d"
-					DeathTypes="ALL"
-					DeathTypesForbidden="" />
-			</CreateObjectDie>
 		
 		<!-- This needs to be in every Stategic Buildings XML
 		            DO NOT CHANGE THE id. it must be the same in all files-->
@@ -504,7 +470,7 @@
 		</Behaviors>
 		<AI>
 			<AIUpdate
-				id="ModuleTag_AI" AILuaEventsList="StructureUnpackingFunctions" />
+				id="ModuleTag_AI" />
 		</AI>
 		<Body>
  		  <ActiveBody

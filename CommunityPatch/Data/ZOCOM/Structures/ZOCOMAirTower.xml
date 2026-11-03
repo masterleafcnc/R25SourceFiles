@@ -85,15 +85,9 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING USER_10">
-					<Model
-						Name="W3DContainer:GBAirField_D3SN" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="DYING">
 					<Model
-						Name="W3DContainer:GBAirField_D2SN" />
+						Name="W3DContainer:GBAirField_D3SN" />
 				</ModelConditionState>
 				<AnimationState
 					ParseCondStateType="PARSE_DEFAULT"></AnimationState>
@@ -124,7 +118,7 @@
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE USER_10"
+					ConditionsYes="RUBBLE"
 					StateName="STATE_Rubble"
 					Flags="START_FRAME_LAST">
 					<Animation
@@ -141,9 +135,6 @@
 						FXParticleSystemTemplate="Des_Medium"
 						FollowBone="false" />
 				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE" />
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="REALLYDAMAGED"
@@ -244,6 +235,20 @@
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING PARKINGPLACE_1_DOOR_OPEN">
+					<Animation
+						AnimationName="GBAirDoor_OPNS"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Animation
+						AnimationName="GBAirDoor_D3AN"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="PARKINGPLACE_1_DOOR_OPENING">
 					<Animation
 						AnimationName="GBAirDoor_OPN"
@@ -268,20 +273,6 @@
 					ConditionsYes="PARKINGPLACE_1_DOOR_CLOSED">
 					<Animation
 						AnimationName="GBAirDoor_CLSS"
-						AnimationMode="ONCE" />
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING PARKINGPLACE_1_DOOR_OPEN USER_10">
-					<Animation
-						AnimationName="GBAirDoor_OPNS"
-						AnimationMode="ONCE" />
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING USER_10">
-					<Animation
-						AnimationName="GBAirDoor_D3AN"
 						AnimationMode="ONCE" />
 				</AnimationState>
 			</ScriptedModelDraw>
@@ -353,6 +344,20 @@
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING PARKINGPLACE_1_DOOR_OPEN">
+					<Animation
+						AnimationName="GBAirDoor_OPNS"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Animation
+						AnimationName="GBAirDoor_D3AN"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="PARKINGPLACE_3_DOOR_OPENING">
 					<Animation
 						AnimationName="GBAirDoor_OPN"
@@ -377,20 +382,6 @@
 					ConditionsYes="PARKINGPLACE_3_DOOR_CLOSED">
 					<Animation
 						AnimationName="GBAirDoor_CLSS"
-						AnimationMode="ONCE" />
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING PARKINGPLACE_1_DOOR_OPEN USER_10">
-					<Animation
-						AnimationName="GBAirDoor_OPNS"
-						AnimationMode="ONCE" />
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING USER_10">
-					<Animation
-						AnimationName="GBAirDoor_D3AN"
 						AnimationMode="ONCE" />
 				</AnimationState>
 			</ScriptedModelDraw>
@@ -462,6 +453,20 @@
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING PARKINGPLACE_1_DOOR_OPEN">
+					<Animation
+						AnimationName="GBAirDoor_OPNS"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Animation
+						AnimationName="GBAirDoor_D3AN"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="PARKINGPLACE_2_DOOR_OPENING">
 					<Animation
 						AnimationName="GBAirDoor_OPN"
@@ -486,20 +491,6 @@
 					ConditionsYes="PARKINGPLACE_2_DOOR_CLOSED">
 					<Animation
 						AnimationName="GBAirDoor_CLSS"
-						AnimationMode="ONCE" />
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING PARKINGPLACE_1_DOOR_OPEN USER_10">
-					<Animation
-						AnimationName="GBAirDoor_OPNS"
-						AnimationMode="ONCE" />
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING USER_10">
-					<Animation
-						AnimationName="GBAirDoor_D3AN"
 						AnimationMode="ONCE" />
 				</AnimationState>
 			</ScriptedModelDraw>
@@ -571,6 +562,20 @@
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING PARKINGPLACE_1_DOOR_OPEN">
+					<Animation
+						AnimationName="GBAirDoor_OPNS"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Animation
+						AnimationName="GBAirDoor_D3AN"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="PARKINGPLACE_4_DOOR_OPENING">
 					<Animation
 						AnimationName="GBAirDoor_OPN"
@@ -595,20 +600,6 @@
 					ConditionsYes="PARKINGPLACE_4_DOOR_CLOSED">
 					<Animation
 						AnimationName="GBAirDoor_CLSS"
-						AnimationMode="ONCE" />
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING PARKINGPLACE_1_DOOR_OPEN USER_10">
-					<Animation
-						AnimationName="GBAirDoor_OPNS"
-						AnimationMode="ONCE" />
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING USER_10">
-					<Animation
-						AnimationName="GBAirDoor_D3AN"
 						AnimationMode="ONCE" />
 				</AnimationState>
 			</ScriptedModelDraw>
@@ -678,7 +669,7 @@
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING USER_10"
+					ConditionsYes="DYING"
 					Flags="DO_NOT_PLAY_WHEN_UNPOWERED">
 					<Animation
 						AnimationName="GBAirRadarD"
@@ -809,22 +800,11 @@
 			</ParkingPlaceBehavior>
 			<SlowDeath
 				id="ModuleTag_Death"
-				SinkDelay="0.05s"
-				SinkRate="1000"
-				DestructionDelay="8.0s">
-				<DieMuxData
-					ExemptStatus="RIDER4"
-					DeathTypes="ALL" />
-			</SlowDeath>
-			<!-- normal slow death if structure is destroyed while unpacking, RIDER4 is set while structure has STRUCTURE_UNPACKING model state -->
-			<SlowDeath
-				id="ModuleTag_DeathUnpacking"
 				SinkDelay="3.0s"
 				SinkRate="4.0"
 				DestructionDelay="8.0s">
 				<Sound Type="INITIAL" List="HumanFaction_MediumBuilding_DieMS" />
 				<DieMuxData
-					RequiredStatus="RIDER4"
 					DeathTypes="ALL" />
 			</SlowDeath>
 			<FXListBehavior
@@ -967,20 +947,6 @@
 				id="ModuleTag_CreateOccupiedSuicide"
 				CreationList="OCL_GenericZOCOMBuildingSuicide" >
 				<DieMuxData DeathTypes="SUICIDED" />
-			</CreateObjectDie>
-
-			<!-- dont create a destroyed building if object is destroyed while unpacking, instead disable geometry. -->
-			<CreateObjectDie
-				id="ModuleTag_CreatedDestroyedBuilding"
-				CreationList="OCL_GDIDestroyedAirTower">
-				<DieMuxData
-					ExemptStatus="RIDER4"
-					RequiredStatus=""
-					DamageAmountRequired="-1"
-					MinKillerAngle="0.9999999d"
-					MaxKillerAngle="-0.9999999d"
-					DeathTypes="ALL"
-					DeathTypesForbidden="" />
 			</CreateObjectDie>
 
       <StancesBehavior

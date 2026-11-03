@@ -100,15 +100,9 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING USER_10">
-					<Model
-						Name="W3DContainer:NB_SiloD3_SN" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="DYING">
 					<Model
-						Name="W3DContainer:NB_SiloD2_SN" />
+						Name="W3DContainer:NB_SiloD3_SN" />
 				</ModelConditionState>
 				<!-- BUILDUP ANIMATION -->
 				<AnimationState
@@ -131,21 +125,6 @@
 						AnimationName="NB_SiloD2_AN"
 						AnimationMode="MANUAL" />
 				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING USER_10"
-					StateName="STATE_Dying">
-					<Animation
-						AnimationName="NB_SiloD3_AN"
-						AnimationMode="ONCE" />
-					<ParticleSysBone
-						BoneName="NONE"
-						FXParticleSystemTemplate="Des_Small"
-						FollowBone="false" />
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE" />
 				<!-- REALLY DAMAGED ANIMATION -->
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
@@ -160,6 +139,18 @@
 					</Script>
 				</AnimationState>
 				<!-- DYING ANIMATION -->
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING"
+					StateName="STATE_Dying">
+					<Animation
+						AnimationName="NB_SiloD3_AN"
+						AnimationMode="ONCE" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="Des_Small"
+						FollowBone="false" />
+				</AnimationState>
 				<!-- Transitions -->
 				<AnimationState
 					ParseCondStateType="PARSE_TRANSITION"
@@ -268,38 +259,13 @@
 					DeathTypes="ALL"
 					DeathTypesForbidden="SUICIDED" />
 			</CreateObjectDie>
-
-			<!-- dont create a destroyed building if object is destroyed while unpacking, instead disable geometry. -->
-			<CreateObjectDie
-				id="ModuleTag_CreatedDestroyedBuilding"
-				CreationList="OCL_NODDestroyedTiberiumSilo">
-				<DieMuxData
-					ExemptStatus="RIDER4"
-					RequiredStatus=""
-					DamageAmountRequired="-1"
-					MinKillerAngle="0.9999999d"
-					MaxKillerAngle="-0.9999999d"
-					DeathTypes="ALL"
-					DeathTypesForbidden="" />
-			</CreateObjectDie>
 			<SlowDeath
 				id="ModuleTag_Death"
-				SinkDelay="0.05s"
-				SinkRate="1000"
-				DestructionDelay="8.0s">
-				<DieMuxData
-					ExemptStatus="RIDER4"
-					DeathTypes="ALL" />
-			</SlowDeath>
-			<!-- normal slow death if structure is destroyed while unpacking, RIDER4 is set while structure has STRUCTURE_UNPACKING model state -->
-			<SlowDeath
-				id="ModuleTag_DeathUnpacking"
 				SinkDelay="3.0s"
 				SinkRate="4.0"
 				DestructionDelay="8.0s">
 				<Sound Type="INITIAL" List="HumanFaction_SmallBuilding_DieMS" />
 				<DieMuxData
-					RequiredStatus="RIDER4"
 					DeathTypes="ALL" />
 			</SlowDeath>
 			<FXListBehavior
@@ -385,7 +351,6 @@
 		<AI>
 			<AIUpdate
 				id="ModuleTag_AI"
-				AILuaEventsList="StructureUnpackingFunctions"
 				AutoAcquireEnemiesWhenIdle="NO"></AIUpdate>
 		</AI>
 		<Body>

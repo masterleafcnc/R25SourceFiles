@@ -57,15 +57,9 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE USER_10">
-					<Model
-						Name="W3DContainer:GBWarFacD3_SN" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="RUBBLE">
 					<Model
-						Name="W3DContainer:GBWarFacD2_SN" />
+						Name="W3DContainer:GBWarFacD3_SN" />
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
@@ -100,7 +94,7 @@
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE USER_10"
+					ConditionsYes="RUBBLE"
 					StateName="STATE_Rubble"
 					Flags="START_FRAME_LAST">
 					<Animation
@@ -117,9 +111,6 @@
 						FXParticleSystemTemplate="Des_Large"
 						FollowBone="false" />
 				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE" />
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="REALLYDAMAGED"
@@ -237,7 +228,7 @@
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING USER_10">
+					ConditionsYes="DYING">
 					<Animation
 						AnimationName="GBWarFacXD3_AN"
 						AnimationMode="ONCE" />
@@ -296,10 +287,10 @@
 					<Animation
 						AnimationName="GBWarDoor_CLS"
 						AnimationMode="ONCE" />
-				</AnimationState>				
+				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING USER_10">
+					ConditionsYes="DYING">
 					<Animation
 						AnimationName="GBWarDoor_OPN"
 						AnimationMode="ONCE" />
@@ -446,22 +437,11 @@
 			</SpawnBehavior>
 			<SlowDeath
 				id="ModuleTag_Death"
-				SinkDelay="0.05s"
-				SinkRate="1000"
-				DestructionDelay="8s">
-				<DieMuxData
-					ExemptStatus="RIDER4"
-					DeathTypes="ALL" />
-			</SlowDeath>
-			<!-- normal slow death if structure is destroyed while unpacking, RIDER4 is set while structure has STRUCTURE_UNPACKING model state -->
-			<SlowDeath
-				id="ModuleTag_DeathUnpacking"
 				SinkDelay="3.0s"
 				SinkRate="4.0"
 				DestructionDelay="8.0s">
 				<Sound Type="INITIAL" List="HumanFaction_MediumBuilding_DieMS" />
 				<DieMuxData
-					RequiredStatus="RIDER4"
 					DeathTypes="ALL" />
 			</SlowDeath>
 			<FXListBehavior
@@ -563,20 +543,6 @@
 				CreationList="OCL_GenericZOCOMBuildingSuicide" >
 				<DieMuxData DeathTypes="SUICIDED" />
 			</CreateObjectDie>
-
-			<!-- dont create a destroyed building if object is destroyed while unpacking, instead disable geometry. -->
-			<CreateObjectDie
-				id="ModuleTag_CreatedDestroyedBuilding"
-				CreationList="OCL_GDIDestroyedWarFactory">
-				<DieMuxData
-					ExemptStatus="RIDER4"
-					RequiredStatus=""
-					DamageAmountRequired="-1"
-					MinKillerAngle="0.9999999d"
-					MaxKillerAngle="-0.9999999d"
-					DeathTypes="ALL"
-					DeathTypesForbidden="" />
-			</CreateObjectDie>
 			<StancesBehavior
 				id="ModuleTag_Stance"
 				StanceTemplate="Generic" />
@@ -584,7 +550,6 @@
 		<AI>
 			<AIUpdate
 				id="ModuleTag_AIUpdate"
-				AILuaEventsList="StructureUnpackingFunctions"
 				AutoAcquireEnemiesWhenIdle="NO" />
 		</AI>
 		<Body>

@@ -170,22 +170,12 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE USER_10"
-					PortraitImage=""
-					ButtonImage=""
-					RetainSubObjects="False">
-					<Model
-						Name="W3DContainer:GBCOMPOSTD3_SN2"
-						ExtraMesh="False" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="RUBBLE"
 					PortraitImage=""
 					ButtonImage=""
 					RetainSubObjects="False">
 					<Model
-						Name="W3DContainer:GBCOMPOSTD2_SN2"
+						Name="W3DContainer:GBCOMPOSTD3_SN2"
 						ExtraMesh="False" />
 				</ModelConditionState>
 				<ModelConditionState
@@ -285,7 +275,7 @@
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE USER_10"
+					ConditionsYes="RUBBLE"
 					StateName="STATE_Rubble"
 					Flags="START_FRAME_LAST"
 					EnteringStateFX=""
@@ -322,9 +312,6 @@
 						OnlyIfOnWater="False"
 						OnlyIfOnLand="False" />
 				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE" />
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="REALLYDAMAGED"
@@ -606,6 +593,14 @@
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING"
+					EnteringStateFX=""
+					FrameForPristineBonePositions="0"
+					ShareAnimation="False"
+					AllowRepeatInRandomPick="False"
+					SimilarRestart="False" />
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="DAMAGED"
 					StateName="STATE_Damaged"
 					Flags="MAINTAIN_FRAME_ACROSS_STATES DO_NOT_PLAY_WHEN_UNPOWERED"
@@ -656,14 +651,6 @@
 						UseWeaponTiming="False"
 						FadingIn="False" />
 				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING USER_10"
-					EnteringStateFX=""
-					FrameForPristineBonePositions="0"
-					ShareAnimation="False"
-					AllowRepeatInRandomPick="False"
-					SimilarRestart="False" />
 			</ScriptedModelDraw>
 			<ScriptedModelDraw
 				id="CD182A15"
@@ -881,10 +868,10 @@
 				NightWindowObject="LIGHT_01" /> -->
 			<SlowDeath
 				id="73542D4A"
-				SinkRate="1000"
+				SinkRate="4"
 				ProbabilityModifier="10"
 				ModifierBonusPerOverkillPercent="0%"
-				SinkDelay="0.05s"
+				SinkDelay="3s"
 				SinkDelayVariance="0s"
 				DestructionDelay="8s"
 				DestructionDelayVariance="0s"
@@ -900,25 +887,17 @@
 				DeathObjectStatusBits=""
 				ShadowWhenDead="False"
 				Fade="False">
+				<Sound
+					Type="INITIAL"
+					List="HumanFaction_MediumBuilding_DieMS" />
 				<DieMuxData
-					ExemptStatus="RIDER4"
+					ExemptStatus=""
 					RequiredStatus=""
 					DamageAmountRequired="-1"
 					MinKillerAngle="1d"
 					MaxKillerAngle="-1d"
 					DeathTypes="ALL"
 					DeathTypesForbidden="" />
-			</SlowDeath>
-			<!-- normal slow death if structure is destroyed while unpacking, RIDER4 is set while structure has STRUCTURE_UNPACKING model state -->
-			<SlowDeath
-				id="ModuleTag_DeathUnpacking"
-				SinkDelay="3s"
-				SinkRate="4"
-				DestructionDelay="8s">
-				<Sound Type="INITIAL" List="HumanFaction_MediumBuilding_DieMS" />
-				<DieMuxData
-					RequiredStatus="RIDER4"
-					DeathTypes="ALL" />
 			</SlowDeath>
 			<FXListBehavior
 				id="C74C39D8">
@@ -1160,20 +1139,6 @@
 					MinKillerAngle="1d"
 					MaxKillerAngle="-1d"
 					DeathTypes="SUICIDED"
-					DeathTypesForbidden="" />
-			</CreateObjectDie>
-
-			<!-- dont create a destroyed building if object is destroyed while unpacking, instead disable geometry. -->
-			<CreateObjectDie
-				id="ModuleTag_CreatedDestroyedBuilding"
-				CreationList="OCL_SteelTalonsDestroyedCommandPost">
-				<DieMuxData
-					ExemptStatus="RIDER4"
-					RequiredStatus=""
-					DamageAmountRequired="-1"
-					MinKillerAngle="0.9999999d"
-					MaxKillerAngle="-0.9999999d"
-					DeathTypes="ALL"
 					DeathTypesForbidden="" />
 			</CreateObjectDie>
 			<ProductionUpdate

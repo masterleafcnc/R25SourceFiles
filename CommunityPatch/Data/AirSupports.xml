@@ -273,21 +273,6 @@
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					Name=""
-					ConditionsYes="DYING USER_10"
-					Skeleton=""
-					ModelAnimationPrefix=""
-					PortraitImage=""
-					ButtonImage=""
-					OverrideTooltip=""
-					id=""
-					RetainSubObjects="False">
-					<Model
-						Name="W3DContainer:NBAIRSPPRT_D3SKN"
-						ExtraMesh="False" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					Name=""
 					ConditionsYes="DYING"
 					Skeleton=""
 					ModelAnimationPrefix=""
@@ -297,7 +282,7 @@
 					id=""
 					RetainSubObjects="False">
 					<Model
-						Name="W3DContainer:NBAIRSPPRT_D2SKN"
+						Name="W3DContainer:NBAIRSPPRT_D3SKN"
 						ExtraMesh="False" />
 				</ModelConditionState>
 				<AnimationState
@@ -355,7 +340,7 @@
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					AnimNickName=""
-					ConditionsYes="RUBBLE USER_10"
+					ConditionsYes="RUBBLE"
 					Name=""
 					StateName="STATE_Rubble"
 					Flags="START_FRAME_LAST"
@@ -398,9 +383,6 @@
 						OnlyIfOnWater="False"
 						OnlyIfOnLand="False" />
 				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE" />
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					AnimNickName=""
@@ -759,10 +741,10 @@
 			</ParkingPlaceBehavior>
 			<SlowDeath
 				id="73542D4A"
-				SinkRate="1000"
+				SinkRate="4"
 				ProbabilityModifier="10"
 				ModifierBonusPerOverkillPercent="0%"
-				SinkDelay="0.05s"
+				SinkDelay="1.5s"
 				SinkDelayVariance="0s"
 				DestructionDelay="8s"
 				DestructionDelayVariance="0s"
@@ -778,25 +760,17 @@
 				DeathObjectStatusBits=""
 				ShadowWhenDead="False"
 				Fade="False">
+				<Sound
+					Type="INITIAL"
+					List="HumanFaction_MediumBuilding_DieMS" />
 				<DieMuxData
-					ExemptStatus="RIDER4"
+					ExemptStatus=""
 					RequiredStatus=""
 					DamageAmountRequired="-1"
 					MinKillerAngle="0.9999999d"
 					MaxKillerAngle="-0.9999999d"
 					DeathTypes="ALL"
 					DeathTypesForbidden="" />
-			</SlowDeath>
-			<!-- normal slow death if structure is destroyed while unpacking, RIDER4 is set while structure has STRUCTURE_UNPACKING model state -->
-			<SlowDeath
-				id="ModuleTag_DeathUnpacking"
-				SinkDelay="1.5s"
-				SinkRate="4"
-				DestructionDelay="8s">
-				<Sound Type="INITIAL" List="HumanFaction_MediumBuilding_DieMS" />
-				<DieMuxData
-					RequiredStatus="RIDER4"
-					DeathTypes="ALL" />
 			</SlowDeath>
 			<FXListBehavior
 				id="C74C39D8">
@@ -921,26 +895,7 @@
 				CreationList="OCL_GenericMarkedOfKaneBuildingSuicide" >
 				<DieMuxData DeathTypes="SUICIDED" />
 			</CreateObjectDie>
-			<!-- dont create a destroyed building if object is destroyed while unpacking, instead disable geometry. -->
-			<CreateObjectDie
-				id="ModuleTag_CreatedDestroyedBuilding"
-				CreationList="OCL_NODDestroyedAirSupport">
-				<DieMuxData
-					ExemptStatus="RIDER4"
-					RequiredStatus=""
-					DamageAmountRequired="-1"
-					MinKillerAngle="0.9999999d"
-					MaxKillerAngle="-0.9999999d"
-					DeathTypes="ALL"
-					DeathTypesForbidden="" />
-			</CreateObjectDie>
 		</Behaviors>
-		<AI>
-			<AIUpdate
-				id="ModuleTag_AIForLua"
-				AutoAcquireEnemiesWhenIdle="NO"
-				AILuaEventsList="StructureUnpackingFunctions" />
-		</AI>
 		<Body>
 			<ActiveBody
 				id="B313F576"
@@ -1404,21 +1359,6 @@
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					Name=""
-					ConditionsYes="DYING USER_10"
-					Skeleton=""
-					ModelAnimationPrefix=""
-					PortraitImage=""
-					ButtonImage=""
-					OverrideTooltip=""
-					id=""
-					RetainSubObjects="False">
-					<Model
-						Name="W3DContainer:NBAIRSPPRT_D3SKN"
-						ExtraMesh="False" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					Name=""
 					ConditionsYes="DYING"
 					Skeleton=""
 					ModelAnimationPrefix=""
@@ -1428,7 +1368,7 @@
 					id=""
 					RetainSubObjects="False">
 					<Model
-						Name="W3DContainer:NBAIRSPPRT_D2SKN"
+						Name="W3DContainer:NBAIRSPPRT_D3SKN"
 						ExtraMesh="False" />
 				</ModelConditionState>
 				<AnimationState
@@ -1486,7 +1426,7 @@
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					AnimNickName=""
-					ConditionsYes="RUBBLE USER_10"
+					ConditionsYes="RUBBLE"
 					Name=""
 					StateName="STATE_Rubble"
 					Flags="START_FRAME_LAST"
@@ -1529,9 +1469,6 @@
 						OnlyIfOnWater="False"
 						OnlyIfOnLand="False" />
 				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE" />
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					AnimNickName=""
@@ -1890,10 +1827,10 @@
 			</ParkingPlaceBehavior>
 			<SlowDeath
 				id="73542D4A"
-				SinkRate="1000"
+				SinkRate="4"
 				ProbabilityModifier="10"
 				ModifierBonusPerOverkillPercent="0%"
-				SinkDelay="0.05s"
+				SinkDelay="1.5s"
 				SinkDelayVariance="0s"
 				DestructionDelay="8s"
 				DestructionDelayVariance="0s"
@@ -1909,25 +1846,17 @@
 				DeathObjectStatusBits=""
 				ShadowWhenDead="False"
 				Fade="False">
+				<Sound
+					Type="INITIAL"
+					List="HumanFaction_MediumBuilding_DieMS" />
 				<DieMuxData
-					ExemptStatus="RIDER4"
+					ExemptStatus=""
 					RequiredStatus=""
 					DamageAmountRequired="-1"
 					MinKillerAngle="0.9999999d"
 					MaxKillerAngle="-0.9999999d"
 					DeathTypes="ALL"
 					DeathTypesForbidden="" />
-			</SlowDeath>
-			<!-- normal slow death if structure is destroyed while unpacking, RIDER4 is set while structure has STRUCTURE_UNPACKING model state -->
-			<SlowDeath
-				id="ModuleTag_DeathUnpacking"
-				SinkDelay="1.5s"
-				SinkRate="4"
-				DestructionDelay="8s">
-				<Sound Type="INITIAL" List="HumanFaction_MediumBuilding_DieMS" />
-				<DieMuxData
-					RequiredStatus="RIDER4"
-					DeathTypes="ALL" />
 			</SlowDeath>
 			<FXListBehavior
 				id="C74C39D8">
@@ -2063,26 +1992,7 @@
 					DeathTypes="SUICIDED"
 					DeathTypesForbidden="" />
 			</CreateObjectDie>
-			<!-- dont create a destroyed building if object is destroyed while unpacking, instead disable geometry. -->
-			<CreateObjectDie
-				id="ModuleTag_CreatedDestroyedBuilding"
-				CreationList="OCL_NODDestroyedAirSupport">
-				<DieMuxData
-					ExemptStatus="RIDER4"
-					RequiredStatus=""
-					DamageAmountRequired="-1"
-					MinKillerAngle="0.9999999d"
-					MaxKillerAngle="-0.9999999d"
-					DeathTypes="ALL"
-					DeathTypesForbidden="" />
-			</CreateObjectDie>
 		</Behaviors>
-		<AI>
-			<AIUpdate
-				id="ModuleTag_AIForLua"
-				AutoAcquireEnemiesWhenIdle="NO"
-				AILuaEventsList="StructureUnpackingFunctions" />
-		</AI>
 		<Body>
 			<ActiveBody
 				id="B313F576"
@@ -2547,21 +2457,6 @@
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					Name=""
-					ConditionsYes="DYING USER_10"
-					Skeleton=""
-					ModelAnimationPrefix=""
-					PortraitImage=""
-					ButtonImage=""
-					OverrideTooltip=""
-					id=""
-					RetainSubObjects="False">
-					<Model
-						Name="W3DContainer:GBAIRSUPPRTD3_SKN"
-						ExtraMesh="False" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					Name=""
 					ConditionsYes="DYING"
 					Skeleton=""
 					ModelAnimationPrefix=""
@@ -2571,7 +2466,7 @@
 					id=""
 					RetainSubObjects="False">
 					<Model
-						Name="W3DContainer:GBAIRSUPPRTD2_SKN2"
+						Name="W3DContainer:GBAIRSUPPRTD3_SKN"
 						ExtraMesh="False" />
 				</ModelConditionState>
 				<AnimationState
@@ -2656,7 +2551,7 @@
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					AnimNickName=""
-					ConditionsYes="RUBBLE USER_10"
+					ConditionsYes="RUBBLE"
 					Name=""
 					StateName="STATE_Rubble"
 					Flags="START_FRAME_LAST"
@@ -2699,9 +2594,6 @@
 						OnlyIfOnWater="False"
 						OnlyIfOnLand="False" />
 				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE" />
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					AnimNickName=""
@@ -3141,10 +3033,10 @@
 			</ParkingPlaceBehavior>
 			<SlowDeath
 				id="73542D4A"
-				SinkRate="1000"
+				SinkRate="4"
 				ProbabilityModifier="10"
 				ModifierBonusPerOverkillPercent="0%"
-				SinkDelay="0.05s"
+				SinkDelay="1.8s"
 				SinkDelayVariance="0s"
 				DestructionDelay="8s"
 				DestructionDelayVariance="0s"
@@ -3160,25 +3052,17 @@
 				DeathObjectStatusBits=""
 				ShadowWhenDead="False"
 				Fade="False">
+				<Sound
+					Type="INITIAL"
+					List="HumanFaction_MediumBuilding_DieMS" />
 				<DieMuxData
-					ExemptStatus="RIDER4"
+					ExemptStatus=""
 					RequiredStatus=""
 					DamageAmountRequired="-1"
 					MinKillerAngle="0.9999999d"
 					MaxKillerAngle="-0.9999999d"
 					DeathTypes="ALL"
 					DeathTypesForbidden="" />
-			</SlowDeath>
-			<!-- normal slow death if structure is destroyed while unpacking, RIDER4 is set while structure has STRUCTURE_UNPACKING model state -->
-			<SlowDeath
-				id="ModuleTag_DeathUnpacking"
-				SinkDelay="1.8s"
-				SinkRate="4"
-				DestructionDelay="8s">
-				<Sound Type="INITIAL" List="HumanFaction_MediumBuilding_DieMS" />
-				<DieMuxData
-					RequiredStatus="RIDER4"
-					DeathTypes="ALL" />
 			</SlowDeath>
 			<FXListBehavior
 				id="C74C39D8">
@@ -3303,26 +3187,7 @@
 				CreationList="OCL_GenericGDIBuildingSuicide1" >
 				<DieMuxData DeathTypes="SUICIDED" />
 			</CreateObjectDie>
-			<!-- dont create a destroyed building if object is destroyed while unpacking, instead disable geometry. -->
-			<CreateObjectDie
-				id="ModuleTag_CreatedDestroyedBuilding"
-				CreationList="OCL_GDIDestroyedAirSupport">
-				<DieMuxData
-					ExemptStatus="RIDER4"
-					RequiredStatus=""
-					DamageAmountRequired="-1"
-					MinKillerAngle="0.9999999d"
-					MaxKillerAngle="-0.9999999d"
-					DeathTypes="ALL"
-					DeathTypesForbidden="" />
-			</CreateObjectDie>
 		</Behaviors>
-		<AI>
-			<AIUpdate
-				id="ModuleTag_AIForLua"
-				AutoAcquireEnemiesWhenIdle="NO"
-				AILuaEventsList="StructureUnpackingFunctions" />
-		</AI>
 		<Body>
 			<ActiveBody
 				id="B313F576"
@@ -3818,21 +3683,6 @@
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					Name=""
-					ConditionsYes="DYING USER_10"
-					Skeleton=""
-					ModelAnimationPrefix=""
-					PortraitImage=""
-					ButtonImage=""
-					OverrideTooltip=""
-					id=""
-					RetainSubObjects="False">
-					<Model
-						Name="W3DContainer:GBAIRSUPPRTD3_SKN"
-						ExtraMesh="False" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					Name=""
 					ConditionsYes="DYING"
 					Skeleton=""
 					ModelAnimationPrefix=""
@@ -3842,7 +3692,7 @@
 					id=""
 					RetainSubObjects="False">
 					<Model
-						Name="W3DContainer:GBAIRSUPPRTD2_SKN2"
+						Name="W3DContainer:GBAIRSUPPRTD3_SKN"
 						ExtraMesh="False" />
 				</ModelConditionState>
 				<AnimationState
@@ -3927,7 +3777,7 @@
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					AnimNickName=""
-					ConditionsYes="RUBBLE USER_10"
+					ConditionsYes="RUBBLE"
 					Name=""
 					StateName="STATE_Rubble"
 					Flags="START_FRAME_LAST"
@@ -3970,9 +3820,6 @@
 						OnlyIfOnWater="False"
 						OnlyIfOnLand="False" />
 				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE" />
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					AnimNickName=""
@@ -4412,10 +4259,10 @@
 			</ParkingPlaceBehavior>
 			<SlowDeath
 				id="73542D4A"
-				SinkRate="1000"
+				SinkRate="4"
 				ProbabilityModifier="10"
 				ModifierBonusPerOverkillPercent="0%"
-				SinkDelay="0.05s"
+				SinkDelay="1.8s"
 				SinkDelayVariance="0s"
 				DestructionDelay="8s"
 				DestructionDelayVariance="0s"
@@ -4431,25 +4278,17 @@
 				DeathObjectStatusBits=""
 				ShadowWhenDead="False"
 				Fade="False">
+				<Sound
+					Type="INITIAL"
+					List="HumanFaction_MediumBuilding_DieMS" />
 				<DieMuxData
-					ExemptStatus="RIDER4"
+					ExemptStatus=""
 					RequiredStatus=""
 					DamageAmountRequired="-1"
 					MinKillerAngle="0.9999999d"
 					MaxKillerAngle="-0.9999999d"
 					DeathTypes="ALL"
 					DeathTypesForbidden="" />
-			</SlowDeath>
-			<!-- normal slow death if structure is destroyed while unpacking, RIDER4 is set while structure has STRUCTURE_UNPACKING model state -->
-			<SlowDeath
-				id="ModuleTag_DeathUnpacking"
-				SinkDelay="1.8s"
-				SinkRate="4"
-				DestructionDelay="8s">
-				<Sound Type="INITIAL" List="HumanFaction_MediumBuilding_DieMS" />
-				<DieMuxData
-					RequiredStatus="RIDER4"
-					DeathTypes="ALL" />
 			</SlowDeath>
 			<FXListBehavior
 				id="C74C39D8">
@@ -4574,26 +4413,7 @@
 				CreationList="OCL_GenericZOCOMBuildingSuicide1" >
 				<DieMuxData DeathTypes="SUICIDED" />
 			</CreateObjectDie>
-			<!-- dont create a destroyed building if object is destroyed while unpacking, instead disable geometry. -->
-			<CreateObjectDie
-				id="ModuleTag_CreatedDestroyedBuilding"
-				CreationList="OCL_GDIDestroyedAirSupport">
-				<DieMuxData
-					ExemptStatus="RIDER4"
-					RequiredStatus=""
-					DamageAmountRequired="-1"
-					MinKillerAngle="0.9999999d"
-					MaxKillerAngle="-0.9999999d"
-					DeathTypes="ALL"
-					DeathTypesForbidden="" />
-			</CreateObjectDie>
 		</Behaviors>
-		<AI>
-			<AIUpdate
-				id="ModuleTag_AIForLua"
-				AutoAcquireEnemiesWhenIdle="NO"
-				AILuaEventsList="StructureUnpackingFunctions" />
-		</AI>
 		<Body>
 			<ActiveBody
 				id="B313F576"
@@ -5088,21 +4908,6 @@
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					Name=""
-					ConditionsYes="DYING USER_10"
-					Skeleton=""
-					ModelAnimationPrefix=""
-					PortraitImage=""
-					ButtonImage=""
-					OverrideTooltip=""
-					id=""
-					RetainSubObjects="False">
-					<Model
-						Name="W3DContainer:GBAIRSUPPRTD3_SKN"
-						ExtraMesh="False" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					Name=""
 					ConditionsYes="DYING"
 					Skeleton=""
 					ModelAnimationPrefix=""
@@ -5112,7 +4917,7 @@
 					id=""
 					RetainSubObjects="False">
 					<Model
-						Name="W3DContainer:GBAIRSUPPRTD2_SKN2"
+						Name="W3DContainer:GBAIRSUPPRTD3_SKN"
 						ExtraMesh="False" />
 				</ModelConditionState>
 				<AnimationState
@@ -5197,7 +5002,7 @@
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					AnimNickName=""
-					ConditionsYes="RUBBLE USER_10"
+					ConditionsYes="RUBBLE"
 					Name=""
 					StateName="STATE_Rubble"
 					Flags="START_FRAME_LAST"
@@ -5240,9 +5045,6 @@
 						OnlyIfOnWater="False"
 						OnlyIfOnLand="False" />
 				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE" />
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					AnimNickName=""
@@ -5682,10 +5484,10 @@
 			</ParkingPlaceBehavior>
 			<SlowDeath
 				id="73542D4A"
-				SinkRate="1000"
+				SinkRate="4"
 				ProbabilityModifier="10"
 				ModifierBonusPerOverkillPercent="0%"
-				SinkDelay="0.05s"
+				SinkDelay="1.8s"
 				SinkDelayVariance="0s"
 				DestructionDelay="8s"
 				DestructionDelayVariance="0s"
@@ -5701,25 +5503,17 @@
 				DeathObjectStatusBits=""
 				ShadowWhenDead="False"
 				Fade="False">
+				<Sound
+					Type="INITIAL"
+					List="HumanFaction_MediumBuilding_DieMS" />
 				<DieMuxData
-					ExemptStatus="RIDER4"
+					ExemptStatus=""
 					RequiredStatus=""
 					DamageAmountRequired="-1"
 					MinKillerAngle="0.9999999d"
 					MaxKillerAngle="-0.9999999d"
 					DeathTypes="ALL"
 					DeathTypesForbidden="" />
-			</SlowDeath>
-			<!-- normal slow death if structure is destroyed while unpacking, RIDER4 is set while structure has STRUCTURE_UNPACKING model state -->
-			<SlowDeath
-				id="ModuleTag_DeathUnpacking"
-				SinkDelay="1.8s"
-				SinkRate="4"
-				DestructionDelay="8s">
-				<Sound Type="INITIAL" List="HumanFaction_MediumBuilding_DieMS" />
-				<DieMuxData
-					RequiredStatus="RIDER4"
-					DeathTypes="ALL" />
 			</SlowDeath>
 			<FXListBehavior
 				id="C74C39D8">
@@ -5844,26 +5638,7 @@
 				CreationList="OCL_GenericSteelTalonsBuildingSuicide1" >
 				<DieMuxData DeathTypes="SUICIDED" />
 			</CreateObjectDie>
-			<!-- dont create a destroyed building if object is destroyed while unpacking, instead disable geometry. -->
-			<CreateObjectDie
-				id="ModuleTag_CreatedDestroyedBuilding"
-				CreationList="OCL_GDIDestroyedAirSupport">
-				<DieMuxData
-					ExemptStatus="RIDER4"
-					RequiredStatus=""
-					DamageAmountRequired="-1"
-					MinKillerAngle="0.9999999d"
-					MaxKillerAngle="-0.9999999d"
-					DeathTypes="ALL"
-					DeathTypesForbidden="" />
-			</CreateObjectDie>
 		</Behaviors>
-		<AI>
-			<AIUpdate
-				id="ModuleTag_AIForLua"
-				AutoAcquireEnemiesWhenIdle="NO"
-				AILuaEventsList="StructureUnpackingFunctions" />
-		</AI>
 		<Body>
 			<ActiveBody
 				id="B313F576"

@@ -38,18 +38,9 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE USER_10">
-					<Model
-						Name="W3DContainer:ABDronePlatD3SN" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="RUBBLE">
 					<Model
-						Name="W3DContainer:ABDronePlatD2SN" />
-					<Texture
-						Original="AUDronShip"
-						New="AUDronShip_D" />
+						Name="W3DContainer:ABDronePlatD3SN" />
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
@@ -123,7 +114,7 @@
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE USER_10"
+					ConditionsYes="RUBBLE"
 					StateName="STATE_Rubble"
 					Flags="START_FRAME_LAST">
 					<Animation
@@ -136,9 +127,6 @@
 						end
 					</Script>
 				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE" />
 				<!-- prevents the TRANS_IntoReallyDamaged playing when unpacking and really damaged -->
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
@@ -255,22 +243,11 @@
 			</ReplaceSelfUpgrade>
 			<SlowDeath
 				id="ModuleTag_Death"
-				SinkDelay="0.05s"
-				SinkRate="1000"
-				DestructionDelay="8s">
-				<DieMuxData
-					ExemptStatus="RIDER4"
-					DeathTypes="ALL" />
-			</SlowDeath>
-			<!-- normal slow death if structure is destroyed while unpacking, RIDER4 is set while structure has STRUCTURE_UNPACKING model state -->
-			<SlowDeath
-				id="ModuleTag_DeathUnpacking"
 				SinkDelay="3.0s"
 				SinkRate="4.0"
 				DestructionDelay="8.0s">
 				<Sound Type="INITIAL" List="ALI_Building_Die" />
 				<DieMuxData
-					RequiredStatus="RIDER4"
 					DeathTypes="ALL" />
 			</SlowDeath>
 			<ProductionUpdate
@@ -362,20 +339,6 @@
 				CreationList="OCL_ConyardAlienBuildingSuicide" >
 				<DieMuxData DeathTypes="SUICIDED" />
 			</CreateObjectDie>
-
-			<!-- dont create a destroyed building if object is destroyed while unpacking, instead disable geometry. -->
-			<CreateObjectDie
-				id="ModuleTag_CreatedDestroyedBuilding"
-				CreationList="OCL_AlienDestroyedDronePlatform">
-				<DieMuxData
-					ExemptStatus="RIDER4"
-					RequiredStatus=""
-					DamageAmountRequired="-1"
-					MinKillerAngle="0.9999999d"
-					MaxKillerAngle="-0.9999999d"
-					DeathTypes="ALL"
-					DeathTypesForbidden="" />
-			</CreateObjectDie>
 			<StructureUnpackUpdate
 				id="StructureUnpackUpdate"
 				UnpackTime="1.5s" />
@@ -388,7 +351,6 @@
 		<AI>
 			<AIUpdate
 				id="ModuleTag_AIUpdate"
-				AILuaEventsList="StructureUnpackingFunctions"
 				AutoAcquireEnemiesWhenIdle="NO" 
 			/>
 		</AI>

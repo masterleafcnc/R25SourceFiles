@@ -202,22 +202,12 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE USER_10"
-					PortraitImage=""
-					ButtonImage=""
-					RetainSubObjects="False">
-					<Model
-						Name="W3DContainer:GBTECHCEND3_SN"
-						ExtraMesh="False" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="RUBBLE"
 					PortraitImage=""
 					ButtonImage=""
 					RetainSubObjects="False">
 					<Model
-						Name="W3DContainer:GBTECHCEND2_SN"
+						Name="W3DContainer:GBTECHCEND3_SN"
 						ExtraMesh="False" />
 				</ModelConditionState>
 				<AnimationState
@@ -297,7 +287,7 @@
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE USER_10"
+					ConditionsYes="RUBBLE"
 					StateName="STATE_Rubble"
 					Flags="START_FRAME_LAST"
 					EnteringStateFX=""
@@ -334,9 +324,6 @@
 						OnlyIfOnWater="False"
 						OnlyIfOnLand="False" />
 				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE" />
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="REALLYDAMAGED"
@@ -619,10 +606,10 @@
 				NightWindowObject="LIGHT_01" />
 			<SlowDeath
 				id="73542D4A"
-				SinkRate="1000"
+				SinkRate="4"
 				ProbabilityModifier="10"
 				ModifierBonusPerOverkillPercent="0%"
-				SinkDelay="0.05s"
+				SinkDelay="3s"
 				SinkDelayVariance="0s"
 				DestructionDelay="8s"
 				DestructionDelayVariance="0s"
@@ -638,25 +625,17 @@
 				DeathObjectStatusBits=""
 				ShadowWhenDead="False"
 				Fade="False">
+				<Sound
+					Type="INITIAL"
+					List="HumanFaction_MediumBuilding_DieMS" />
 				<DieMuxData
-					ExemptStatus="RIDER4"
+					ExemptStatus=""
 					RequiredStatus=""
 					DamageAmountRequired="-1"
 					MinKillerAngle="1d"
 					MaxKillerAngle="-1d"
 					DeathTypes="ALL"
 					DeathTypesForbidden="" />
-			</SlowDeath>
-			<!-- normal slow death if structure is destroyed while unpacking, RIDER4 is set while structure has STRUCTURE_UNPACKING model state -->
-			<SlowDeath
-				id="ModuleTag_DeathUnpacking"
-				SinkDelay="3s"
-				SinkRate="4"
-				DestructionDelay="8s">
-				<Sound Type="INITIAL" List="HumanFaction_MediumBuilding_DieMS" />
-				<DieMuxData
-					RequiredStatus="RIDER4"
-					DeathTypes="ALL" />
 			</SlowDeath>
 			<SubObjectsUpgrade
 				id="E8889AED"
@@ -999,20 +978,6 @@
 					MinKillerAngle="1d"
 					MaxKillerAngle="-1d"
 					DeathTypes="SUICIDED"
-					DeathTypesForbidden="" />
-			</CreateObjectDie>
-
-			<!-- dont create a destroyed building if object is destroyed while unpacking, instead disable geometry. -->
-			<CreateObjectDie
-				id="ModuleTag_CreatedDestroyedBuilding"
-				CreationList="OCL_GDIDestroyedArmory">
-				<DieMuxData
-					ExemptStatus="RIDER4"
-					RequiredStatus=""
-					DamageAmountRequired="-1"
-					MinKillerAngle="0.9999999d"
-					MaxKillerAngle="-0.9999999d"
-					DeathTypes="ALL"
 					DeathTypesForbidden="" />
 			</CreateObjectDie>
 			<ModelConditionUpgrade

@@ -333,21 +333,6 @@
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					Name=""
-					ConditionsYes="DYING USER_10"
-					Skeleton=""
-					ModelAnimationPrefix=""
-					PortraitImage=""
-					ButtonImage=""
-					OverrideTooltip=""
-					id=""
-					RetainSubObjects="False">
-					<Model
-						Name="W3DContainer:NBCONYARDD3_SN"
-						ExtraMesh="False" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					Name=""
 					ConditionsYes="DYING"
 					Skeleton=""
 					ModelAnimationPrefix=""
@@ -357,7 +342,7 @@
 					id=""
 					RetainSubObjects="False">
 					<Model
-						Name="W3DContainer:NBCONYARDD2_SN"
+						Name="W3DContainer:NBCONYARDD3_SN"
 						ExtraMesh="False" />
 				</ModelConditionState>
 				<AnimationState
@@ -423,7 +408,43 @@
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					AnimNickName=""
-					ConditionsYes="DYING USER_10"
+					ConditionsYes="REALLYDAMAGED"
+					Name=""
+					StateName="STATE_ReallyDamaged"
+					Flags="START_FRAME_LAST"
+					EnteringStateFX=""
+					FrameForPristineBonePositions="0"
+					ShareAnimation="False"
+					AllowRepeatInRandomPick="False"
+					SimilarRestart="False">
+					<Animation
+						Flags=""
+						AnimationName="NBCONYARDD2_AN"
+						AnimationMode="MANUAL"
+						AnimNickName=""
+						Distance="0"
+						AnimationBlendTime="5"
+						AnimationSpeedFactorMin="1"
+						AnimationSpeedFactorMax="1"
+						WeaponTimingOrdering="PRIMARY_WEAPON"
+						WeaponTimingSlotID="1"
+						AnimationPriority="1"
+						FadeBeginFrame="-1"
+						FadeEndFrame="-1"
+						AnimationMustCompleteBlend="False"
+						UseWeaponTiming="False"
+						FadingIn="False" />
+					<Script>
+					Prev = CurDrawablePrevAnimationState();
+					if Prev ~= "STATE_ReallyDamaged" and Prev ~= "TRANS_DamagedToReallyDamaged" then
+						CurDrawableSetTransitionAnimState("TRANS_DamagedToReallyDamaged")
+					end
+				</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					AnimNickName=""
+					ConditionsYes="DYING"
 					Name=""
 					StateName=""
 					Flags=""
@@ -459,45 +480,6 @@
 						FollowBone="False"
 						OnlyIfOnWater="False"
 						OnlyIfOnLand="False" />
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE" />
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					AnimNickName=""
-					ConditionsYes="REALLYDAMAGED"
-					Name=""
-					StateName="STATE_ReallyDamaged"
-					Flags="START_FRAME_LAST"
-					EnteringStateFX=""
-					FrameForPristineBonePositions="0"
-					ShareAnimation="False"
-					AllowRepeatInRandomPick="False"
-					SimilarRestart="False">
-					<Animation
-						Flags=""
-						AnimationName="NBCONYARDD2_AN"
-						AnimationMode="MANUAL"
-						AnimNickName=""
-						Distance="0"
-						AnimationBlendTime="5"
-						AnimationSpeedFactorMin="1"
-						AnimationSpeedFactorMax="1"
-						WeaponTimingOrdering="PRIMARY_WEAPON"
-						WeaponTimingSlotID="1"
-						AnimationPriority="1"
-						FadeBeginFrame="-1"
-						FadeEndFrame="-1"
-						AnimationMustCompleteBlend="False"
-						UseWeaponTiming="False"
-						FadingIn="False" />
-					<Script>
-					Prev = CurDrawablePrevAnimationState();
-					if Prev ~= "STATE_ReallyDamaged" and Prev ~= "TRANS_DamagedToReallyDamaged" then
-						CurDrawableSetTransitionAnimState("TRANS_DamagedToReallyDamaged")
-					end
-				</Script>
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_TRANSITION"
@@ -963,10 +945,10 @@
 				id="A504956C" />
 			<SlowDeath
 				id="73542D4A"
-				SinkRate="1000"
+				SinkRate="4"
 				ProbabilityModifier="10"
 				ModifierBonusPerOverkillPercent="0%"
-				SinkDelay="0.05s"
+				SinkDelay="3s"
 				SinkDelayVariance="0s"
 				DestructionDelay="8s"
 				DestructionDelayVariance="0s"
@@ -982,25 +964,17 @@
 				DeathObjectStatusBits=""
 				ShadowWhenDead="False"
 				Fade="False">
+				<Sound
+					Type="INITIAL"
+					List="HumanFaction_MediumBuilding_DieMS" />
 				<DieMuxData
-					ExemptStatus="RIDER4"
+					ExemptStatus=""
 					RequiredStatus=""
 					DamageAmountRequired="-1"
 					MinKillerAngle="0.9999999d"
 					MaxKillerAngle="-0.9999999d"
 					DeathTypes="ALL"
 					DeathTypesForbidden="" />
-			</SlowDeath>
-			<!-- normal slow death if structure is destroyed while unpacking, RIDER4 is set while structure has STRUCTURE_UNPACKING model state -->
-			<SlowDeath
-				id="ModuleTag_DeathUnpacking"
-				SinkDelay="3s"
-				SinkRate="4"
-				DestructionDelay="8s">
-				<Sound Type="INITIAL" List="HumanFaction_MediumBuilding_DieMS" />
-				<DieMuxData
-					RequiredStatus="RIDER4"
-					DeathTypes="ALL" />
 			</SlowDeath>
 			<StructureUnpackUpdate
 				id="6B1345CC"
@@ -1337,20 +1311,6 @@
 					DeathTypes="SUICIDED"
 					DeathTypesForbidden="" />
 			</CreateObjectDie>
-
-			<!-- dont create a destroyed building if object is destroyed while unpacking, instead disable geometry. -->
-			<CreateObjectDie
-				id="ModuleTag_CreatedDestroyedBuilding"
-				CreationList="OCL_NODDestroyedConstructionYard">
-				<DieMuxData
-					ExemptStatus="RIDER4"
-					RequiredStatus=""
-					DamageAmountRequired="-1"
-					MinKillerAngle="0.9999999d"
-					MaxKillerAngle="-0.9999999d"
-					DeathTypes="ALL"
-					DeathTypesForbidden="" />
-			</CreateObjectDie>
 		</Behaviors>
 		<AI>
 			<AIUpdate
@@ -1359,7 +1319,7 @@
 				AutoAcquireEnemiesWhenIdle="NO"
 				StopChaseDistance="500"
 				HoldGroundCloseRangeDistance="0"
-				AILuaEventsList="StructureUnpackingFunctions"
+				AILuaEventsList=""
 				MinCowerTime="0s"
 				MaxCowerTime="0s"
 				RampageTime="0s"

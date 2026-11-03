@@ -289,22 +289,12 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE USER_10"
-					PortraitImage=""
-					ButtonImage=""
-					RetainSubObjects="False">
-					<Model
-						Name="W3DContainer:ABTIBERTOW_D3SN"
-						ExtraMesh="False" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="RUBBLE"
 					PortraitImage=""
 					ButtonImage=""
 					RetainSubObjects="False">
 					<Model
-						Name="W3DContainer:ABTIBERTOW_D2SN"
+						Name="W3DContainer:ABTIBERTOW_D3SN"
 						ExtraMesh="False" />
 				</ModelConditionState>
 				<ModelConditionState
@@ -380,7 +370,7 @@
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE USER_10"
+					ConditionsYes="RUBBLE"
 					StateName="STATE_Rubble"
 					Flags="START_FRAME_LAST"
 					EnteringStateFX=""
@@ -410,9 +400,6 @@
 						end
 					</Script>
 				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE" />
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="REALLYDAMAGED"
@@ -683,7 +670,7 @@
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DOCKING_ACTIVE"
+					ConditionsYes="DYING"
 					StateName="STATE_loading"
 					EnteringStateFX=""
 					FrameForPristineBonePositions="0"
@@ -691,7 +678,7 @@
 					AllowRepeatInRandomPick="False"
 					SimilarRestart="False">
 					<Animation
-						AnimationName="ABTIBERTOWX_LOA"
+						AnimationName="ABTIBERTOWX_D3"
 						AnimationMode="ONCE"
 						Distance="0"
 						AnimationBlendTime="5"
@@ -708,7 +695,7 @@
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING USER_10"
+					ConditionsYes="DOCKING_ACTIVE"
 					StateName="STATE_loading"
 					EnteringStateFX=""
 					FrameForPristineBonePositions="0"
@@ -716,7 +703,7 @@
 					AllowRepeatInRandomPick="False"
 					SimilarRestart="False">
 					<Animation
-						AnimationName="ABTIBERTOWX_D3"
+						AnimationName="ABTIBERTOWX_LOA"
 						AnimationMode="ONCE"
 						Distance="0"
 						AnimationBlendTime="5"
@@ -839,10 +826,10 @@
 			</CreateObjectDie>
 			<SlowDeath
 				id="73542D4A"
-				SinkRate="1000"
+				SinkRate="4"
 				ProbabilityModifier="10"
 				ModifierBonusPerOverkillPercent="0%"
-				SinkDelay="0.05s"
+				SinkDelay="3s"
 				SinkDelayVariance="0s"
 				DestructionDelay="8s"
 				DestructionDelayVariance="0s"
@@ -858,25 +845,17 @@
 				DeathObjectStatusBits=""
 				ShadowWhenDead="False"
 				Fade="False">
+				<Sound
+					Type="INITIAL"
+					List="ALI_Building_Die" />
 				<DieMuxData
-					ExemptStatus="RIDER4"
+					ExemptStatus=""
 					RequiredStatus=""
 					DamageAmountRequired="-1"
 					MinKillerAngle="0.9999999d"
 					MaxKillerAngle="-0.9999999d"
 					DeathTypes="ALL"
 					DeathTypesForbidden="" />
-			</SlowDeath>
-			<!-- normal slow death if structure is destroyed while unpacking, RIDER4 is set while structure has STRUCTURE_UNPACKING model state -->
-			<SlowDeath
-				id="ModuleTag_DeathUnpacking"
-				SinkDelay="3s"
-				SinkRate="4"
-				DestructionDelay="8s">
-				<Sound Type="INITIAL" List="ALI_Building_Die" />
-				<DieMuxData
-					RequiredStatus="RIDER4"
-					DeathTypes="ALL" />
 			</SlowDeath>
 			<QueueProductionExitUpdate
 				id="01734524"
@@ -991,20 +970,6 @@
 					MinKillerAngle="0.9999999d"
 					MaxKillerAngle="-0.9999999d"
 					DeathTypes="SUICIDED"
-					DeathTypesForbidden="" />
-			</CreateObjectDie>
-
-			<!-- dont create a destroyed building if object is destroyed while unpacking, instead disable geometry. -->
-			<CreateObjectDie
-				id="ModuleTag_CreatedDestroyedBuilding"
-				CreationList="OCL_AlienDestroyedRefinery">
-				<DieMuxData
-					ExemptStatus="RIDER4"
-					RequiredStatus=""
-					DamageAmountRequired="-1"
-					MinKillerAngle="0.9999999d"
-					MaxKillerAngle="-0.9999999d"
-					DeathTypes="ALL"
 					DeathTypesForbidden="" />
 			</CreateObjectDie>
 			<StructureUnpackUpdate
@@ -1147,12 +1112,6 @@
 				<SpawnTemplate>Reaper17Harvester</SpawnTemplate>
 			</SpawnBehavior>
 		</Behaviors>
-		<AI>
-			<AIUpdate
-				id="ModuleTag_AIForLua"
-				AutoAcquireEnemiesWhenIdle="NO"
-				AILuaEventsList="StructureUnpackingFunctions" />
-		</AI>
 		<Body>
 			<ActiveBody
 				id="B313F576"

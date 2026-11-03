@@ -50,15 +50,9 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE USER_10">
-					<Model
-						Name="W3DContainer:ABWarpBD3_SN" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="RUBBLE">
 					<Model
-						Name="W3DContainer:ABWarpBD2_SN" />
+						Name="W3DContainer:ABWarpBD3_SN" />
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
@@ -88,7 +82,7 @@
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE USER_10"
+					ConditionsYes="RUBBLE"
 					StateName="STATE_Rubble"
 					Flags="START_FRAME_LAST">
 					<Animation
@@ -101,9 +95,6 @@
 						end
 					</Script>
 				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE" />
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="REALLYDAMAGED"
@@ -160,6 +151,20 @@
 						UseHouseColor="true"
 						Texture="AUDronShipDecalIdle" />
 				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE">
+					<Model
+						Name="W3DContainer:ABPortal_FXDie" />
+					<ShadowInfo
+						Type="ADDITIVE_DECAL"
+						SizeX="120"
+						SizeY="120"
+						OverrideLODVisibility="true"
+						MaxHeight="200"
+						UseHouseColor="true"
+						Texture="AUDronShipDecalIdle" />						
+				</ModelConditionState>
 				<!--Underpowered or EMP'd.  No particle effects.-->
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
@@ -172,20 +177,6 @@
 					ConditionsYes="AFFECTED_BY_EMP">
 					<Model
 						Name="W3DContainer:ABPortal_FX" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE USER_10">
-					<Model
-						Name="W3DContainer:ABPortal_FXDie" />
-					<ShadowInfo
-						Type="ADDITIVE_DECAL"
-						SizeX="120"
-						SizeY="120"
-						OverrideLODVisibility="true"
-						MaxHeight="200"
-						UseHouseColor="true"
-						Texture="AUDronShipDecalIdle" />						
 				</ModelConditionState>
 				<AnimationState
 					ParseCondStateType="PARSE_DEFAULT">
@@ -240,7 +231,7 @@
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE USER_10"
+					ConditionsYes="RUBBLE"
 					StateName="STATE_Rubble">
 					<!-- no anim -->
 					<Script>
@@ -347,6 +338,29 @@
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE"
+					StateName="STATE_Rubble"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="ABWarpBP_D3AN"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble" and Prev ~= "TRANS_IntoRubble" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoRubble">
+					<Animation
+						AnimationName="ABWarpBP_D3AN"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="PARKINGPLACE_1_DOOR_OPENING">
 					<Animation
 						AnimationName="ABWarpBP_OPN"
@@ -374,29 +388,6 @@
 					<Animation
 						AnimationName="ABWarpBP_CLS"
 						AnimationMode="ONCE" />
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE USER_10"
-					StateName="STATE_Rubble"
-					Flags="START_FRAME_LAST">
-					<Animation
-						AnimationName="ABWarpBP_D3AN"
-						AnimationMode="MANUAL" />
-					<Script>
-						Prev = CurDrawablePrevAnimationState();
-						if Prev ~= "STATE_Rubble" and Prev ~= "TRANS_IntoRubble" then
-						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
-						end
-					</Script>
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_TRANSITION"
-					StateName="TRANS_IntoRubble">
-					<Animation
-						AnimationName="ABWarpBP_D3AN"
-						AnimationMode="ONCE"
-						AnimationBlendTime="0" />
 				</AnimationState>
 			</ScriptedModelDraw>
 			<!-- DRAW DOOR02 -->
@@ -458,6 +449,29 @@
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE"
+					StateName="STATE_Rubble"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="ABWarpBP_D3AN"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble" and Prev ~= "TRANS_IntoRubble" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoRubble">
+					<Animation
+						AnimationName="ABWarpBP_D3AN"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="PARKINGPLACE_2_DOOR_OPENING">
 					<Animation
 						AnimationName="ABWarpBP_OPN"
@@ -485,29 +499,6 @@
 					<Animation
 						AnimationName="ABWarpBP_CLS"
 						AnimationMode="ONCE" />
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE USER_10"
-					StateName="STATE_Rubble"
-					Flags="START_FRAME_LAST">
-					<Animation
-						AnimationName="ABWarpBP_D3AN"
-						AnimationMode="MANUAL" />
-					<Script>
-						Prev = CurDrawablePrevAnimationState();
-						if Prev ~= "STATE_Rubble" and Prev ~= "TRANS_IntoRubble" then
-						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
-						end
-					</Script>
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_TRANSITION"
-					StateName="TRANS_IntoRubble">
-					<Animation
-						AnimationName="ABWarpBP_D3AN"
-						AnimationMode="ONCE"
-						AnimationBlendTime="0" />
 				</AnimationState>
 			</ScriptedModelDraw>
 			<!-- DRAW DOOR03 -->
@@ -569,6 +560,29 @@
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE"
+					StateName="STATE_Rubble"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="ABWarpBP_D3AN"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble" and Prev ~= "TRANS_IntoRubble" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoRubble">
+					<Animation
+						AnimationName="ABWarpBP_D3AN"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="PARKINGPLACE_3_DOOR_OPENING">
 					<Animation
 						AnimationName="ABWarpBP_OPN"
@@ -596,29 +610,6 @@
 					<Animation
 						AnimationName="ABWarpBP_CLS"
 						AnimationMode="ONCE" />
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE USER_10"
-					StateName="STATE_Rubble"
-					Flags="START_FRAME_LAST">
-					<Animation
-						AnimationName="ABWarpBP_D3AN"
-						AnimationMode="MANUAL" />
-					<Script>
-						Prev = CurDrawablePrevAnimationState();
-						if Prev ~= "STATE_Rubble" and Prev ~= "TRANS_IntoRubble" then
-						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
-						end
-					</Script>
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_TRANSITION"
-					StateName="TRANS_IntoRubble">
-					<Animation
-						AnimationName="ABWarpBP_D3AN"
-						AnimationMode="ONCE"
-						AnimationBlendTime="0" />
 				</AnimationState>
 			</ScriptedModelDraw>
 			<!-- DRAW DOOR04 -->
@@ -680,6 +671,29 @@
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="RUBBLE"
+					StateName="STATE_Rubble"
+					Flags="START_FRAME_LAST">
+					<Animation
+						AnimationName="ABWarpBP_D3AN"
+						AnimationMode="MANUAL" />
+					<Script>
+						Prev = CurDrawablePrevAnimationState();
+						if Prev ~= "STATE_Rubble" and Prev ~= "TRANS_IntoRubble" then
+						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
+						end
+					</Script>
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_TRANSITION"
+					StateName="TRANS_IntoRubble">
+					<Animation
+						AnimationName="ABWarpBP_D3AN"
+						AnimationMode="ONCE"
+						AnimationBlendTime="0" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="PARKINGPLACE_4_DOOR_OPENING">
 					<Animation
 						AnimationName="ABWarpBP_OPN"
@@ -707,29 +721,6 @@
 					<Animation
 						AnimationName="ABWarpBP_CLS"
 						AnimationMode="ONCE" />
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE USER_10"
-					StateName="STATE_Rubble"
-					Flags="START_FRAME_LAST">
-					<Animation
-						AnimationName="ABWarpBP_D3AN"
-						AnimationMode="MANUAL" />
-					<Script>
-						Prev = CurDrawablePrevAnimationState();
-						if Prev ~= "STATE_Rubble" and Prev ~= "TRANS_IntoRubble" then
-						CurDrawableSetTransitionAnimState("TRANS_IntoRubble")
-						end
-					</Script>
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_TRANSITION"
-					StateName="TRANS_IntoRubble">
-					<Animation
-						AnimationName="ABWarpBP_D3AN"
-						AnimationMode="ONCE"
-						AnimationBlendTime="0" />
 				</AnimationState>
 			</ScriptedModelDraw>
 			<ScriptedModelDraw
@@ -840,22 +831,11 @@
 				UnpackTime="2.0s" />
 			<SlowDeath
 				id="ModuleTag_Death"
-				SinkDelay="0.05s"
-				SinkRate="1000"
-				DestructionDelay="8s">
-				<DieMuxData
-					ExemptStatus="RIDER4"
-					DeathTypes="ALL" />
-			</SlowDeath>
-			<!-- normal slow death if structure is destroyed while unpacking, RIDER4 is set while structure has STRUCTURE_UNPACKING model state -->
-			<SlowDeath
-				id="ModuleTag_DeathUnpacking"
 				SinkDelay="4.0s"
 				SinkRate="4.0"
 				DestructionDelay="8.0s">
 				<Sound Type="INITIAL" List="ALI_Building_Die" />
 				<DieMuxData
-					RequiredStatus="RIDER4"
 					DeathTypes="ALL" />
 			</SlowDeath>
 			<RepairUpdate 
@@ -926,20 +906,6 @@
 				<DieMuxData DeathTypes="SUICIDED" />
 			</CreateObjectDie>
 
-			<!-- dont create a destroyed building if object is destroyed while unpacking, instead disable geometry. -->
-			<CreateObjectDie
-				id="ModuleTag_CreatedDestroyedBuilding"
-				CreationList="OCL_AlienDestroyedWarpBeacon">
-				<DieMuxData
-					ExemptStatus="RIDER4"
-					RequiredStatus=""
-					DamageAmountRequired="-1"
-					MinKillerAngle="0.9999999d"
-					MaxKillerAngle="-0.9999999d"
-					DeathTypes="ALL"
-					DeathTypesForbidden="" />
-			</CreateObjectDie>
-
       <StancesBehavior
 				id="ModuleTag_Stance"
 				StanceTemplate="Generic" />
@@ -949,7 +915,6 @@
 			<!-- needed for special powers -->
 			<AIUpdate
 				id="ModuleTag_AIUpdate"
-				AILuaEventsList="StructureUnpackingFunctions"
 				AutoAcquireEnemiesWhenIdle="NO" />
 		</AI>
 		<Body>

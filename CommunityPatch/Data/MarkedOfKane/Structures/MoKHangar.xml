@@ -66,15 +66,9 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING USER_10">
-					<Model
-						Name="W3DContainer:NBHangarD3_SN" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="DYING">
 					<Model
-						Name="W3DContainer:NBHangarD2_SN" />
+						Name="W3DContainer:NBHangarD3_SN" />
 				</ModelConditionState>
 				<AnimationState
 					ParseCondStateType="PARSE_DEFAULT"></AnimationState>
@@ -109,20 +103,6 @@
 						AnimationName="NBHangarD2_AN"
 						AnimationMode="MANUAL" />
 				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING USER_10">
-					<Animation
-						AnimationName="NBHangarD3_AN"
-						AnimationMode="ONCE" />
-					<ParticleSysBone
-						BoneName="NONE"
-						FXParticleSystemTemplate="Des_Medium"
-						FollowBone="false" />
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE" />
 				<!-- REALLY DAMAGED ANIMATION -->
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
@@ -140,6 +120,17 @@
 					</Script>
 				</AnimationState>
 				<!-- DYING ANIMATION -->
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Animation
+						AnimationName="NBHangarD3_AN"
+						AnimationMode="ONCE" />
+					<ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="Des_Medium"
+						FollowBone="false" />
+				</AnimationState>
 				<!-- Transitions -->
 				<AnimationState
 					ParseCondStateType="PARSE_TRANSITION"
@@ -209,6 +200,14 @@
 				<!-- DYING ANIMATION -->
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Animation
+						AnimationName="NBHangDoor_D3"
+						AnimationMode="ONCE"
+						AnimationBlendTime="30" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="PARKINGPLACE_1_DOOR_OPENING">
 					<Animation
 						AnimationName="NBHangDoor_OPN"
@@ -236,14 +235,6 @@
 					<Animation
 						AnimationName="NBHangDoor_CLS"
 						AnimationMode="MANUAL" />
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING USER_10">
-					<Animation
-						AnimationName="NBHangDoor_D3"
-						AnimationMode="ONCE"
-						AnimationBlendTime="30" />
 				</AnimationState>
 			</ScriptedModelDraw>
 			<!-- DRAW DOOR02 -->
@@ -306,6 +297,14 @@
 				<!-- DYING ANIMATION -->
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Animation
+						AnimationName="NBHangDoor_D3"
+						AnimationMode="ONCE"
+						AnimationBlendTime="30" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="PARKINGPLACE_2_DOOR_OPENING">
 					<Animation
 						AnimationName="NBHangDoor_OPN"
@@ -333,14 +332,6 @@
 					<Animation
 						AnimationName="NBHangDoor_CLS"
 						AnimationMode="MANUAL" />
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING USER_10">
-					<Animation
-						AnimationName="NBHangDoor_D3"
-						AnimationMode="ONCE"
-						AnimationBlendTime="30" />
 				</AnimationState>
 			</ScriptedModelDraw>
 			<!-- DRAW DOOR03 -->
@@ -403,6 +394,14 @@
 				<!-- DYING ANIMATION -->
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Animation
+						AnimationName="NBHangDoor_D3"
+						AnimationMode="ONCE"
+						AnimationBlendTime="30" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="PARKINGPLACE_3_DOOR_OPENING">
 					<Animation
 						AnimationName="NBHangDoor_OPN"
@@ -430,14 +429,6 @@
 					<Animation
 						AnimationName="NBHangDoor_CLS"
 						AnimationMode="MANUAL" />
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING USER_10">
-					<Animation
-						AnimationName="NBHangDoor_D3"
-						AnimationMode="ONCE"
-						AnimationBlendTime="30" />
 				</AnimationState>
 			</ScriptedModelDraw>
 			<!-- DRAW DOOR04 -->
@@ -484,6 +475,14 @@
 				</ModelConditionState>
 				<!-- DYING ANIMATION -->
 				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Animation
+						AnimationName="NBHangDoor_D3"
+						AnimationMode="ONCE"
+						AnimationBlendTime="30" />
+				</AnimationState>
+				<AnimationState
 					ParseCondStateType="PARSE_DEFAULT"
 					Flags="START_FRAME_LAST">
 					<Animation
@@ -527,14 +526,6 @@
 					<Animation
 						AnimationName="NBHangDoor_CLS"
 						AnimationMode="MANUAL" />
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING USER_10">
-					<Animation
-						AnimationName="NBHangDoor_D3"
-						AnimationMode="ONCE"
-						AnimationBlendTime="30" />
 				</AnimationState>
 			</ScriptedModelDraw>
 			<ScriptedModelDraw
@@ -664,22 +655,11 @@
 			
 			<SlowDeath
 				id="ModuleTag_Death"
-				SinkDelay="0.05s"
-				SinkRate="1000"
-				DestructionDelay="8.0s">
-				<DieMuxData
-					ExemptStatus="RIDER4"
-					DeathTypes="ALL" />
-			</SlowDeath>
-			<!-- normal slow death if structure is destroyed while unpacking, RIDER4 is set while structure has STRUCTURE_UNPACKING model state -->
-			<SlowDeath
-				id="ModuleTag_DeathUnpacking"
 				SinkDelay="2.0s"
 				SinkRate="3.0"
 				DestructionDelay="8.0s">
 				<Sound Type="INITIAL" List="HumanFaction_MediumBuilding_DieMS" />
 				<DieMuxData
-					RequiredStatus="RIDER4"
 					DeathTypes="ALL" />
 			</SlowDeath>
 			<FXListBehavior
@@ -795,20 +775,6 @@
 				id="ModuleTag_CreateOccupiedSuicide"
 				CreationList="OCL_GenericMarkedOfKaneBuildingSuicide" >
 				<DieMuxData DeathTypes="SUICIDED" />
-			</CreateObjectDie>
-
-			<!-- dont create a destroyed building if object is destroyed while unpacking, instead disable geometry. -->
-			<CreateObjectDie
-				id="ModuleTag_CreatedDestroyedBuilding"
-				CreationList="OCL_NODDestroyedHangar">
-				<DieMuxData
-					ExemptStatus="RIDER4"
-					RequiredStatus=""
-					DamageAmountRequired="-1"
-					MinKillerAngle="0.9999999d"
-					MaxKillerAngle="-0.9999999d"
-					DeathTypes="ALL"
-					DeathTypesForbidden="" />
 			</CreateObjectDie>
 
       <StancesBehavior

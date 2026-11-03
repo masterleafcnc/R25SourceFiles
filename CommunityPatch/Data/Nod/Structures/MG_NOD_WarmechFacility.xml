@@ -70,15 +70,9 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING USER_10">
-					<Model
-						Name="W3DContainer:NBEngFaD3_SKN" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="DYING">
 					<Model
-						Name="W3DContainer:NBEngFaD2Base_SKN" />
+						Name="W3DContainer:NBEngFaD3_SKN" />
 				</ModelConditionState>
 
 				<AnimationState
@@ -103,7 +97,15 @@
 	
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING USER_10">
+					ConditionsYes="REALLYDAMAGED">
+					<Animation
+						AnimationName="NBEngFaD2Base_AAN"
+						AnimationMode="ONCE" />
+				</AnimationState>
+
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
 					<Animation
 						AnimationName="NBEngFaD3_AAN"
 						AnimationMode="ONCE" />
@@ -112,17 +114,6 @@
 						FXParticleSystemTemplate="Des_Large"
 						FollowBone="false" />
 				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE" />
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="REALLYDAMAGED">
-					<Animation
-						AnimationName="NBEngFaD2Base_AAN"
-						AnimationMode="ONCE" />
-				</AnimationState>
-
 			</ScriptedModelDraw>
 
 
@@ -1309,22 +1300,11 @@
 			</QueueProductionExitUpdate>
 			<SlowDeath
 				id="ModuleTag_Death"
-				SinkDelay="0.05s"
-				SinkRate="1000"
-				DestructionDelay="8s">
-				<DieMuxData
-					ExemptStatus="RIDER4"
-					DeathTypes="ALL" />
-			</SlowDeath>
-			<!-- normal slow death if structure is destroyed while unpacking, RIDER4 is set while structure has STRUCTURE_UNPACKING model state -->
-			<SlowDeath
-				id="ModuleTag_DeathUnpacking"
 				SinkDelay="3.0s"
 				SinkRate="4.0"
 				DestructionDelay="8.0s">
 				<Sound Type="INITIAL" List="HumanFaction_LargeBuilding_DieMS" />
 				<DieMuxData
-					RequiredStatus="RIDER4"
 					DeathTypes="ALL" />
 			</SlowDeath>
 			<FXListBehavior
@@ -1436,20 +1416,6 @@
 				id="ModuleTag_CreateOccupiedSuicide"
 				CreationList="OCL_AdvancedNODBuildingSuicide" >
 				<DieMuxData DeathTypes="SUICIDED" />
-			</CreateObjectDie>
-
-			<!-- dont create a destroyed building if object is destroyed while unpacking, instead disable geometry. -->
-			<CreateObjectDie
-				id="ModuleTag_CreatedDestroyedBuilding"
-				CreationList="OCL_NODDestroyedWarmechFacility">
-				<DieMuxData
-					ExemptStatus="RIDER4"
-					RequiredStatus=""
-					DamageAmountRequired="-1"
-					MinKillerAngle="0.9999999d"
-					MaxKillerAngle="-0.9999999d"
-					DeathTypes="ALL"
-					DeathTypesForbidden="" />
 			</CreateObjectDie>
 			<StancesBehavior
 				id="ModuleTag_Stance"

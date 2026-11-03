@@ -54,15 +54,9 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE USER_10">
-					<Model
-						Name="W3DContainer:GBSpcCmnd_D3SN" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="RUBBLE">
 					<Model
-						Name="W3DContainer:GBSpcCmnd_D2SN" />
+						Name="W3DContainer:GBSpcCmnd_D3SN" />
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
@@ -113,7 +107,7 @@
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE USER_10"
+					ConditionsYes="RUBBLE"
 					StateName="STATE_Rubble"
 					Flags="START_FRAME_LAST">
 					<Animation
@@ -130,9 +124,6 @@
 						FXParticleSystemTemplate="Des_Medium"
 						FollowBone="false" />
 				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="RUBBLE" />
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="REALLYDAMAGED"
@@ -183,6 +174,18 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING SPECIALPOWER1_READY">
+					<Model
+						Name="W3DContainer:GBSpcCmndX_RDY_D3" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Model
+						Name="W3DContainer:GBSpcCmndX_D3" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="SPECIALPOWER1_READY">
 					<Model
 						Name="W3DContainer:GBSpcCmndX_SKN" />
@@ -198,18 +201,6 @@
 						BoneName="FXBone03"
 						FXParticleSystemTemplate="BuildingSteam"
 						FollowBone="true" />						
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING SPECIALPOWER1_READY USER_10">
-					<Model
-						Name="W3DContainer:GBSpcCmndX_RDY_D3" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING USER_10">
-					<Model
-						Name="W3DContainer:GBSpcCmndX_D3" />
 				</ModelConditionState>
 				<!-- ANIMATIONS -->
 				<AnimationState
@@ -235,6 +226,20 @@
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING SPECIALPOWER1_READY">
+					<Animation
+						AnimationName="GBSpcCmndX_RDY_D3"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Animation
+						AnimationName="GBSpcCmndX_D3"
+						AnimationMode="ONCE" />
+				</AnimationState>
+				<AnimationState
+					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="SPECIALPOWER1_READY"
 					StateName="STATE_Ready">
 					<Animation
@@ -249,20 +254,6 @@
 						AnimationName="GBSpcCmndX_IDLA"
 						AnimationMode="ONCE"
 						AnimationBlendTime="0" />
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING SPECIALPOWER1_READY USER_10">
-					<Animation
-						AnimationName="GBSpcCmndX_RDY_D3"
-						AnimationMode="ONCE" />
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING USER_10">
-					<Animation
-						AnimationName="GBSpcCmndX_D3"
-						AnimationMode="ONCE" />
 				</AnimationState>
 				<AnimationState
 					ParseCondStateType="PARSE_TRANSITION"
@@ -347,22 +338,11 @@
 		
 			<SlowDeath
 				id="ModuleTag_Death"
-				SinkDelay="0.05s"
-				SinkRate="1000"
-				DestructionDelay="8.0s">
-				<DieMuxData
-					ExemptStatus="RIDER4"
-					DeathTypes="ALL" />
-			</SlowDeath>
-			<!-- normal slow death if structure is destroyed while unpacking, RIDER4 is set while structure has STRUCTURE_UNPACKING model state -->
-			<SlowDeath
-				id="ModuleTag_DeathUnpacking"
 				SinkDelay="3.0s"
 				SinkRate="4.0"
 				DestructionDelay="8.0s">
 				<Sound Type="INITIAL" List="HumanFaction_MediumBuilding_DieMS" />
 				<DieMuxData
-					RequiredStatus="RIDER4"
 					DeathTypes="ALL" />
 			</SlowDeath>
 			<FXListBehavior
@@ -404,7 +384,7 @@
 				SpecialPowerAIType="SPECIAL_POWER_ENEMY_TYPE_KILLER_STRUCTURES"
 				SpecialPowerRadius="99999"
 				ReinforceDistance="1500"
-				UnitKindOf="UNIQUE_UNIT METAUNIT"
+				UnitKindOf="VEHICLE"
 				EnemyUnitExclude="AIRCRAFT CIVILIAN_BUILDING HUSK"
 				RandomizeTargetLocation="False" />
 			
@@ -529,26 +509,12 @@
 				<DieMuxData DeathTypes="SUICIDED" />
 			</CreateObjectDie>
 
-			<!-- dont create a destroyed building if object is destroyed while unpacking, instead disable geometry. -->
-			<CreateObjectDie
-				id="ModuleTag_CreatedDestroyedBuilding"
-				CreationList="OCL_GDIDestroyedSpaceCommandUplink">
-				<DieMuxData
-					ExemptStatus="RIDER4"
-					RequiredStatus=""
-					DamageAmountRequired="-1"
-					MinKillerAngle="0.9999999d"
-					MaxKillerAngle="-0.9999999d"
-					DeathTypes="ALL"
-					DeathTypesForbidden="" />
-			</CreateObjectDie>
-
 		</Behaviors>
 		<AI>
 			<AIUpdate
 				id="ModuleTag_AIUpdate"
 				AutoAcquireEnemiesWhenIdle="NO" 
-				AILuaEventsList="GDISpaceCommandUplinkFunctions"
+				AILuaEventsList="BuildingPowerFunctions"
 			/>
 		</AI>
 		<Body>
