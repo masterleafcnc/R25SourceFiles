@@ -920,6 +920,12 @@
 				<TriggeredBy>Upgrade_Traveler59FusionCore</TriggeredBy>
 			</SubObjectsUpgrade>
 		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AIForLua"
+				AutoAcquireEnemiesWhenIdle="NO"
+				AILuaEventsList="StructureGeometryFunctions" />
+		</AI>
 		<Body>
 			<ActiveBody
 				id="B313F576"

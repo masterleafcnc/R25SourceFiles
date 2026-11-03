@@ -507,6 +507,12 @@
 			<StructureUnpackUpdate
 				UnpackTime="1.5s" />
 		</Behaviors>
+		<AI>
+			<AIUpdate
+				id="ModuleTag_AIForLua"
+				AutoAcquireEnemiesWhenIdle="NO"
+				AILuaEventsList="StructureGeometryFunctions" />
+		</AI>
 		<Body>
 			<ActiveBody
 				id="C026F3D9"

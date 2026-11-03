@@ -4209,32 +4209,7 @@ end
 
 -- ############################# R25 Disable Building Geometry Fix ###################################
 
--- R25j Structure placement functions
-function StructureIsUnpacking(self)
-	local objId = getObjectId(self)
-	objectReferences[objId] = objectReferences[objId] or SetObjectReference(self)
-	local stringRef = objectReferences[objId]
-
-	--print("structure is unpacking")
-	-- sets RIDER4 status to true
-	if stringRef and not EvaluateCondition("UNIT_HAS_OBJECT_STATUS", stringRef, 44) then
-		ExecuteAction("UNIT_CHANGE_OBJECT_STATUS", stringRef, 44, 1)
-	end
-end
-
-function StructureIsUnpackingEnd(self)
-	local objId = getObjectId(self)
-	objectReferences[objId] = objectReferences[objId] or SetObjectReference(self)
-	local stringRef = objectReferences[objId]
-
-	--print("structure is unpacking end")
-	-- sets RIDER4 status to false
-	if stringRef and EvaluateCondition("UNIT_HAS_OBJECT_STATUS", stringRef, 44) then
-		ExecuteAction("UNIT_CHANGE_OBJECT_STATUS", stringRef, 44, 0)
-	end
-end
-
-
+-- Number of named collision shapes on each structure template.
 StructureGeometryTable = {
 	-- Combat support airfields
 	["75F7ECE5"] = 2, -- MarkedOfKaneAirSupport
@@ -4395,48 +4370,15 @@ StructureGeometryTable = {
 	["3E52427A"] = 1, -- Traveler59DronePlatform
 }
 
--- -RIDER4, check if the structure is destroyed and if it is disable its geometry by name 
+-- Disable every named shape on destruction, including during unpacking.
 function DisableGeometryOnDeath(self)
-	local objId = getObjectId(self)
-	-- shared event lists also reach objects that are not in the table, skip those
+	if self == nil then return end
+
 	local numOfGeometry = StructureGeometryTable[getObjectName(self)]
-	-- do object check and reference a table to disable geometries 
 	if numOfGeometry then
-		objectReferences[objId] = objectReferences[objId] or SetObjectReference(self)
-		local stringRef = objectReferences[objId]
-		if stringRef and EvaluateCondition("UNIT_HAS_OBJECT_STATUS", stringRef, 44) then
-			-- apply model state to begin the rubble animation
-			ExecuteAction("UNIT_SET_MODELCONDITION_FOR_DURATION", self, "USER_10", 9999, 100)
-			for i = 1, numOfGeometry, 1 do
-				if self ~= nil then
-					ObjectSetGeometryActive(self, tostring("Geom_" .. i), false)
-				end
-			end
-			--print("structure geometry disabled.")
+		for i = 1, numOfGeometry do
+			ObjectSetGeometryActive(self, "Geom_" .. i, false)
 		end
-	end
-	-- clear after death processing, even when geometry changes are skipped
-	objectReferences[objId] = nil
-end
-
-function ShockwaveArtilleryGrantUpgrade(self)
-	local objId = getObjectId(self)
-	objectReferences[objId] = objectReferences[objId] or SetObjectReference(self)
-	local stringRef = objectReferences[objId]
-
-	--print("shockwave missile ready to fire")
-	if stringRef and not EvaluateCondition("UNIT_HAS_UPGRADE", stringRef, "Upgrade_ShockwaveReady") then
-		ObjectGrantUpgrade(self, "Upgrade_ShockwaveReady")
-	end
-end
-
-function ShockwaveArtilleryRemoveUpgrade(self)
-	local objId = getObjectId(self)
-	objectReferences[objId] = objectReferences[objId] or SetObjectReference(self)
-	local stringRef = objectReferences[objId]
-
-	if stringRef and EvaluateCondition("UNIT_HAS_UPGRADE", stringRef, "Upgrade_ShockwaveReady") then
-		ObjectRemoveUpgrade(self, "Upgrade_ShockwaveReady")
 	end
 end
 

@@ -304,12 +304,6 @@
 				<DieMuxData
 					DeathTypes="ALL" />
 			</SlowDeath>
-
-			<ModelConditionUpgrade
-				id="ModuleTag_ModelConditionUpgrade_ShockwaveMissile"
-				AddConditionFlags="USER_1">
-				<TriggeredBy>Upgrade_ShockwaveReady</TriggeredBy>
-			</ModelConditionUpgrade>
 		</Behaviors>
 		<AI>
 			<AIUpdate

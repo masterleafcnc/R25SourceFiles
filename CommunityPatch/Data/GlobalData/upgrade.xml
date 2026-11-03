@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="us-ascii"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
-	<UpgradeTemplate id="Upgrade_ShockwaveReady"
-		Type="OBJECT"
-	/>
-
 	<UpgradeTemplate id="Upgrade_InGarrison"
 		Type="OBJECT"
 	/>
