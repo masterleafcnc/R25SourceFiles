@@ -90,12 +90,6 @@
 -->
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING USER_5">
-					<Model
-						Name="" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="DAMAGED USER_5">
 					<Model
 						Name="W3DContainer:NUVenom_SKN" />
@@ -142,6 +136,27 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING USER_5">
+					<Model
+						Name="W3DContainer:NUVenomR_SKN" />
+					<Texture
+						Original="NuVenomD"
+						New="NuVenomD_K" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
 					RetainSubObjects="true"
 					ConditionsYes="USER_5">
 					<Model
@@ -149,12 +164,6 @@
 					<Texture
 						Original="NUVenom"
 						New="NuVenom_K" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING">
-					<Model
-						Name="" />
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
@@ -197,6 +206,24 @@
 					<ParticleSysBone
 						BoneName="Bone_Engine_L"
 						FXParticleSystemTemplate="VenomDamagedSmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Model
+						Name="W3DContainer:NUVenomR_SKN" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
 						FollowBone="true" />
 				</ModelConditionState>
 				<AnimationState
@@ -268,10 +295,6 @@
 						AnimationName="NUVenom_MOV"
 						AnimationMode="LOOP"
 						AnimationBlendTime="15" />
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING">
 				</AnimationState>
 			</TruckDraw>
 			<SpotlightDraw
@@ -629,9 +652,9 @@
 				LaserId="1" />
 			<SlowDeath
 				id="ModuleTag_Death"
-				SinkDelay="5s"
+				SinkDelay="0s"
 				SinkRate="0.5"
-				DestructionDelay="5s">
+				DestructionDelay="0.01s">
 				<OCL
 					Type="INITIAL">
 					<OCL>OCL_NODVenomInitialDebris</OCL>

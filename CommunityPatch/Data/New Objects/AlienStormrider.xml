@@ -163,12 +163,6 @@
 
                 <ModelConditionState
                     ParseCondStateType="PARSE_NORMAL"
-                    ConditionsYes="DYING">
-                    <Model
-                        Name="" />
-                </ModelConditionState>
-                <ModelConditionState
-                    ParseCondStateType="PARSE_NORMAL"
                     ConditionsYes="DAMAGED">
                     <Model
                         Name="W3DContainer:AUSRIDER_SKN" />
@@ -197,6 +191,12 @@
                         BoneName="FX_Flame_03"
                         FXParticleSystemTemplate="AlienFlyingDamageFireGlow02"
                         FollowBone="true" />
+                </ModelConditionState>
+                <ModelConditionState
+                    ParseCondStateType="PARSE_NORMAL"
+                    ConditionsYes="DYING">
+                    <Model
+                        Name="W3DContainer:AUSRIDERR_SKN" />
                 </ModelConditionState>
                 <ModelConditionState
                     ParseCondStateType="PARSE_NORMAL"
@@ -295,10 +295,6 @@
                 </AnimationState>
                 <AnimationState
                     ParseCondStateType="PARSE_NORMAL"
-                    ConditionsYes="DYING">
-                </AnimationState>
-                <AnimationState
-                    ParseCondStateType="PARSE_NORMAL"
                     ConditionsYes="CLIMBING">
                     <Animation
                         AnimationName="AUSRider_FLYA"
@@ -331,12 +327,6 @@
                         BoneName="FX_Flame_01"
                         FXParticleSystemTemplate="AlienStormRiderContrail"
                         FollowBone="true" />
-                </ModelConditionState>
-                <ModelConditionState
-                    ParseCondStateType="PARSE_NORMAL"
-                    ConditionsYes="DYING">
-                    <Model
-                        Name="" />
                 </ModelConditionState>
             </ScriptedModelDraw>
             <ScriptedModelDraw
@@ -498,9 +488,9 @@
                 SpecialPowerTemplate="SpecialPowerReturnToProducer" />
             <SlowDeath
                 id="ModuleTag_Death"
-                SinkDelay="5s"
+                SinkDelay="0s"
                 SinkRate="0.5"
-                DestructionDelay="5s">
+                DestructionDelay="0s">
                 <OCL
                     Type="INITIAL">
                     <OCL>OCL_ALIENStormRiderDebris</OCL>

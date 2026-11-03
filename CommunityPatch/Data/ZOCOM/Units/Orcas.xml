@@ -139,12 +139,6 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING USER_6">
-					<Model
-						Name="" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="REALLYDAMAGED USER_6">
 					<Model
 						Name="W3DContainer:GUOrca_SKN" />
@@ -193,6 +187,36 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING USER_6">
+					<Model
+						Name="W3DContainer:GUOrcaR_SKN" />
+					<Texture
+						Original="GUOrca_07D"
+						New="GUOrca_UGCA" />
+					<Texture
+						Original="GUOrca_07_NRM"
+						New="GUOrca_UGCA_NRM" />
+					<Texture
+						Original="GUOrca_07_SPM"
+						New="GUOrca_UGCA_SPM" />
+					<Texture
+						Original="HC_GUOrca_07"
+						New="HC_GUOrca_UGCA" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="USER_6">
 					<Model
 						Name="W3DContainer:GUOrca_SKN" />
@@ -210,12 +234,6 @@
 						New="HC_GUOrca_UGCA" />
 				</ModelConditionState>
 				
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING">
-					<Model
-						Name="" />
-				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="REALLYDAMAGED">
@@ -241,6 +259,24 @@
 					<ParticleSysBone
 						BoneName="FX_Rfan"
 						FXParticleSystemTemplate="orcadamagesmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Model
+						Name="W3DContainer:GUOrcaR_SKN" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallFire"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallFireDistortion"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
 						FollowBone="true" />
 				</ModelConditionState>
 				<AnimationState
@@ -315,10 +351,6 @@
 						AnimationName="GUORCA_MOVA"
 						AnimationMode="LOOP"
 						AnimationBlendTime="15" />
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING">
 				</AnimationState>
 			</ScriptedModelDraw>
 			<ScriptedModelDraw
@@ -1393,9 +1425,9 @@
 				SinkRate="0.5"
 				ProbabilityModifier="10"
 				ModifierBonusPerOverkillPercent="0%"
-				SinkDelay="5s"
+				SinkDelay="0s"
 				SinkDelayVariance="0s"
-				DestructionDelay="5s"
+				DestructionDelay="0.01s"
 				DestructionDelayVariance="0s"
 				DecayBeginTime="0s"
 				FlingForce="0"

@@ -767,12 +767,6 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING">
-					<Model
-						Name="" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="DAMAGED"
 					PortraitImage=""
 					ButtonImage=""
@@ -1372,9 +1366,9 @@
 				SinkRate="0.5"
 				ProbabilityModifier="10"
 				ModifierBonusPerOverkillPercent="0%"
-				SinkDelay="5s"
+				SinkDelay="0s"
 				SinkDelayVariance="0s"
-				DestructionDelay="5s"
+				DestructionDelay="0.01s"
 				DestructionDelayVariance="0s"
 				DecayBeginTime="0s"
 				FlingForce="0"

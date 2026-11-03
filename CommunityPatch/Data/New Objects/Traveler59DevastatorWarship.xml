@@ -411,12 +411,6 @@
 												
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING">
-					<Model
-						Name="" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="DAMAGED">
 					<Model
 						Name="W3DContainer:AUDevWar_SKN" />
@@ -574,10 +568,6 @@
                         ParseCondStateType="PARSE_NORMAL"
                         ConditionsYes="FORMATION_PREVIEW">
             </AnimationState>
-                    <AnimationState
-                        ParseCondStateType="PARSE_NORMAL"
-                        ConditionsYes="DYING">
-                    </AnimationState>
 			</ScriptedModelDraw>
 
 			<ScriptedModelDraw		
@@ -920,9 +910,9 @@
                 id="ModuleTag_Physics" />
             <SlowDeath
                 id="ModuleTag_Death"
-                SinkDelay="5s"
+                SinkDelay="0s"
                 SinkRate="0.5"
-                DestructionDelay="5s">
+                DestructionDelay="0.01s">
                 <OCL
                     Type="INITIAL">
                     <OCL>OCL_ALIENDevastatorInitialDebris</OCL>

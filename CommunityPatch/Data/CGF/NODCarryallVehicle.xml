@@ -163,16 +163,6 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING"
-					PortraitImage=""
-					ButtonImage=""
-					RetainSubObjects="False">
-					<Model
-						Name=""
-						ExtraMesh="False" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="DAMAGED"
 					PortraitImage=""
 					ButtonImage=""
@@ -191,6 +181,47 @@
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="REALLYDAMAGED"
+					PortraitImage=""
+					ButtonImage=""
+					RetainSubObjects="False">
+					<Model
+						Name="W3DContainer:NUCARRYALL_SKN"
+						ExtraMesh="False" />
+					<Texture
+						Original="NUCarryAll"
+						New="NUCarryAll_D" />
+					<ParticleSysBone
+						BoneName="Bone_Engine_LF"
+						FXParticleSystemTemplate="orcaexhaust"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="Bone_Engine_RR"
+						FXParticleSystemTemplate="orcaexhaust"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="Bone_Engine_RR"
+						FXParticleSystemTemplate="orcadamagefire"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+					<ParticleSysBone
+						BoneName="Bone_Engine_RR"
+						FXParticleSystemTemplate="orcadamagesmoke"
+						PersistID="0"
+						FollowBone="True"
+						OnlyIfOnWater="False"
+						OnlyIfOnLand="False" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING"
 					PortraitImage=""
 					ButtonImage=""
 					RetainSubObjects="False">
@@ -367,10 +398,6 @@
 					<Script>
 						CurDrawableHideSubObject("Hangar")
 					</Script>
-				</AnimationState>
-				<AnimationState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING">
 				</AnimationState>
 			</ScriptedModelDraw>
 		</Draws>
@@ -666,9 +693,9 @@
 				SinkRate="0.5"
 				ProbabilityModifier="10"
 				ModifierBonusPerOverkillPercent="0%"
-				SinkDelay="5s"
+				SinkDelay="0s"
 				SinkDelayVariance="0s"
-				DestructionDelay="5s"
+				DestructionDelay="0.01s"
 				DestructionDelayVariance="0s"
 				DecayBeginTime="0s"
 				FlingForce="0"
