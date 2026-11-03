@@ -1232,8 +1232,8 @@
 				IgnoreTerrainHeight="False" />
 			 <SlowDeath
                 id="ModuleTag_Death"
-                SinkDelay="0.05s"
-				SinkRate="1000"
+                SinkDelay="3s"
+				SinkRate="1.0"
 				DestructionDelay="7s">
                 <OCL
                     Type="INITIAL">
