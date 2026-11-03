@@ -4,12 +4,14 @@
 		id="NODPropagandaTowerDestroyed"
 		Side="NOD"
 		EditorSorting="MISC_MAN_MADE"
+		RadarPriority="NOT_ON_RADAR"
+		IsTrainable="false"
+		CommandSet="EmptyCommandSet"
 		KindOf="IMMOBILE NO_COLLIDE UNATTACKABLE NOT_AUTOACQUIRABLE CAN_CAST_REFLECTIONS"
 		EditorName="NODPropagandaTowerDestroyed">
 		<DisplayName>NODPropagandaTowerDestroyed</DisplayName>
 		<ArmorSet
-			Armor="NODBaseDefenceArmor"
-			DamageFX="FactionStructureDamageFX" />
+			Armor="NoArmor" />
 		<Draws>
 			<ScriptedModelDraw
 				id="ModuleTag_Draw"

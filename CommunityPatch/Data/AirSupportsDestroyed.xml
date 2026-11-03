@@ -4,13 +4,14 @@
 		id="NODAirSupportDestroyed"
 		Side="NOD"
 		EditorSorting="MISC_MAN_MADE"
+		RadarPriority="NOT_ON_RADAR"
+		IsTrainable="false"
+		CommandSet="EmptyCommandSet"
 		KindOf="IMMOBILE NO_COLLIDE UNATTACKABLE NOT_AUTOACQUIRABLE CAN_CAST_REFLECTIONS"
 		EditorName="NODAirSupportDestroyed">
 		<DisplayName>NODAirSupportDestroyed</DisplayName>
 		<ArmorSet
-			Armor="NODHangarArmor"
-			DamageFX="FactionStructureDamageFX"
-			Conditions="" />
+			Armor="NoArmor" />
 		<Draws>
 			<ScriptedModelDraw
 				id="50DF2C46"
@@ -520,13 +521,14 @@
 		id="GDIAirSupportDestroyed"
 		Side="GDI"
 		EditorSorting="MISC_MAN_MADE"
+		RadarPriority="NOT_ON_RADAR"
+		IsTrainable="false"
+		CommandSet="EmptyCommandSet"
 		KindOf="IMMOBILE NO_COLLIDE UNATTACKABLE NOT_AUTOACQUIRABLE CAN_CAST_REFLECTIONS"
 		EditorName="GDIAirSupportDestroyed">
 		<DisplayName>GDIAirSupportDestroyed</DisplayName>
 		<ArmorSet
-			Armor="GDIAirTowerArmor"
-			DamageFX="FactionStructureDamageFX"
-			Conditions="" />
+			Armor="NoArmor" />
 		<Draws>
 			<ScriptedModelDraw
 				id="50DF2C46"

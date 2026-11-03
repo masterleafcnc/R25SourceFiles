@@ -4,13 +4,14 @@
 		id="GDIArmoryDestroyed"
 		Side="GDI"
 		EditorSorting="MISC_MAN_MADE"
+		RadarPriority="NOT_ON_RADAR"
+		IsTrainable="false"
+		CommandSet="EmptyCommandSet"
 		KindOf="IMMOBILE NO_COLLIDE UNATTACKABLE NOT_AUTOACQUIRABLE CAN_CAST_REFLECTIONS"
 		EditorName="GDIArmoryDestroyed">
 		<DisplayName>GDIArmoryDestroyed</DisplayName>
 		<ArmorSet
-			Armor="GDIArmoryArmor"
-			DamageFX="FactionStructureDamageFX"
-			Conditions="" />
+			Armor="NoArmor" />
 		<Draws>
 			<ScriptedModelDraw
 				id="50DF2C46"

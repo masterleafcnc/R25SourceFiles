@@ -4,13 +4,14 @@
 		id="GDIDigInBuildingDestroyed"
 		Side="GDI"
 		EditorSorting="MISC_MAN_MADE"
+		RadarPriority="NOT_ON_RADAR"
+		IsTrainable="false"
+		CommandSet="EmptyCommandSet"
 		KindOf="IMMOBILE NO_COLLIDE UNATTACKABLE NOT_AUTOACQUIRABLE CAN_CAST_REFLECTIONS"
 		EditorName="GDIDigInBuildingDestroyed">
 		<DisplayName>GDIDigInBuildingDestroyed</DisplayName>
 		<ArmorSet
-			Armor="GDIDigInBuildingArmor"
-			DamageFX="FactionStructureDamageFX"
-			Conditions="" />
+			Armor="NoArmor" />
 		<Draws>
 			<ScriptedModelDraw
 				id="90B2BBF6"

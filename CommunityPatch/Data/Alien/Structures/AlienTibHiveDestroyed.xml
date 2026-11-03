@@ -4,12 +4,14 @@
 		id="AlienTibHiveDestroyed"
 		Side="ALIEN"
 		EditorSorting="MISC_MAN_MADE"
+		RadarPriority="NOT_ON_RADAR"
+		IsTrainable="false"
+		CommandSet="EmptyCommandSet"
 		KindOf="IMMOBILE NO_COLLIDE UNATTACKABLE NOT_AUTOACQUIRABLE CAN_CAST_REFLECTIONS"
 		EditorName="AlienTibHiveDestroyed">
 		<DisplayName>AlienTibHiveDestroyed</DisplayName>
 		<ArmorSet
-			Armor="AlienTibHiveArmor"
-			DamageFX="FactionStructureDamageFX" />
+			Armor="NoArmor" />
 		<Draws>
 			<ScriptedModelDraw
 				id="ModuleTag_Draw"

@@ -4,12 +4,14 @@
 		id="GDITiberiumSiloDestroyed"
 		Side="GDI"
 		EditorSorting="MISC_MAN_MADE"
+		RadarPriority="NOT_ON_RADAR"
+		IsTrainable="false"
+		CommandSet="EmptyCommandSet"
 		KindOf="IMMOBILE NO_COLLIDE UNATTACKABLE NOT_AUTOACQUIRABLE CAN_CAST_REFLECTIONS"
 		EditorName="GDITiberiumSiloDestroyed">
 		<DisplayName>GDITiberiumSiloDestroyed</DisplayName>
 		<ArmorSet
-			Armor="GDITiberiumSiloArmor"
-			DamageFX="FactionStructureDamageFX" />
+			Armor="NoArmor" />
 		<Draws>
 			<ScriptedModelDraw
 				id="ModuleTag_Draw"

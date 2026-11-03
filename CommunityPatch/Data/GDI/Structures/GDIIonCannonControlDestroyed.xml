@@ -4,11 +4,14 @@
 		id="GDIIonCannonControlDestroyed"
 		Side="GDI"
 		EditorSorting="MISC_MAN_MADE"
+		RadarPriority="NOT_ON_RADAR"
+		IsTrainable="false"
+		CommandSet="EmptyCommandSet"
 		KindOf="IMMOBILE NO_COLLIDE UNATTACKABLE NOT_AUTOACQUIRABLE CAN_CAST_REFLECTIONS"
 		EditorName="GDIIonCannonControlDestroyed">
 		<DisplayName>GDIIonCannonControlDestroyed</DisplayName>
 		<ArmorSet
-			Armor="GDIIonCannonControlArmor" />
+			Armor="NoArmor" />
 		<Draws>
 			<ScriptedModelDraw
 				id="ModuleTag_Draw"

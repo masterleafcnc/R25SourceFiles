@@ -4,12 +4,14 @@
 		id="Reaper17GrowthStimulatorDestroyed"
 		Side="Reaper17"
 		EditorSorting="MISC_MAN_MADE"
+		RadarPriority="NOT_ON_RADAR"
+		IsTrainable="false"
+		CommandSet="EmptyCommandSet"
 		KindOf="IMMOBILE NO_COLLIDE UNATTACKABLE NOT_AUTOACQUIRABLE CAN_CAST_REFLECTIONS"
 		EditorName="Reaper17GrowthStimulatorDestroyed">
 		<DisplayName>Reaper17GrowthStimulatorDestroyed</DisplayName>
 		<ArmorSet
-			Armor="AlienSporePodArmor"
-			DamageFX="FactionStructureDamageFX" />
+			Armor="NoArmor" />
 		<Draws>
 			<ScriptedModelDraw
 				OkToChangeModelColor="true">

@@ -4,12 +4,14 @@
 		id="MG_Alien_HiveDestroyed"
 		Side="ALIEN"
 		EditorSorting="MISC_MAN_MADE"
+		RadarPriority="NOT_ON_RADAR"
+		IsTrainable="false"
+		CommandSet="EmptyCommandSet"
 		KindOf="IMMOBILE NO_COLLIDE UNATTACKABLE NOT_AUTOACQUIRABLE CAN_CAST_REFLECTIONS"
 		EditorName="MG_Alien_HiveDestroyed">
 		<DisplayName>MG_Alien_HiveDestroyed</DisplayName>
 		<ArmorSet
-			Armor="GDITerraformingStationArmor"
-			DamageFX="FactionStructureDamageFX" />
+			Armor="NoArmor" />
 		<Draws>
 			<ScriptedModelDraw
 				id="50DF2C46"
