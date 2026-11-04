@@ -413,7 +413,6 @@
 		<AI>
 			<AIUpdate
 				id="ModuleTag_SoWeCanUseWeapon"
-				AILuaEventsList="StructureGeometryFunctions"
 				AutoAcquireEnemiesWhenIdle="NO" />
 		</AI>
 				<Body>

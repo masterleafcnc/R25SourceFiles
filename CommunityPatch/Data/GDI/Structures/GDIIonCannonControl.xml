@@ -470,8 +470,7 @@
 		</Behaviors>
 		<AI>
 			<AIUpdate
-				id="ModuleTag_AI"
-				AILuaEventsList="StructureGeometryFunctions" />
+				id="ModuleTag_AI" />
 		</AI>
 		<Body>
  		  <ActiveBody

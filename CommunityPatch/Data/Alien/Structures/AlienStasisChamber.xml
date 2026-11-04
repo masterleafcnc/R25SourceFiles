@@ -713,7 +713,6 @@
 		<AI>
 			<AIUpdate
 				id="6F9507AA"
-				AILuaEventsList="StructureGeometryFunctions"
 				AutoAcquireEnemiesWhenIdle=""
 				StopChaseDistance="500"
 				HoldGroundCloseRangeDistance="0"

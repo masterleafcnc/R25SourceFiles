@@ -896,12 +896,6 @@
 				<DieMuxData DeathTypes="SUICIDED" />
 			</CreateObjectDie>
 		</Behaviors>
-		<AI>
-			<AIUpdate
-				id="ModuleTag_AIForLua"
-				AutoAcquireEnemiesWhenIdle="NO"
-				AILuaEventsList="StructureGeometryFunctions" />
-		</AI>
 		<Body>
 			<ActiveBody
 				id="B313F576"
@@ -1999,12 +1993,6 @@
 					DeathTypesForbidden="" />
 			</CreateObjectDie>
 		</Behaviors>
-		<AI>
-			<AIUpdate
-				id="ModuleTag_AIForLua"
-				AutoAcquireEnemiesWhenIdle="NO"
-				AILuaEventsList="StructureGeometryFunctions" />
-		</AI>
 		<Body>
 			<ActiveBody
 				id="B313F576"
@@ -3200,12 +3188,6 @@
 				<DieMuxData DeathTypes="SUICIDED" />
 			</CreateObjectDie>
 		</Behaviors>
-		<AI>
-			<AIUpdate
-				id="ModuleTag_AIForLua"
-				AutoAcquireEnemiesWhenIdle="NO"
-				AILuaEventsList="StructureGeometryFunctions" />
-		</AI>
 		<Body>
 			<ActiveBody
 				id="B313F576"
@@ -4432,12 +4414,6 @@
 				<DieMuxData DeathTypes="SUICIDED" />
 			</CreateObjectDie>
 		</Behaviors>
-		<AI>
-			<AIUpdate
-				id="ModuleTag_AIForLua"
-				AutoAcquireEnemiesWhenIdle="NO"
-				AILuaEventsList="StructureGeometryFunctions" />
-		</AI>
 		<Body>
 			<ActiveBody
 				id="B313F576"
@@ -5663,12 +5639,6 @@
 				<DieMuxData DeathTypes="SUICIDED" />
 			</CreateObjectDie>
 		</Behaviors>
-		<AI>
-			<AIUpdate
-				id="ModuleTag_AIForLua"
-				AutoAcquireEnemiesWhenIdle="NO"
-				AILuaEventsList="StructureGeometryFunctions" />
-		</AI>
 		<Body>
 			<ActiveBody
 				id="B313F576"

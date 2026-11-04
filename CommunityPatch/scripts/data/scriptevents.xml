@@ -2093,24 +2093,24 @@
 		<EventHandler EventName="OnGenericEvent"	ScriptFunctionName="OnNeutralGarrisonableBuildingGenericEvent" DebugSingleStep="false"/>
     </EventList>
 	    
-    <EventList Name="GDITechCenterFunctions" Inherit="BuildingPowerFunctions">
+    <EventList Name="GDITechCenterFunctions" Inherit="BaseScriptFunctions">
         <EventHandler EventName="OnCreated"	ScriptFunctionName="OnGDITechCenterCreated" DebugSingleStep="false"/>
+		<EventHandler EventName="OnPowerOutage" ScriptFunctionName="onBuildingPowerOutage" DebugSingleStep="false"/>
+		<EventHandler EventName="OnPowerRestore" ScriptFunctionName="onBuildingPowerRestored" DebugSingleStep="false"/>
     </EventList>
 
-    <EventList Name="GDIMedicalBayFunctions" Inherit="StructureGeometryFunctions">
+    <EventList Name="GDIMedicalBayFunctions" Inherit="BaseScriptFunctions">
         <EventHandler EventName="OnCreated"	ScriptFunctionName="OnGDIMedicalBayCreated" DebugSingleStep="false"/>
     </EventList>
 
-	<!-- Shared death handling for structures with named geometry shapes. -->
-	<EventList Name="StructureGeometryFunctions" Inherit="BaseScriptFunctions">
-		<EventHandler EventName="OnDestroyed" ScriptFunctionName="DisableGeometryOnDeath" DebugSingleStep="false"/>
-	</EventList>
 
-    <EventList Name="GDIPowerPlantFunctions" Inherit="BuildingPowerFunctions">
+    <EventList Name="GDIPowerPlantFunctions" Inherit="BaseScriptFunctions">
         <EventHandler EventName="OnCreated"	ScriptFunctionName="OnGDIPowerPlantCreated" DebugSingleStep="false"/>
+		<EventHandler EventName="OnPowerOutage" ScriptFunctionName="onBuildingPowerOutage" DebugSingleStep="false"/>
+		<EventHandler EventName="OnPowerRestore" ScriptFunctionName="onBuildingPowerRestored" DebugSingleStep="false"/>
     </EventList>
     
-    <EventList Name="GDICommandPostFunctions" Inherit="StructureGeometryFunctions">
+    <EventList Name="GDICommandPostFunctions" Inherit="BaseScriptFunctions">
         <EventHandler EventName="OnCreated"	ScriptFunctionName="OnGDICommandPostCreated" DebugSingleStep="false"/>
     </EventList>
     
@@ -2209,19 +2209,23 @@
 	</EventList>
 	<!-- ################################################################## -->	
 
-	<EventList Name="NODTechAssembleyPlantFunctions" Inherit="StructureGeometryFunctions">
+	<EventList Name="NODTechAssembleyPlantFunctions" Inherit="BaseScriptFunctions">
 		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnNODTechAssembleyPlantCreated" DebugSingleStep="false"/>
 	</EventList>
 
-	<EventList Name="NODHangarFunctions" Inherit="BuildingPowerFunctions">
+	<EventList Name="NODHangarFunctions" Inherit="BaseScriptFunctions">
 		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnNODHangarCreated" DebugSingleStep="false"/>
+		<EventHandler EventName="OnPowerOutage" ScriptFunctionName="onBuildingPowerOutage" DebugSingleStep="false"/>
+		<EventHandler EventName="OnPowerRestore" ScriptFunctionName="onBuildingPowerRestored" DebugSingleStep="false"/>
 	</EventList>
 
-	<EventList Name="NODOperationsCenterFunctions" Inherit="BuildingPowerFunctions">
+	<EventList Name="NODOperationsCenterFunctions" Inherit="BaseScriptFunctions">
 		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnNODOperationsCenterCreated" DebugSingleStep="false"/>
+		<EventHandler EventName="OnPowerOutage" ScriptFunctionName="onBuildingPowerOutage" DebugSingleStep="false"/>
+		<EventHandler EventName="OnPowerRestore" ScriptFunctionName="onBuildingPowerRestored" DebugSingleStep="false"/>
 	</EventList>
 
-	<EventList Name="NODSecretShrineFunctions" Inherit="StructureGeometryFunctions">
+	<EventList Name="NODSecretShrineFunctions" Inherit="BaseScriptFunctions">
 		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnNODSecretShrineCreated" DebugSingleStep="false"/>
 		<EventHandler EventName="OnPowerOutage" ScriptFunctionName="OnNODSecretShrinePowerOutage" DebugSingleStep="false"/>
 		<EventHandler EventName="OnPowerRestore" ScriptFunctionName="OnNODSecretShrinePowerRestored" DebugSingleStep="false"/>
@@ -2231,9 +2235,15 @@
 		<EventHandler EventName="OnCreated" ScriptFunctionName="onCreatedControlPointFunctions" DebugSingleStep="false"/>
 	</EventList>
 
-	<EventList Name="BuildingPowerFunctions" Inherit="StructureGeometryFunctions">
+	<EventList Name="BuildingPowerFunctions" Inherit="BaseScriptFunctions">
 		<EventHandler EventName="OnPowerOutage" ScriptFunctionName="onBuildingPowerOutage" DebugSingleStep="false"/>
 		<EventHandler EventName="OnPowerRestore" ScriptFunctionName="onBuildingPowerRestored" DebugSingleStep="false"/>
+		<!--
+		<EventHandler EventName="SpecialOne" ScriptFunctionName="OnSpecialPowerUsed" DebugSingleStep="false"/>
+		<EventHandler EventName="SpecialTwo" ScriptFunctionName="OnSpecialPowerUsed" DebugSingleStep="false"/>
+		<EventHandler EventName="SpecialThree" ScriptFunctionName="OnSpecialPowerUsed" DebugSingleStep="false"/
+		ONLY TRIGGERS THE SPECIAL POWER, DOEESNT SHOW THE RADIUS
+		<EventHandler EventName="OnSelected" ScriptFunctionName="BuildingSelecteed" DebugSingleStep="false"/>> -->
 	</EventList>
 
     <EventList Name="InfantryFunctions" Inherit="BaseScriptFunctions">
@@ -2322,7 +2332,7 @@
 		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnGDIMARVCreated" DebugSingleStep="false"/>
 	</EventList>
 	
-	<EventList Name="NODMetaUnitFunctions" Inherit="StructureGeometryFunctions">
+	<EventList Name="NODMetaUnitFunctions" Inherit="BaseScriptFunctions">
 		<EventHandler EventName="OnCreated"	ScriptFunctionName="OnNODMetaUnitCreated" DebugSingleStep="false"/>
 	</EventList>
 
@@ -2507,7 +2517,7 @@
 		<EventHandler EventName="OnGenericEvent" ScriptFunctionName="OnNODAvatarGenericEvent" DebugSingleStep="false"/>
 	</EventList>
 	
-	<EventList Name="GDIAirfieldFunctions" Inherit="StructureGeometryFunctions">
+	<EventList Name="GDIAirfieldFunctions" Inherit="BaseScriptFunctions">
 	    <EventHandler EventName="OnCreated"	ScriptFunctionName="OnGDIAirfieldCreated" DebugSingleStep="false"/>
 	</EventList>	
 

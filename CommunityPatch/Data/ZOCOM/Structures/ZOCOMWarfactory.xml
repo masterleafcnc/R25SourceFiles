@@ -550,7 +550,6 @@
 		<AI>
 			<AIUpdate
 				id="ModuleTag_AIUpdate"
-				AILuaEventsList="StructureGeometryFunctions"
 				AutoAcquireEnemiesWhenIdle="NO" />
 		</AI>
 		<Body>

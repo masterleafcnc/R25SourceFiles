@@ -1319,7 +1319,7 @@
 				AutoAcquireEnemiesWhenIdle="NO"
 				StopChaseDistance="500"
 				HoldGroundCloseRangeDistance="0"
-				AILuaEventsList="StructureGeometryFunctions"
+				AILuaEventsList=""
 				MinCowerTime="0s"
 				MaxCowerTime="0s"
 				RampageTime="0s"
