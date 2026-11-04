@@ -1406,7 +1406,7 @@
 			IsSmall="false">
 			<Shape
 				Type="CYLINDER"
-				Name="Geom_1"
+				Name=""
 				MajorRadius="21.0"
 				Height="20.0"
 				ContactPointGeneration="INFANTRY">
@@ -1417,7 +1417,7 @@
 			</Shape>
 			<Shape
 				Type="CYLINDER"
-				Name="Geom_2"
+				Name=""
 				MajorRadius="6.0"
 				Height="35.0"
 				ContactPointGeneration="INFANTRY">
@@ -1428,7 +1428,7 @@
 			</Shape>
 			<Shape
 				Type="CYLINDER"
-				Name="Geom_3"
+				Name=""
 				MajorRadius="20.0"
 				Height="16.0"
 				ContactPointGeneration="INFANTRY">
@@ -1439,7 +1439,7 @@
 			</Shape>
 			<Shape
 				Type="CYLINDER"
-				Name="Geom_4"
+				Name=""
 				MajorRadius="12.5"
 				Height="17.0"
 				ContactPointGeneration="INFANTRY">
@@ -1450,7 +1450,7 @@
 			</Shape>
 			<Shape
 				Type="BOX"
-				Name="Geom_5"
+				Name=""
 				MajorRadius="15.0"
 				MinorRadius="20.0"
 				Height="20.0"
@@ -1462,7 +1462,7 @@
 			</Shape>
 			<Shape
 				Type="CYLINDER"
-				Name="Geom_6"
+				Name=""
 				MajorRadius="4.0"
 				Height="45.0"
 				ContactPointGeneration="INFANTRY">
@@ -1473,7 +1473,7 @@
 			</Shape>
 			<Shape 
 				Type= "BOX"
-				Name="Geom_7"
+				Name=""
 				MajorRadius = "46.8567"
 				MinorRadius = "27.4004"
 				Height = "9.27532" 
@@ -1485,7 +1485,7 @@
 			</Shape>
 			<Shape 
 				Type= "BOX"
-				Name="Geom_8"
+				Name=""
 				MajorRadius = "29.4575"
 				MinorRadius = "19.6674"
 				Height = "9.27532" 

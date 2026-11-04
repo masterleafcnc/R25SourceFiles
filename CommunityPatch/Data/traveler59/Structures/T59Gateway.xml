@@ -1214,7 +1214,7 @@
 			IsSmall="False">
 			<Shape
 				Type="BOX"
-				Name="Geom_1"
+				Name=""
 				ContactPointGeneration="NONE"
 				MajorRadius="25"
 				MinorRadius="65"

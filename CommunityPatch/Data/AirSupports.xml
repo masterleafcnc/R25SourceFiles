@@ -939,7 +939,7 @@
 			IsSmall="false">
 			<Shape
 				Type="BOX"
-				Name="Geom_1"
+				Name=""
 				MajorRadius="25.0"
 				MinorRadius="25.0"
 				Height="50.0">
@@ -950,7 +950,7 @@
 			</Shape>
 			<Shape 
 				Type= "BOX"
-				Name="Geom_2"
+				Name=""
 				MajorRadius = "50.0"
 				MinorRadius = "50.0"
 				Height = "5.0" >
@@ -2036,7 +2036,7 @@
 			IsSmall="false">
 			<Shape
 				Type="BOX"
-				Name="Geom_1"
+				Name=""
 				MajorRadius="25.0"
 				MinorRadius="25.0"
 				Height="50.0">
@@ -2047,7 +2047,7 @@
 			</Shape>
 			<Shape 
 				Type= "BOX"
-				Name="Geom_2"
+				Name=""
 				MajorRadius = "50.0"
 				MinorRadius = "50.0"
 				Height = "5.0" >
@@ -3232,7 +3232,7 @@
 			<Shape
 				Type="BOX"
 				ContactPointGeneration="NONE"
-				Name="Geom_1"
+				Name=""
 				MajorRadius="50"
 				MinorRadius="75"
 				Other=""
@@ -3243,7 +3243,7 @@
 			<Shape
 				Type="CYLINDER"
 				ContactPointGeneration="NONE"
-				Name="Geom_2"
+				Name=""
 				MajorRadius="12"
 				MinorRadius="12"
 				Other=""
@@ -3259,7 +3259,7 @@
 			<Shape
 				Type="BOX"
 				ContactPointGeneration="NONE"
-				Name="Geom_3"
+				Name=""
 				MajorRadius="60"
 				MinorRadius="80"
 				Other=""
@@ -4458,7 +4458,7 @@
 			<Shape
 				Type="BOX"
 				ContactPointGeneration="NONE"
-				Name="Geom_1"
+				Name=""
 				MajorRadius="50"
 				MinorRadius="75"
 				Other=""
@@ -4469,7 +4469,7 @@
 			<Shape
 				Type="CYLINDER"
 				ContactPointGeneration="NONE"
-				Name="Geom_2"
+				Name=""
 				MajorRadius="12"
 				MinorRadius="12"
 				Other=""
@@ -4485,7 +4485,7 @@
 			<Shape
 				Type="BOX"
 				ContactPointGeneration="NONE"
-				Name="Geom_3"
+				Name=""
 				MajorRadius="60"
 				MinorRadius="80"
 				Other=""
@@ -5683,7 +5683,7 @@
 			<Shape
 				Type="BOX"
 				ContactPointGeneration="NONE"
-				Name="Geom_1"
+				Name=""
 				MajorRadius="50"
 				MinorRadius="75"
 				Other=""
@@ -5694,7 +5694,7 @@
 			<Shape
 				Type="CYLINDER"
 				ContactPointGeneration="NONE"
-				Name="Geom_2"
+				Name=""
 				MajorRadius="12"
 				MinorRadius="12"
 				Other=""
@@ -5710,7 +5710,7 @@
 			<Shape
 				Type="BOX"
 				ContactPointGeneration="NONE"
-				Name="Geom_3"
+				Name=""
 				MajorRadius="60"
 				MinorRadius="80"
 				Other=""

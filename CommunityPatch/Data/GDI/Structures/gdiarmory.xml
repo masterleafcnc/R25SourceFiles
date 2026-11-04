@@ -1048,7 +1048,7 @@
 			IsSmall="False">
 			<Shape
 				Type="BOX"
-				Name="Geom_1"
+				Name=""
 				ContactPointGeneration="NONE"
 				MajorRadius="46"
 				MinorRadius="46"
@@ -1063,7 +1063,7 @@
 			</Shape>
 			<Shape
 				Type="BOX"
-				Name="Geom_2"
+				Name=""
 				ContactPointGeneration="NONE"
 				MajorRadius="20"
 				MinorRadius="13"

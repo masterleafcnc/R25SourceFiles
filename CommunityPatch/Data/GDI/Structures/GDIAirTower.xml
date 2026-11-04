@@ -1045,13 +1045,13 @@
 			IsSmall="false">
 			<Shape
 				Type="BOX"
-				Name="Geom_1"
+				Name=""
 				MajorRadius="50.0"
 				MinorRadius="75.0"
 				Height="30.0"></Shape>
 			<Shape
 				Type="CYLINDER"
-				Name="Geom_2"
+				Name=""
 				MajorRadius="12.0"
 				MinorRadius="12.0"
 				Height="75.0">
@@ -1062,7 +1062,7 @@
 			</Shape>
 			<Shape 
 				Type= "BOX"
-				Name="Geom_3"
+				Name=""
 				MajorRadius = "60.0"
 				MinorRadius = "80.0"
 				Height = "3.0" >

@@ -849,7 +849,7 @@
 			IsSmall="False">
 			<Shape
 				Type="BOX"
-				Name="Geom_1"
+				Name=""
 				ContactPointGeneration="STRUCTURE"
 				MajorRadius="40"
 				MinorRadius="17"

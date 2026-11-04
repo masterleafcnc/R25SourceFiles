@@ -1456,7 +1456,7 @@
 			IsSmall="False">
 			<Shape
 				Type="CYLINDER"
-				Name="Geom_1"
+				Name=""
 				ContactPointGeneration="INFANTRY"
 				MajorRadius="21"
 				MinorRadius="1"
@@ -1471,7 +1471,7 @@
 			</Shape>
 			<Shape
 				Type="CYLINDER"
-				Name="Geom_2"
+				Name=""
 				ContactPointGeneration="INFANTRY"
 				MajorRadius="6"
 				MinorRadius="1"
@@ -1486,7 +1486,7 @@
 			</Shape>
 			<Shape
 				Type="CYLINDER"
-				Name="Geom_3"
+				Name=""
 				ContactPointGeneration="INFANTRY"
 				MajorRadius="20"
 				MinorRadius="1"
@@ -1501,7 +1501,7 @@
 			</Shape>
 			<Shape
 				Type="CYLINDER"
-				Name="Geom_4"
+				Name=""
 				ContactPointGeneration="INFANTRY"
 				MajorRadius="12.5"
 				MinorRadius="1"
@@ -1516,7 +1516,7 @@
 			</Shape>
 			<Shape
 				Type="BOX"
-				Name="Geom_5"
+				Name=""
 				ContactPointGeneration="VEHICLE"
 				MajorRadius="15"
 				MinorRadius="20"
@@ -1531,7 +1531,7 @@
 			</Shape>
 			<Shape
 				Type="CYLINDER"
-				Name="Geom_6"
+				Name=""
 				ContactPointGeneration="INFANTRY"
 				MajorRadius="4"
 				MinorRadius="1"
@@ -1546,7 +1546,7 @@
 			</Shape>
 			<Shape
 				Type="BOX"
-				Name="Geom_7"
+				Name=""
 				ContactPointGeneration="INFANTRY"
 				MajorRadius="46.8567"
 				MinorRadius="27.4004"
@@ -1561,7 +1561,7 @@
 			</Shape>
 			<Shape
 				Type="BOX"
-				Name="Geom_8"
+				Name=""
 				ContactPointGeneration="INFANTRY"
 				MajorRadius="29.4575"
 				MinorRadius="19.6674"

@@ -323,7 +323,7 @@
 			IsSmall="false">
 			<Shape
 				Type="BOX"
-				Name="Geom_1"
+				Name=""
 				MajorRadius="20.0"
 				MinorRadius="15.0"
 				Height="25.0"

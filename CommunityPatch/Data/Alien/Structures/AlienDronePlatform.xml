@@ -359,7 +359,7 @@
 			IsSmall="false">
 			<Shape
 				Type="CYLINDER"
-				Name="Geom_1"
+				Name=""
 				MajorRadius="24.0"
 				MinorRadius="24.0"
 				Height="80.0">

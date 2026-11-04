@@ -460,7 +460,7 @@
 			IsSmall="false">
 			<Shape 
 				Type= "BOX"
-				Name="Geom_1"
+				Name=""
 				MajorRadius = "27.7657"
 				MinorRadius = "16.6304"
 				Height = "28.8532" >
@@ -471,7 +471,7 @@
 			</Shape>
 			<Shape 
 				Type= "BOX"
-				Name="Geom_2"
+				Name=""
 				MajorRadius = "32.7635"
 				MinorRadius = "21.9521"
 				Height = "14.4266" >
@@ -482,7 +482,7 @@
 			</Shape>
 			<Shape 
 				Type= "BOX"
-				Name="Geom_3"
+				Name=""
 				MajorRadius = "4.0"
 				MinorRadius = "4.0"
 				Height = "14.4266" >
@@ -493,7 +493,7 @@
 			</Shape>
 			<Shape 
 				Type= "BOX"
-				Name="Geom_4"
+				Name=""
 				MajorRadius = "4.0"
 				MinorRadius = "8.88"
 				Height = "24.5252" >
@@ -504,7 +504,7 @@
 			</Shape>
 			<Shape 
 				Type= "BOX"
-				Name="Geom_5"
+				Name=""
 				MajorRadius = "4.0"
 				MinorRadius = "8.88"
 				Height = "24.5252" >
@@ -515,7 +515,7 @@
 			</Shape>
 			<Shape 
 				Type= "BOX"
-				Name="Geom_6"
+				Name=""
 				MajorRadius = "6.0"
 				MinorRadius = "6.0"
 				Height = "15.0036" >
@@ -526,7 +526,7 @@
 			</Shape>
 			<Shape 
 				Type= "BOX"
-				Name="Geom_7"
+				Name=""
 				MajorRadius = "4.0"
 				MinorRadius = "4.0"
 				Height = "52.32" >
@@ -537,7 +537,7 @@
 			</Shape>
 			<Shape 
 				Type= "BOX"
-				Name="Geom_8"
+				Name=""
 				MajorRadius = "2.5"
 				MinorRadius = "2.5"
 				Height = "65.9232" >
@@ -548,7 +548,7 @@
 			</Shape>
 			<Shape 
 				Type= "BOX"
-				Name="Geom_9"
+				Name=""
 				MajorRadius = "13.5707"
 				MinorRadius = "16.6304"
 				Height = "37.9647" >
@@ -560,7 +560,7 @@
 <!-- Tiberium Core -->			
 			<Shape 
 				Type= "BOX"
-				Name="Geom_10"
+				Name=""
 				MajorRadius = "13.2939"
 				MinorRadius = "7.9971"
 				Height = "16.6174" >

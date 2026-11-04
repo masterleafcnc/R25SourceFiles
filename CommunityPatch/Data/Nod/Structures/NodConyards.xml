@@ -1404,7 +1404,7 @@
 			<Shape
 				Type="BOX"
 				ContactPointGeneration="NONE"
-				Name="Geom_1"
+				Name=""
 				MajorRadius="50"
 				MinorRadius="30"
 				Other=""
@@ -1420,7 +1420,7 @@
 			<Shape
 				Type="BOX"
 				ContactPointGeneration="NONE"
-				Name="Geom_2"
+				Name=""
 				MajorRadius="18"
 				MinorRadius="25"
 				Other=""
@@ -1436,7 +1436,7 @@
 			<Shape
 				Type="BOX"
 				ContactPointGeneration="NONE"
-				Name="Geom_3"
+				Name=""
 				MajorRadius="25"
 				MinorRadius="25"
 				Other=""
@@ -1452,7 +1452,7 @@
 			<Shape
 				Type="CYLINDER"
 				ContactPointGeneration="NONE"
-				Name="Geom_4"
+				Name=""
 				MajorRadius="5"
 				MinorRadius="1"
 				Other=""
@@ -1468,7 +1468,7 @@
 			<Shape
 				Type="BOX"
 				ContactPointGeneration="NONE"
-				Name="Geom_5"
+				Name=""
 				MajorRadius="9"
 				MinorRadius="12"
 				Other=""
@@ -1484,7 +1484,7 @@
 			<Shape
 				Type="BOX"
 				ContactPointGeneration="NONE"
-				Name="Geom_6"
+				Name=""
 				MajorRadius="9"
 				MinorRadius="12"
 				Other=""

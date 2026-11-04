@@ -379,7 +379,7 @@
 			IsSmall="false">
 			<Shape
 				Type="CYLINDER"
-				Name="Geom_1"
+				Name=""
 				MajorRadius="18.0"
 				Height="20.0">
 				<Offset
@@ -389,7 +389,7 @@
 			</Shape>
 			<Shape
 				Type="CYLINDER"
-				Name="Geom_2"
+				Name=""
 				MajorRadius="12.0"
 				Height="46.0">
 				<Offset
@@ -399,7 +399,7 @@
 			</Shape>
 			<Shape
 				Type="BOX"
-				Name="Geom_3"
+				Name=""
 				MajorRadius="3.5"
 				MinorRadius="11.0"
 				Height="42.0">

@@ -1003,7 +1003,7 @@
 			IsSmall="False">
 			<Shape
 				Type="BOX"
-				Name="Geom_1"
+				Name=""
 				ContactPointGeneration="NONE"
 				MajorRadius="15"
 				MinorRadius="27.5"
@@ -1018,7 +1018,7 @@
 			</Shape>
 			<Shape
 				Type="BOX"
-				Name="Geom_2"
+				Name=""
 				ContactPointGeneration="NONE"
 				MajorRadius="15"
 				MinorRadius="20"
@@ -1033,7 +1033,7 @@
 			</Shape>
 			<Shape
 				Type="BOX"
-				Name="Geom_3"
+				Name=""
 				ContactPointGeneration="NONE"
 				MajorRadius="15"
 				MinorRadius="12.5"
@@ -1048,7 +1048,7 @@
 			</Shape>
 			<Shape
 				Type="BOX"
-				Name="Geom_4"
+				Name=""
 				ContactPointGeneration="NONE"
 				MajorRadius="15.9"
 				MinorRadius="22.5"
@@ -1063,7 +1063,7 @@
 			</Shape>
 			<Shape
 				Type="BOX"
-				Name="Geom_5"
+				Name=""
 				ContactPointGeneration="NONE"
 				MajorRadius="15.9"
 				MinorRadius="15.504"
@@ -1078,7 +1078,7 @@
 			</Shape>
 			<Shape
 				Type="BOX"
-				Name="Geom_6"
+				Name=""
 				ContactPointGeneration="NONE"
 				MajorRadius="15.9"
 				MinorRadius="17.9846"
@@ -1093,7 +1093,7 @@
 			</Shape>
 			<Shape
 				Type="BOX"
-				Name="Geom_7"
+				Name=""
 				ContactPointGeneration="NONE"
 				MajorRadius="15.9"
 				MinorRadius="16.1862"
@@ -1108,7 +1108,7 @@
 			</Shape>
 			<Shape
 				Type="BOX"
-				Name="Geom_8"
+				Name=""
 				ContactPointGeneration="NONE"
 				MajorRadius="10"
 				MinorRadius="10"
@@ -1123,7 +1123,7 @@
 			</Shape>
 			<Shape
 				Type="BOX"
-				Name="Geom_9"
+				Name=""
 				ContactPointGeneration="NONE"
 				MajorRadius="10"
 				MinorRadius="10"
@@ -1138,7 +1138,7 @@
 			</Shape>
 			<Shape
 				Type="BOX"
-				Name="Geom_10"
+				Name=""
 				ContactPointGeneration="NONE"
 				MajorRadius="8"
 				MinorRadius="8"

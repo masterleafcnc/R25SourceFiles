@@ -1476,7 +1476,7 @@
 	<!-- *** Base Structure OBBOxes *** -->
 			<Shape 
 			     Type= "BOX"
-			     Name="Geom_1"
+			     Name=""
 			     MajorRadius = "35.6968"
 			     MinorRadius = "41.8586"
 			     Height = "4.0" >
@@ -1487,7 +1487,7 @@
 			</Shape>
 			<Shape 
 			     Type= "BOX"
-			     Name="Geom_2"
+			     Name=""
 			     MajorRadius = "27.3684"
 			     MinorRadius = "5.81579"
 			     Height = "4.0" >
@@ -1498,7 +1498,7 @@
 			</Shape>
 			<Shape 
 			     Type= "BOX"
-			     Name="Geom_3"
+			     Name=""
 			     MajorRadius = "23.1663"
 			     MinorRadius = "6.13053"
 			     Height = "4.0" >
@@ -1509,7 +1509,7 @@
 			</Shape>
 			<Shape 
 			     Type= "BOX"
-			     Name="Geom_4"
+			     Name=""
 			     MajorRadius = "18.7368"
 			     MinorRadius = "7.47368"
 			     Height = "4.0" >
@@ -1520,7 +1520,7 @@
 			</Shape>
 			<Shape 
 			     Type= "BOX"
-			     Name="Geom_5"
+			     Name=""
 			     MajorRadius = "15.5768"
 			     MinorRadius = "12.6147"
 			     Height = "4.0" >
@@ -1531,7 +1531,7 @@
 			</Shape>
 			<Shape 
 			     Type= "BOX"
-			     Name="Geom_6"
+			     Name=""
 			     MajorRadius = "5.05263"
 			     MinorRadius = "3.89474"
 			     Height = "5.26316" >
@@ -1542,7 +1542,7 @@
 			</Shape>
 			<Shape 
 			     Type= "BOX"
-			     Name="Geom_7"
+			     Name=""
 			     MajorRadius = "10.7853"
 			     MinorRadius = "10.3621"
 			     Height = "13.0" >
@@ -1553,7 +1553,7 @@
 			</Shape>
 			<Shape 
 			     Type= "BOX"
-			     Name="Geom_8"
+			     Name=""
 			     MajorRadius = "11.2393"
 			     MinorRadius = "11.2393"
 			     Height = "13.0" >
@@ -1564,7 +1564,7 @@
 			</Shape>
 			<Shape 
 			     Type= "BOX"
-			     Name="Geom_9"
+			     Name=""
 			     MajorRadius = "10.6105"
 			     MinorRadius = "29.3684"
 			     Height = "4.0" >
@@ -1575,7 +1575,7 @@
 			</Shape>
 			<Shape 
 			     Type= "BOX"
-			     Name="Geom_10"
+			     Name=""
 			     MajorRadius = "8.8021"
 			     MinorRadius = "22.2105"
 			     Height = "4.0" >
@@ -1586,7 +1586,7 @@
 			</Shape>
 			<Shape 
 			     Type= "BOX"
-			     Name="Geom_11"
+			     Name=""
 			     MajorRadius = "9.05263"
 			     MinorRadius = "13.6842"
 			     Height = "4.0" >
@@ -1597,7 +1597,7 @@
 			</Shape>
 			<Shape 
 			     Type= "BOX"
-			     Name="Geom_12"
+			     Name=""
 			     MajorRadius = "8.0"
 			     MinorRadius = "10.4211"
 			     Height = "13.0" >
@@ -1609,7 +1609,7 @@
 	<!-- *** Door OBBOxes *** -->		
 					<Shape 
 					     Type= "BOX"
-					     Name="Geom_13"
+					     Name=""
 					     MajorRadius = "9.7135"
 					     MinorRadius = "58.1375"
 					     Height = "15.0" >
@@ -1620,7 +1620,7 @@
 					</Shape>
 					<Shape 
 					     Type= "BOX"
-					     Name="Geom_14"
+					     Name=""
 					     MajorRadius = "8.25666"
 					     MinorRadius = "50.3307"
 					     Height = "15.0" >
@@ -1631,7 +1631,7 @@
 					</Shape>
 					<Shape 
 					     Type= "BOX"
-					     Name="Geom_15"
+					     Name=""
 					     MajorRadius = "8.31498"
 					     MinorRadius = "40.545"
 					     Height = "15.0" >
@@ -1642,7 +1642,7 @@
 					</Shape>
 					<Shape 
 					     Type= "BOX"
-					     Name="Geom_16"
+					     Name=""
 					     MajorRadius = "10.3208"
 					     MinorRadius = "32.4491"
 					     Height = "15.0" >
@@ -1653,7 +1653,7 @@
 					</Shape>
 					<Shape 
 					     Type= "BOX"
-					     Name="Geom_17"
+					     Name=""
 					     MajorRadius = "8.80573"
 					     MinorRadius = "24.4991"
 					     Height = "15.0" >
@@ -1664,7 +1664,7 @@
 					</Shape>
 					<Shape 
 					     Type= "BOX"
-					     Name="Geom_18"
+					     Name=""
 					     MajorRadius = "8.80573"
 					     MinorRadius = "15.6794"
 					     Height = "15.0" >
@@ -1675,7 +1675,7 @@
 					</Shape>
 					<Shape 
 					     Type= "BOX"
-					     Name="Geom_19"
+					     Name=""
 					     MajorRadius = "9.78687"
 					     MinorRadius = "11.6498"
 					     Height = "15.0" >
@@ -1686,7 +1686,7 @@
 					</Shape>
 					<Shape 
 					     Type= "BOX"
-					     Name="Geom_20"
+					     Name=""
 					     MajorRadius = "8.2565"
 					     MinorRadius = "47.311"
 					     Height = "15.0" >
@@ -1697,7 +1697,7 @@
 					</Shape>
 					<Shape 
 					     Type= "BOX"
-					     Name="Geom_21"
+					     Name=""
 					     MajorRadius = "8.31498"
 					     MinorRadius = "36.6682"
 					     Height = "15.0" >
@@ -1708,7 +1708,7 @@
 					</Shape>
 					<Shape 
 					     Type= "BOX"
-					     Name="Geom_22"
+					     Name=""
 					     MajorRadius = "10.3208"
 					     MinorRadius = "27.629"
 					     Height = "15.0" >
@@ -1719,7 +1719,7 @@
 					</Shape>
 					<Shape 
 					     Type= "BOX"
-					     Name="Geom_23"
+					     Name=""
 					     MajorRadius = "8.80573"
 					     MinorRadius = "19.8376"
 					     Height = "15.0" >
@@ -1730,7 +1730,7 @@
 					</Shape>
 					<Shape 
 					     Type= "BOX"
-					     Name="Geom_24"
+					     Name=""
 					     MajorRadius = "13.1632"
 					     MinorRadius = "11.3673"
 					     Height = "15.0" >
@@ -1741,7 +1741,7 @@
 					</Shape>
 					<Shape 
 					     Type= "BOX"
-					     Name="Geom_25"
+					     Name=""
 					     MajorRadius = "8.2565"
 					     MinorRadius = "34.0639"
 					     Height = "15.0" >
@@ -1752,7 +1752,7 @@
 					</Shape>
 					<Shape 
 					     Type= "BOX"
-					     Name="Geom_26"
+					     Name=""
 					     MajorRadius = "8.31498"
 					     MinorRadius = "26.0344"
 					     Height = "15.0" >
@@ -1763,7 +1763,7 @@
 					</Shape>
 					<Shape 
 					     Type= "BOX"
-					     Name="Geom_27"
+					     Name=""
 					     MajorRadius = "10.3208"
 					     MinorRadius = "16.8537"
 					     Height = "15.0" >
@@ -1774,7 +1774,7 @@
 					</Shape>
 					<Shape 
 					     Type= "BOX"
-					     Name="Geom_28"
+					     Name=""
 					     MajorRadius = "10.3291"
 					     MinorRadius = "10.3156"
 					     Height = "15.0" >
@@ -1785,7 +1785,7 @@
 					</Shape>
 					<Shape 
 					     Type= "BOX"
-					     Name="Geom_29"
+					     Name=""
 					     MajorRadius = "7.18315"
 					     MinorRadius = "24.8667"
 					     Height = "15.0" >
@@ -1796,7 +1796,7 @@
 					</Shape>
 					<Shape 
 					     Type= "BOX"
-					     Name="Geom_30"
+					     Name=""
 					     MajorRadius = "8.31498"
 					     MinorRadius = "19.2655"
 					     Height = "15.0" >
@@ -1807,7 +1807,7 @@
 					</Shape>
 					<Shape 
 					     Type= "BOX"
-					     Name="Geom_31"
+					     Name=""
 					     MajorRadius = "10.3208"
 					     MinorRadius = "10.7864"
 					     Height = "15.0" >
@@ -1818,7 +1818,7 @@
 					</Shape>
 					<Shape 
 					     Type= "BOX"
-					     Name="Geom_32"
+					     Name=""
 					     MajorRadius = "12.8051"
 					     MinorRadius = "12.892"
 					     Height = "7.5" >

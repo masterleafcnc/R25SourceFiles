@@ -535,7 +535,7 @@
 			IsSmall="False">
 			<Shape
 				Type="CYLINDER"
-				Name="Geom_1"
+				Name=""
 				ContactPointGeneration="NONE"
 				MajorRadius="25"
 				MinorRadius="1"

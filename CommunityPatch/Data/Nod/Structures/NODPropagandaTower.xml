@@ -298,7 +298,7 @@
 			IsSmall="false">
 			<Shape
 				Type="CYLINDER"
-				Name="Geom_1"
+				Name=""
 				MajorRadius="20.0"
 				Height="55.0"
 				ContactPointGeneration="INFANTRY" />

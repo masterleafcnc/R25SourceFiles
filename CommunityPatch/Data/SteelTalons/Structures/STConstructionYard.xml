@@ -509,7 +509,7 @@
 			IsSmall="false">
 			<Shape
 				Type="BOX"
-				Name="Geom_1"
+				Name=""
 				MajorRadius="46.0"
 				MinorRadius="35"
 				Height="30.0">
@@ -520,7 +520,7 @@
 			</Shape>
 			<Shape
 				Type="BOX"
-				Name="Geom_2"
+				Name=""
 				MajorRadius="17.5"
 				MinorRadius="10"
 				Height="14.0">
@@ -531,7 +531,7 @@
 			</Shape>
 			<Shape
 				Type="BOX"
-				Name="Geom_3"
+				Name=""
 				MajorRadius="11.0"
 				MinorRadius="8.5"
 				Height="18.0">

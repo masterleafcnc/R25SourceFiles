@@ -1063,7 +1063,7 @@
 			<Shape
 				Type="BOX"
 				ContactPointGeneration="NONE"
-				Name="Geom_Orig"
+				Name=""
 				MajorRadius="72"
 				MinorRadius="50"
 				Height="24"
@@ -1078,7 +1078,7 @@
 			<Shape
 				Type="CYLINDER"
 				ContactPointGeneration="NONE"
-				Name="Geom_Tower"
+				Name=""
 				MajorRadius="18"
 				MinorRadius="18"
 				Height="90"
