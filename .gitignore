@@ -28,12 +28,10 @@ CommunityPatch/KanesWrathXMLFiles/**
 #102texturefix/Data/Static.xml
 102texturefix/Data/MPSettings.xml
 CommunityPatch/[\.tmp]*
-CommunityPatch/Data/test.xml
 CommunityPatch/Data/test2.xml
 CommunityPatch/Data/TODO.txt
 
 CommunityPatch/.tmp.drivedownload/26449.1744834794173447
-CommunityPatch/Data/test.xml
 CommunityPatch/scripts/data/codex-x86_64-pc-windows-msvc.exe
 CommunityPatch/R25
 CommunityPatch/Assets/**

@@ -1,0 +1,973 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	<Includes>
+		<!-- Central include for all SkirmishAI definitions. -->
+		<Include source="SkirmishAI/SkirmishAIIncludes.xml" type="all"/>
+
+		<!-- R25i to R25k: active additions not already included below.
+		     Includes in CDATA and XML comments remain inactive.
+		     Extracted Assets are restored 1.02+ reference sources; GDI/GDIHammerhead.xml
+		     duplicates GDI/Units/GDIHammerhead.xml. Worldbuilder.xml builds separately. -->
+		<Include source="AirSupportsDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienDronePlatformDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienFoundryDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienGatewayDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienMiniMCVOutpostDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienPhotonCannon.xml" type="all"/>
+		<Include source="Alien\Structures\AlienPortalDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienPowerProjectorDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienReactorDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienRefDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienRiftGeneratorDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienSignalTransmitterDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienSporePodDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienStasisChamberDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienTibHiveDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienWarpBeaconDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienWarpChasmDestroyed.xml" type="all"/>
+		<Include source="BlackHand\Structures\blackhandhandofnodDestroyed.xml" type="all"/>
+		<Include source="BlackHand\Structures\BlackHandObelisk.xml" type="all"/>
+		<Include source="CGF\AlienControlCenterDestroyed.xml" type="all"/>
+		<Include source="GDI\Structures\GDIAirTowerDestroyed.xml" type="all"/>
+		<Include source="GDI\Structures\gdiarmoryDestroyed.xml" type="all"/>
+		<Include source="GDI\Structures\GDIBarracksDestroyed.xml" type="all"/>
+		<Include source="GDI\Structures\GDIBattlebase.xml" type="all"/>
+		<Include source="GDI\Structures\gdicommandpostDestroyed.xml" type="all"/>
+		<Include source="GDI\Structures\GDIConstructionYardDestroyed.xml" type="all"/>
+		<Include source="GDI\Structures\GDICraneDestroyed.xml" type="all"/>
+		<Include source="GDI\Structures\GDIIonCannonControlDestroyed.xml" type="all"/>
+		<Include source="GDI\Structures\gdimedicalbayDestroyed.xml" type="all"/>
+		<Include source="GDI\Structures\GDIMiniMCVOutpostDestroyed.xml" type="all"/>
+		<Include source="GDI\Structures\GDIPowerPlantDestroyed.xml" type="all"/>
+		<Include source="GDI\Structures\GDIRefDestroyed.xml" type="all"/>
+		<Include source="GDI\Structures\GDITiberiumSiloDestroyed.xml" type="all"/>
+		<Include source="GDI\Structures\GDIWarfactoryDestroyed.xml" type="all"/>
+		<Include source="GDI\Structures\MG_GDI_ReclamatorHubDestroyed.xml" type="all"/>
+		<Include source="GDI\Units\GDIDigInBuildingDestroyed.xml" type="all"/>
+		<Include source="GDI\Units\GDIGrenadeSoldierGarrisoned.xml" type="all"/>
+		<Include source="GDI\Units\GDIMissileSoldierGarrisoned.xml" type="all"/>
+		<Include source="GDI\Units\GDIRifleSoldierGarrisoned.xml" type="all"/>
+		<Include source="GDI\Units\GDIZoneInf.xml" type="all"/>
+		<Include source="GlobalData\AttributeModifier.xml" type="all"/>
+		<Include source="GlobalData\FXParticleSystem.xml" type="all"/>
+		<Include source="GlobalData\ObjectCreationListsR25.xml" type="all"/>
+		<Include source="GlobalData\SpecialPowerTemplates.xml" type="all"/>
+		<Include source="GlobalData\WeaponR21.xml" type="all"/>
+		<Include source="GlobalData\WeaponR25.xml" type="all"/>
+		<Include source="GlobalData\ZoneRaiderWeaponsR25.xml" type="all"/>
+		<Include source="GlobalData\ZoneTrooperWeaponsR25.xml" type="all"/>
+		<Include source="MarkedOfKane\Structures\MarkedOfKaneObelisk.xml" type="all"/>
+		<Include source="Neutral\Units\MutantMarauderGarrisoned.xml" type="all"/>
+		<Include source="Nod\Structures\MG_NOD_WarmechFacilityDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NodConyardsDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NODCraneDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NODDisruptionTowerDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NODDropZoneDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\nodhandofnodDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NODHangarDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NODMiniMCVOutpostDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NODObelisk.xml" type="all"/>
+		<Include source="Nod\Structures\NODOperationsCenterDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NodPowerPlantDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NODPropagandaTowerDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NODRefDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NODSecretShrineDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NODTechCenterDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NODTempleOfNodDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NodTibChemPlantDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NODTiberiumSiloDestroyed.xml" type="all"/>
+		<Include source="Reaper17\Structures\R17SporePodDestroyed.xml" type="all"/>
+		<Include source="Reaper17\Structures\Reaper17PhotonCannon.xml" type="all"/>
+		<Include source="SteelTalons\Structures\STBattlebase.xml" type="all"/>
+		<Include source="SteelTalons\Structures\steeltalonscommandpostDestroyed.xml" type="all"/>
+		<Include source="SteelTalons\Units\SteelTalonsGrenadeSoldierGarrisoned.xml" type="all"/>
+		<Include source="SteelTalons\Units\SteelTalonsMissileSoldierGarrisoned.xml" type="all"/>
+		<Include source="SteelTalons\Units\SteelTalonsRifleSoldierGarrisoned.xml" type="all"/>
+		<Include source="traveler59\Structures\Traveler59PhotonCannon.xml" type="all"/>
+		<Include source="ZOCOM\Structures\ZOCOMBarracksDestroyed.xml" type="all"/>
+		<Include source="ZOCOM\Structures\ZOCOMBattlebase.xml" type="all"/>
+		<Include source="ZOCOM\Structures\ZOCOMGolumCannon.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMGrenadeSoldierGarrisoned.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMMissileSoldierGarrisoned.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMRifleSoldierGarrisoned.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMZoneRaiderGarrisoned.xml" type="all"/>
+
+		<Include source="MetaGame\MetaGameMapZones.xml" type="all"/>
+
+		<!-- Files modified in 664bc2e and all later changes -->
+		<Include source="AirSupports.xml" type="all"/>
+		<Include source="Alien\Structures\AlienDronePlatform.xml" type="all"/>
+		<Include source="Alien\Structures\AlienFoundry.xml" type="all"/>
+		<Include source="Alien\Structures\AlienGateway.xml" type="all"/>
+		<Include source="Alien\Structures\AlienMiniMCVOutpost.xml" type="all"/>
+		<Include source="Alien\Structures\AlienPortal.xml" type="all"/>
+		<Include source="Alien\Structures\AlienPowerProjector.xml" type="all"/>
+		<Include source="Alien\Structures\AlienReactor.xml" type="all"/>
+		<Include source="Alien\Structures\AlienRef.xml" type="all"/>
+		<Include source="Alien\Structures\AlienRiftGenerator.xml" type="all"/>
+		<Include source="Alien\Structures\AlienSignalTransmitter.xml" type="all"/>
+		<Include source="Alien\Structures\AlienSporePod.xml" type="all"/>
+		<Include source="Alien\Structures\AlienStasisChamber.xml" type="all"/>
+		<Include source="Alien\Structures\AlienTibHive.xml" type="all"/>
+		<Include source="Alien\Structures\AlienWarpBeacon.xml" type="all"/>
+		<Include source="Alien\Structures\AlienWarpChasm.xml" type="all"/>
+		<Include source="BlackHand\Structures\BHConstructionYard.xml" type="all"/>
+		<Include source="BlackHand\Structures\BHCrane.xml" type="all"/>
+		<Include source="BlackHand\Structures\BHDropZone.xml" type="all"/>
+		<Include source="BlackHand\Structures\BHMiniMCVOutpost.xml" type="all"/>
+		<Include source="BlackHand\Structures\BHPowerPlant.xml" type="all"/>
+		<Include source="BlackHand\Structures\BHPropagandaTower.xml" type="all"/>
+		<Include source="BlackHand\Structures\BHRef.xml" type="all"/>
+		<Include source="BlackHand\Structures\BHSecretShrine.xml" type="all"/>
+		<Include source="BlackHand\Structures\BHTechCenter.xml" type="all"/>
+		<Include source="BlackHand\Structures\BHTempleOfNod.xml" type="all"/>
+		<Include source="BlackHand\Structures\BHTibChemPlant.xml" type="all"/>
+		<Include source="BlackHand\Structures\blackhandhandofnod.xml" type="all"/>
+		<Include source="BlackHand\Structures\blackhandoperationscenter.xml" type="all"/>
+		<Include source="BlackHand\Structures\BlackHandTiberiumSilo.xml" type="all"/>
+		<Include source="BlackHand\Structures\DecoyTemple.xml" type="all"/>
+		<Include source="BlackHand\Structures\MG_BH_WarmechFacility.xml" type="all"/>
+		<Include source="CGF\AlienControlCenter.xml" type="all"/>
+		<Include source="CGF\R17ControlCenter.xml" type="all"/>
+		<Include source="CGF\T59ControlCenter.xml" type="all"/>
+		<Include source="GDI\Structures\GDIAirTower.xml" type="all"/>
+		<Include source="GDI\Structures\gdiarmory.xml" type="all"/>
+		<Include source="GDI\Structures\GDIBarracks.xml" type="all"/>
+		<Include source="GDI\Structures\gdicommandpost.xml" type="all"/>
+		<Include source="GDI\Structures\GDIConstructionYard.xml" type="all"/>
+		<Include source="GDI\Structures\GDICrane.xml" type="all"/>
+		<Include source="GDI\Structures\GDIIonCannonControl.xml" type="all"/>
+		<Include source="GDI\Structures\gdimedicalbay.xml" type="all"/>
+		<Include source="GDI\Structures\GDIMiniMCVOutpost.xml" type="all"/>
+		<Include source="GDI\Structures\GDIPowerPlant.xml" type="all"/>
+		<Include source="GDI\Structures\GDIRef.xml" type="all"/>
+		<Include source="GDI\Structures\GDISpaceCommandUplink.xml" type="all"/>
+		<Include source="GDI\Structures\GDISpaceCommandUplinkDestroyed.xml" type="all"/>
+		<Include source="GDI\Structures\GDITiberiumSilo.xml" type="all"/>
+		<Include source="GDI\Structures\GDIWarfactory.xml" type="all"/>
+		<Include source="GDI\Structures\MG_GDI_ReclamatorHub.xml" type="all"/>
+		<Include source="GDI\Units\GDIDigInBuilding.xml" type="all"/>
+		<Include source="GlobalData\upgrade.xml" type="all"/>
+		<Include source="MarkedOfKane\Structures\MarkedOfKaneDisruptionTower.xml" type="all"/>
+		<Include source="MarkedOfKane\Structures\markedofkaneoperationscenter.xml" type="all"/>
+		<Include source="MarkedOfKane\Structures\MarkedOfKaneTiberiumSilo.xml" type="all"/>
+		<Include source="MarkedOfKane\Structures\MG_MoK_WarmechFacility.xml" type="all"/>
+		<Include source="MarkedOfKane\Structures\MoKConstructionYard.xml" type="all"/>
+		<Include source="MarkedOfKane\Structures\MoKCrane.xml" type="all"/>
+		<Include source="MarkedOfKane\Structures\MoKDropZone.xml" type="all"/>
+		<Include source="MarkedOfKane\Structures\MoKhandofnod.xml" type="all"/>
+		<Include source="MarkedOfKane\Structures\MoKHangar.xml" type="all"/>
+		<Include source="MarkedOfKane\Structures\MoKMiniMCVOutpost.xml" type="all"/>
+		<Include source="MarkedOfKane\Structures\MoKPowerPlant.xml" type="all"/>
+		<Include source="MarkedOfKane\Structures\MoKPropagandaTower.xml" type="all"/>
+		<Include source="MarkedOfKane\Structures\MOKRef.xml" type="all"/>
+		<Include source="MarkedOfKane\Structures\MoKSecretShrine.xml" type="all"/>
+		<Include source="MarkedOfKane\Structures\MoKTechCenter.xml" type="all"/>
+		<Include source="MarkedOfKane\Structures\MOKTempleOfNod.xml" type="all"/>
+		<Include source="MarkedOfKane\Structures\MOKTibChemPlant.xml" type="all"/>
+		<Include source="Nod\Structures\MG_NOD_WarmechFacility.xml" type="all"/>
+		<Include source="Nod\Structures\NodConyards.xml" type="all"/>
+		<Include source="Nod\Structures\NODCrane.xml" type="all"/>
+		<Include source="Nod\Structures\NODDisruptionTower.xml" type="all"/>
+		<Include source="Nod\Structures\NODDropZone.xml" type="all"/>
+		<Include source="Nod\Structures\nodhandofnod.xml" type="all"/>
+		<Include source="Nod\Structures\NODHangar.xml" type="all"/>
+		<Include source="Nod\Structures\NODMiniMCVOutpost.xml" type="all"/>
+		<Include source="Nod\Structures\NODOperationsCenter.xml" type="all"/>
+		<Include source="Nod\Structures\NodPowerPlant.xml" type="all"/>
+		<Include source="Nod\Structures\NODPropagandaTower.xml" type="all"/>
+		<Include source="Nod\Structures\NODRef.xml" type="all"/>
+		<Include source="Nod\Structures\NODSecretShrine.xml" type="all"/>
+		<Include source="Nod\Structures\NODTechCenter.xml" type="all"/>
+		<Include source="Nod\Structures\NODTempleOfNod.xml" type="all"/>
+		<Include source="Nod\Structures\NodTibChemPlant.xml" type="all"/>
+		<Include source="Nod\Structures\NODTiberiumSilo.xml" type="all"/>
+		<Include source="Reaper17\Structures\R17Foundry.xml" type="all"/>
+		<Include source="Reaper17\Structures\R17Gateway.xml" type="all"/>
+		<Include source="Reaper17\Structures\R17MiniMCVOutpost.xml" type="all"/>
+		<Include source="Reaper17\Structures\R17Portal.xml" type="all"/>
+		<Include source="Reaper17\Structures\R17PowerProjector.xml" type="all"/>
+		<Include source="Reaper17\Structures\R17Reactor.xml" type="all"/>
+		<Include source="Reaper17\Structures\R17Ref.xml" type="all"/>
+		<Include source="Reaper17\Structures\R17RiftGenerator.xml" type="all"/>
+		<Include source="Reaper17\Structures\R17SignalTransmitter.xml" type="all"/>
+		<Include source="Reaper17\Structures\R17SporePod.xml" type="all"/>
+		<Include source="Reaper17\Structures\R17StasisChamber.xml" type="all"/>
+		<Include source="Reaper17\Structures\R17WarpBeacon.xml" type="all"/>
+		<Include source="Reaper17\Structures\R17WarpChasm.xml" type="all"/>
+		<Include source="Reaper17\Structures\Reaper17DronePlatform.xml" type="all"/>
+		<Include source="SteelTalons\Structures\STAirTower.xml" type="all"/>
+		<Include source="SteelTalons\Structures\STBarracks.xml" type="all"/>
+		<Include source="SteelTalons\Structures\STConstructionYard.xml" type="all"/>
+		<Include source="SteelTalons\Structures\STCrane.xml" type="all"/>
+		<Include source="SteelTalons\Structures\steeltalonscommandpost.xml" type="all"/>
+		<Include source="SteelTalons\Structures\steeltalonstechcenter.xml" type="all"/>
+		<Include source="SteelTalons\Structures\SteelTalonsTiberiumSilo.xml" type="all"/>
+		<Include source="SteelTalons\Structures\STEpicWF.xml" type="all"/>
+		<Include source="SteelTalons\Structures\STIonCannonControl.xml" type="all"/>
+		<Include source="SteelTalons\Structures\STMiniMCVOutpost.xml" type="all"/>
+		<Include source="SteelTalons\Structures\STPowerPlant.xml" type="all"/>
+		<Include source="SteelTalons\Structures\STRef.xml" type="all"/>
+		<Include source="SteelTalons\Structures\STSpaceCommandUplink.xml" type="all"/>
+		<Include source="SteelTalons\Structures\STWarfactory.xml" type="all"/>
+		<Include source="traveler59\Structures\T59Foundry.xml" type="all"/>
+		<Include source="traveler59\Structures\T59Gateway.xml" type="all"/>
+		<Include source="traveler59\Structures\T59MiniMCVOutpost.xml" type="all"/>
+		<Include source="traveler59\Structures\T59Portal.xml" type="all"/>
+		<Include source="traveler59\Structures\T59PowerProjector.xml" type="all"/>
+		<Include source="traveler59\Structures\T59Reactor.xml" type="all"/>
+		<Include source="traveler59\Structures\T59Ref.xml" type="all"/>
+		<Include source="traveler59\Structures\T59RiftGenerator.xml" type="all"/>
+		<Include source="traveler59\Structures\T59SignalTransmitter.xml" type="all"/>
+		<Include source="traveler59\Structures\T59SporePod.xml" type="all"/>
+		<Include source="traveler59\Structures\T59StasisChamber.xml" type="all"/>
+		<Include source="traveler59\Structures\T59WarpBeacon.xml" type="all"/>
+		<Include source="traveler59\Structures\T59WarpChasm.xml" type="all"/>
+		<Include source="traveler59\Structures\Traveler59DronePlatform.xml" type="all"/>
+		<Include source="ZOCOM\Structures\MG_ZOCOM_ReclamatorHub.xml" type="all"/>
+		<Include source="ZOCOM\Structures\ZOCOMAirTower.xml" type="all"/>
+		<Include source="ZOCOM\Structures\zocomarmory.xml" type="all"/>
+		<Include source="ZOCOM\Structures\ZOCOMBarracks.xml" type="all"/>
+		<Include source="ZOCOM\Structures\zocomcommandpost.xml" type="all"/>
+		<Include source="ZOCOM\Structures\ZOCOMConstructionYard.xml" type="all"/>
+		<Include source="ZOCOM\Structures\ZOCOMCrane.xml" type="all"/>
+		<Include source="ZOCOM\Structures\ZOCOMIonCannonControl.xml" type="all"/>
+		<Include source="ZOCOM\Structures\zocommedicalbay.xml" type="all"/>
+		<Include source="ZOCOM\Structures\ZOCOMMiniMCVOutpost.xml" type="all"/>
+		<Include source="ZOCOM\Structures\ZOCOMPowerPlant.xml" type="all"/>
+		<Include source="ZOCOM\Structures\ZOCOMRef.xml" type="all"/>
+		<Include source="ZOCOM\Structures\ZOCOMSpaceCommandUplink.xml" type="all"/>
+		<Include source="ZOCOM\Structures\ZOCOMTiberiumSilo.xml" type="all"/>
+		<Include source="ZOCOM\Structures\ZOCOMWarfactory.xml" type="all"/>
+
+		<!-- Aircraft restored to R25i; Hammerhead night-light fix retained -->
+		<Include source="Alien\Units\AlienDevastatorWarship.xml" type="all"/>
+		<Include source="Alien\Units\AlienInvaderFighter.xml" type="all"/>
+		<Include source="Alien\Units\AlienMothership.xml" type="all"/>
+		<Include source="Alien\Units\alienplanetaryassaultcarrier.xml" type="all"/>
+		<Include source="CGF\NODCarryallInfantry.xml" type="all"/>
+		<Include source="CGF\NODCarryallVehicle.xml" type="all"/>
+		<Include source="GDI\Units\GDIFireHawk.xml" type="all"/>
+		<Include source="GDI\Units\GDIHammerhead.xml" type="all"/>
+		<Include source="GDI\Units\GDIOrca.xml" type="all"/>
+		<Include source="GDI\Units\GDIV35Ox_Summoned.xml" type="all"/>
+		<Include source="GDI\Units\GDIV35Ox_SummonedForVehicle.xml" type="all"/>
+		<Include source="MarkedOfKane\Units\markedofkanevertigo.xml" type="all"/>
+		<Include source="MarkedOfKane\Units\MoKVenom.xml" type="all"/>
+		<Include source="New Objects\AlienStormrider.xml" type="all"/>
+		<Include source="New Objects\Reaper17Stormrider.xml" type="all"/>
+		<Include source="New Objects\Traveler59DevastatorWarship.xml" type="all"/>
+		<Include source="New Objects\Traveler59Stormrider.xml" type="all"/>
+		<Include source="Nod\Units\NODVenom.xml" type="all"/>
+		<Include source="Nod\Units\nodvertigo.xml" type="all"/>
+		<Include source="Reaper17\Units\Reaper17Mothership.xml" type="all"/>
+		<Include source="SteelTalons\Units\SteelTalonsFireHawk.xml" type="all"/>
+		<Include source="SteelTalons\Units\STHammerhead.xml" type="all"/>
+		<Include source="SteelTalons\Units\STOrca.xml" type="all"/>
+		<Include source="SteelTalons\Units\STV35Ox_Summoned.xml" type="all"/>
+		<Include source="SteelTalons\Units\STV35Ox_SummonedForVehicle.xml" type="all"/>
+		<Include source="traveler59\Units\Traveler59Mothership.xml" type="all"/>
+		<Include source="traveler59\Units\Traveler59PlanetaryAssaultCarrier.xml" type="all"/>
+		<Include source="ZOCOM\Units\Orcas.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMFireHawk.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMHammerhead.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMV35Ox_Summoned.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMV35Vehicle.xml" type="all"/>
+
+		<!-- Scrin MCVs and unpacking variants restored to R25i -->
+		<Include source="Alien\Units\AlienMCV.xml" type="all"/>
+		<Include source="Alien\Units\AlienMCVUnpacking.xml" type="all"/>
+		<Include source="Reaper17\Units\R17MCV.xml" type="all"/>
+		<Include source="Reaper17\Units\R17MCVUnpacking.xml" type="all"/>
+		<Include source="traveler59\Units\T59MCV.xml" type="all"/>
+		<Include source="traveler59\Units\T59MCVUnpacking.xml" type="all"/>
+
+		<!-- Shatterers restored to R25i -->
+		<Include source="CGF\ZOCOMShatt.xml" type="all"/>
+		<Include source="New Objects\GDISonicTank.xml" type="all"/>
+
+		<![CDATA[
+
+		<!-- Files modified since 81fed1a -->
+		<Include source="SkirmishAI\Campaign\CM_2_3_Capture_Giraud\CM_2_3_AIP_GDI_A.xml" type="all"/>
+		<Include source="SkirmishAI\Campaign\CM_2_3_Capture_Giraud\CM_2_3_AIP_GDI_B.xml" type="all"/>
+
+		<Include source="MetaGame\MetaGameMapZones.xml" type="all"/>
+
+		<Include source="AirSupportsDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienDronePlatformDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienFoundryDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienGatewayDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienMiniMCVOutpostDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienPortalDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienPowerProjectorDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienReactorDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienRefDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienRiftGeneratorDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienSignalTransmitterDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienSporePodDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienStasisChamberDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienTibHiveDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienWarpBeaconDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienWarpChasmDestroyed.xml" type="all"/>
+		<Include source="BlackHand\Structures\blackhandhandofnodDestroyed.xml" type="all"/>
+		<Include source="CGF\AlienControlCenterDestroyed.xml" type="all"/>
+		<Include source="CGF\ZOCOMShatt.xml" type="all"/>
+		<Include source="GDI\Structures\GDIConstructionYardDestroyed.xml" type="all"/>
+		<Include source="GDI\Structures\GDICraneDestroyed.xml" type="all"/>
+		<Include source="GDI\Structures\GDIIonCannonControlDestroyed.xml" type="all"/>
+		<Include source="GDI\Structures\GDIMiniMCVOutpostDestroyed.xml" type="all"/>
+		<Include source="GDI\Structures\GDIRefDestroyed.xml" type="all"/>
+		<Include source="GDI\Structures\GDITiberiumSiloDestroyed.xml" type="all"/>
+		<Include source="GDI\Structures\GDIWarfactoryDestroyed.xml" type="all"/>
+		<Include source="GDI\Structures\MG_GDI_ReclamatorHubDestroyed.xml" type="all"/>
+		<Include source="GDI\Units\GDIDigInBuildingDestroyed.xml" type="all"/>
+		<Include source="New Objects\GDISonicTank.xml" type="all"/>
+		<Include source="Nod\Structures\MG_NOD_WarmechFacilityDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NODCraneDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NODDisruptionTowerDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NODDropZoneDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NODMiniMCVOutpostDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NODPropagandaTowerDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NODRefDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NODTempleOfNodDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NODTiberiumSiloDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NodConyardsDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NodPowerPlantDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NodTibChemPlantDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\nodhandofnodDestroyed.xml" type="all"/>
+		<Include source="Reaper17\Structures\R17SporePodDestroyed.xml" type="all"/>
+		<Include source="ZOCOM\Structures\ZOCOMGolumCannon.xml" type="all"/>
+		]]>
+
+		<![CDATA[ 
+		<!-- hammerheads -->
+
+		<Include source="GlobalData\ObjectCreationListsR25.xml" type="all"/>
+		<Include source="GDI\Structures\GDIBattlebase.xml" type="all"/>
+		<Include source="ZOCOM\Structures\ZOCOMBattlebase.xml" type="all"/>
+		<Include source="SteelTalons\Structures\STBattlebase.xml" type="all"/>
+		<Include source="Nod\Structures\nodhandofnodDestroyed.xml" type="all"/>
+		<Include source="BlackHand\Structures\blackhandhandofnodDestroyed.xml" type="all"/>
+		]]>
+		<![CDATA[
+		<Include source="GlobalData\DestroyedStructureWeapons.xml" type="all"/>
+		<!-- pr #24-->
+
+	
+
+		<Include source="ZOCOM/Structures/ZOCOMBattlebase.xml" type="all"/>
+		<Include type="all" source="SteelTalons\Structures\STBattlebase.xml" />
+		<Include type="all" source="GDI\Structures\GDIBattlebase.xml" />
+		<Include source="GlobalData\WeaponR25.xml" type="all"/>
+		<Include source="GDI\Structures\GDIRefDestroyed.xml" type="all"/>
+		<Include source="GDI\Structures\GDIBarracksDestroyed.xml" type="all"/>
+		<Include source="ZOCOM\Structures\ZOCOMBarracksDestroyed.xml" type="all"/>
+		<Include source="GDI\Structures\GDIConstructionYardDestroyed.xml" type="all"/>
+		<Include source="GDI\Structures\GDIWarfactoryDestroyed.xml" type="all"/>
+		<Include source="GDI\Structures\MG_GDI_ReclamatorHubDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NodConyardsDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NODDropZoneDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NODRefDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\nodhandofnodDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\MG_NOD_WarmechFacilityDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NODShredderTurret.xml" type="all"/>
+		<Include source="Alien\Structures\AlienDronePlatformDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienGatewayDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienPortalDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienRefDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienWarpBeaconDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienWarpChasmDestroyed.xml" type="all"/>
+		<!-- structure placement fix: remaining structures -->
+		<Include source="GDI\Structures\GDIGolumCannon.xml" type="all"/>
+		<Include source="SteelTalons\Structures\STGolumCannon.xml" type="all"/>
+		<Include source="GDI\Structures\GDITerraformingStation.xml" type="all"/>
+		<Include source="ZOCOM\Structures\ZOCOMTerraformingStation.xml" type="all"/>
+		<Include source="New Objects\GDIWatchTower.xml" type="all"/>
+		<Include source="New Objects\ZOCOMWatchTower.xml" type="all"/>
+		<Include source="New Objects\SteelTalonsWatchTower.xml" type="all"/>
+		<Include source="Nod\Structures\NodLaserCannonHub.xml" type="all"/>
+		<Include source="BlackHand\Structures\BHLaserCannonHub.xml" type="all"/>
+		<Include source="MarkedOfKane\Structures\MoKLaserCannonHub.xml" type="all"/>
+		<Include source="Nod\Structures\NodRocketBunkerHub.xml" type="all"/>
+		<Include source="BlackHand\Structures\BHRocketBunkerHub.xml" type="all"/>
+		<Include source="MarkedOfKane\Structures\MOKRocketBunkerHub.xml" type="all"/>
+		<Include source="Nod\Structures\NodShredderTurretHub.xml" type="all"/>
+		<Include source="BlackHand\Structures\BlackHandShredderTurretHub.xml" type="all"/>
+		<Include source="MarkedOfKane\Structures\MoKShredderTurretHub.xml" type="all"/>
+		<Include source="Alien\Structures\AlienStormColumn.xml" type="all"/>
+		<Include source="Reaper17\Structures\R17StormColumn.xml" type="all"/>
+		<Include source="traveler59\Structures\T59StormColumn.xml" type="all"/>
+		<Include source="New Objects\AlienBuzzerHive.xml" type="all"/>
+		<Include source="New Objects\Reaper17BuzzerHive.xml" type="all"/>
+		<Include source="New Objects\Traveler59BuzzerHive.xml" type="all"/>
+		<!-- neutral buildings 
+		<Include source="Alien\Structures\MutantHovel.xml" type="all"/>
+		<Include source="Neutral\Structures\CDMTower.xml" type="all"/>
+		<Include source="Neutral\Structures\DefensiveTower.xml" type="all"/>
+		<Include source="Neutral\Structures\ElectromagneticPulseControlCenter.xml" type="all"/>
+		<Include source="Neutral\Structures\TiberiumSilo.xml" type="all"/>
+		<Include source="TiberiumSpike.xml" type="all"/> -->
+		<!-- -->
+		<Include source="GDI\Structures\GDIAirTowerDestroyed.xml" type="all"/>
+		<Include source="GDI\Structures\GDICraneDestroyed.xml" type="all"/>
+		<Include source="GDI\Structures\GDIIonCannonControlDestroyed.xml" type="all"/>
+		<Include source="GDI\Structures\GDIMiniMCVOutpostDestroyed.xml" type="all"/>
+		<Include source="GDI\Structures\GDIPowerPlantDestroyed.xml" type="all"/>
+		<Include source="GDI\Structures\GDITiberiumSiloDestroyed.xml" type="all"/>
+		<Include source="GDI\Structures\gdiarmoryDestroyed.xml" type="all"/>
+		<Include source="GDI\Structures\gdicommandpostDestroyed.xml" type="all"/>
+		<Include source="SteelTalons\Structures\steeltalonscommandpostDestroyed.xml" type="all"/>
+		<Include source="GDI\Structures\gdimedicalbayDestroyed.xml" type="all"/>
+		<Include source="GDI\Units\GDIDigInBuildingDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NODCraneDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NODDisruptionTowerDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NODPropagandaTowerDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NODHangarDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NODMiniMCVOutpostDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NODOperationsCenterDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NODSecretShrineDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NODTechCenterDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NODTempleOfNodDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NODTiberiumSiloDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NodPowerPlantDestroyed.xml" type="all"/>
+		<Include source="Nod\Structures\NodTibChemPlantDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienFoundryDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienMiniMCVOutpostDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienPowerProjectorDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienReactorDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienRiftGeneratorDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienSignalTransmitterDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienSporePodDestroyed.xml" type="all"/>
+		<Include source="Reaper17\Structures\R17SporePodDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienStasisChamberDestroyed.xml" type="all"/>
+		<Include source="Alien\Structures\AlienTibHiveDestroyed.xml" type="all"/>
+		<Include source="CGF\AlienControlCenterDestroyed.xml" type="all"/>
+		<Include source="AirSupportsDestroyed.xml" type="all"/>
+		<!-- obelisk / photon cannon (flattened from vanilla) + placement fix -->
+		<Include source="Nod\Structures\NODObelisk.xml" type="all"/>
+		<Include source="BlackHand\Structures\BlackHandObelisk.xml" type="all"/>
+		<Include source="MarkedOfKane\Structures\MarkedOfKaneObelisk.xml" type="all"/>
+		<Include source="Alien\Structures\AlienPhotonCannon.xml" type="all"/>
+		<Include source="Reaper17\Structures\Reaper17PhotonCannon.xml" type="all"/>
+		<Include source="traveler59\Structures\Traveler59PhotonCannon.xml" type="all"/>
+		<Include source="ZOCOM\Structures\ZOCOMGolumCannon.xml" type="all"/>
+		<Include source="GlobalData\ObjectCreationListsR25.xml" type="all"/>
+		<!-- SlowDeath DestructionDelay 5s -->
+
+		<Include source="GlobalData/SpecialPowerTemplates.xml" type="all"/>	
+		<!-- R25j -->
+		<Include source="GDI\Units\GDIZoneInf.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMZoneRaiderGarrisoned.xml" type="all"/>
+		<Include source="GDI\Units\GDIMissileSoldierGarrisoned.xml" type="all"/>
+		<Include source="GDI\Units\GDIRifleSoldierGarrisoned.xml" type="all"/>
+		<Include source="GDI\Units\GDIGrenadeSoldierGarrisoned.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMRifleSoldierGarrisoned.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMMissileSoldierGarrisoned.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMGrenadeSoldierGarrisoned.xml" type="all"/>
+		<Include source="SteelTalons\Units\SteelTalonsRifleSoldierGarrisoned.xml" type="all"/>
+		<Include source="SteelTalons\Units\SteelTalonsMissileSoldierGarrisoned.xml" type="all"/>
+		<Include source="SteelTalons\Units\SteelTalonsGrenadeSoldierGarrisoned.xml" type="all"/>
+		<Include source="Neutral\Units\MutantMarauderGarrisoned.xml" type="all"/>
+		<Include source="GlobalData\ZoneRaiderWeaponsR25.xml" type="all"/>
+		<Include source="GlobalData\ZoneTrooperWeaponsR25.xml" type="all"/>
+		<!-- mothership fixes -->
+		<Include source="GlobalData/WeaponR21.xml" type="all"/>
+		<!-- shatterer overload beam 
+		<Include type="all" source="GlobalData/AttributeModifier.xml" />-->
+		<!-- repair drones -->
+		<Include type="all" source="RDrones.xml" />
+		<Include type="all" source="STMRTDrone.xml" />	
+		<!-- shatterers: instant sink -->
+		<Include source="CGF\ZOCOMShatt.xml" type="all"/>
+		<Include source="New Objects\GDISonicTank.xml" type="all"/>
+
+		<Include source="GlobalData\LocomotorR25.xml" type="all"/>
+		<Include source="GlobalData/Locomotor.xml" type="all"/>  ]]>
+
+		<!-- R25h
+		<Include type="all" source="GDI\Props\GDIMjolnirStrikeProjectileStrike.xml" />
+		<Include source="GDI\Props\GDIShockwaveArtillerySeed.xml" type="all"/>	
+		<Include source="GlobalData\ExperienceLevelsR25.xml" type="all"/>
+		<Include source="GlobalData\experiencelevels.xml" type="all"/>
+		<Include source="New Objects\GDISonicTank.xml" type="all"/>	
+		<Include type="all" source="Nod\props\NODCatalystSeed.xml" />
+		<Include type="all" source="Alien\Props\RiftGeneratorWeaponObject.xml" />
+		<Include type="all" source="IonCannonEffect.xml" />
+		<Include type="all" source="Nod\props\NODMine.xml" />
+		<Include type="all" source="Nod\props\NODCatalystMissileSeed.xml" />
+		<Include type="all" source="GDI\Props\GDIMine.xml" />
+		<Include type="all" source="TVD.xml" />
+		<Include type="all" source="MarkedOfKane\props\MarkedOfKaneMagneticMine.xml" />
+		<Include source="GDI\Units\GDIZoneInf.xml" type="all"/>
+		<Include source="GDI\Units\GDIRifleSoldierGarrisoned.xml" type="all"/>
+		<Include source="GDI\Units\GDIGrenadeSoldierGarrisoned.xml" type="all"/>
+		<Include source="GDI\Units\GDIMissileSoldierGarrisoned.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMZoneRaiderGarrisoned.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMRifleSoldierGarrisoned.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMGrenadeSoldierGarrisoned.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMMissileSoldierGarrisoned.xml" type="all"/>
+		<Include source="SteelTalons\Units\SteelTalonsRifleSoldierGarrisoned.xml" type="all"/>
+		<Include source="SteelTalons\Units\SteelTalonsGrenadeSoldierGarrisoned.xml" type="all"/>
+		<Include source="SteelTalons\Units\SteelTalonsMissileSoldierGarrisoned.xml" type="all"/>
+		<Include source="Neutral\Units\MutantMarauderGarrisoned.xml" type="all"/>
+		-->
+
+		<!-- assets changed in e764ecf9e0493545462179bab6b83662288cb212
+		<Include type="all" source="BlackHand\Units\BlackHandCustomWarmechHusk.xml" />
+		<Include type="all" source="MarkedOfKane\Units\MoKAvatarHusk.xml" />
+		<Include type="all" source="Nod\Units\NODAvatarHusk.xml" />
+		<Include source="ZOCOM\Units\ZOCOMSniper.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMSpotter.xml" type="all"/>
+		<Include source="ZOCOM\ZOCOM.xml" type="all"/>
+		<Include source="Alien\Units\AlienMillipedeBody.xml" type="all"/>
+		<Include source="Alien\Units\AlienMillipedeHead.xml" type="all"/>
+		<Include source="Alien\Units\AlienRazorDrones.xml" type="all"/>
+		<Include source="Alien\Units\AlienShockTrooper.xml" type="all"/>
+		<Include source="BlackHand\Units\BHDisciple.xml" type="all"/>
+		<Include source="BlackHand\Units\BHFanatic.xml" type="all"/>
+		<Include source="BlackHand\Units\BlackHandConfessor.xml" type="all"/>
+		<Include source="BlackHand\Units\BlackHandMilitantRocket.xml" type="all"/>
+		<Include source="BlackHand\Units\Blackhands.xml" type="all"/>
+		<Include source="CGF\Blackhands.xml" type="all"/>
+		<Include source="CGF\T59RazorDrones.xml" type="all"/>
+		<Include source="GDI\Units\GDIGrenadeSoldier.xml" type="all"/>
+		<Include source="GDI\Units\GDIGrenadeSoldierGarrisoned.xml" type="all"/>
+		<Include source="GDI\Units\GDIMissileSoldierGarrisoned.xml" type="all"/>
+		<Include source="GDI\Units\GDIMissileSoldierVeteran.xml" type="all"/>
+		<Include source="GDI\Units\GDIRifleSoldier.xml" type="all"/>
+		<Include source="GDI\Units\GDIRifleSoldierGarrisoned.xml" type="all"/>
+		<Include source="GDI\Units\GDIRifleSoldierVeteran.xml" type="all"/>
+		<Include source="GDI\Units\GDISniper.xml" type="all"/>
+		<Include source="GDI\Units\GDISpotter.xml" type="all"/>
+		<Include source="GDI\Units\GDIZoneInf.xml" type="all"/>
+		<Include source="MarkedOfKane\Units\MOKAwakened.xml" type="all"/>
+		<Include source="MarkedOfKane\Units\MOKEnlightened.xml" type="all"/>
+		<Include source="MarkedOfKane\Units\MOKTibTrooper.xml" type="all"/>
+		<Include source="MarkedOfKane\Units\MarkedOfKaneFanatic.xml" type="all"/>
+		<Include source="MarkedOfKane\Units\MarkedOfKaneMilitantRocket.xml" type="all"/>
+		<Include source="Neutral\Units\MutantMarauderGarrisoned.xml" type="all"/>
+		<Include source="Neutral\Units\mutantmarauder.xml" type="all"/>
+		<Include source="Nod\Units\NODConfessor.xml" type="all"/>
+		<Include source="Nod\Units\NODCyborg.xml" type="all"/>
+		<Include source="Nod\Units\NODFanatic.xml" type="all"/>
+		<Include source="Nod\Units\NODMilitantRocket.xml" type="all"/>
+		<Include source="Nod\Units\Shadows.xml" type="all"/>
+		<Include source="Reaper17\Units\R17ShockTrooper.xml" type="all"/>
+		<Include source="Reaper17\Units\R17Stalker.xml" type="all"/>
+		<Include source="SteelTalons\Units\STRifleSoldier.xml" type="all"/>
+		<Include source="SteelTalons\Units\SteelTalonsGrenadeSoldier.xml" type="all"/>
+		<Include source="SteelTalons\Units\SteelTalonsGrenadeSoldierGarrisoned.xml" type="all"/>
+		<Include source="SteelTalons\Units\SteelTalonsMissileSoldierGarrisoned.xml" type="all"/>
+		<Include source="SteelTalons\Units\SteelTalonsRifleSoldierGarrisoned.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMGrenadeSoldier.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMGrenadeSoldierGarrisoned.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMMissileSoldierGarrisoned.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMMissileSoldierVeteran.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMRifleSoldier.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMRifleSoldierGarrisoned.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMRifleSoldierVeteran.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMZoneInf.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMZoneRaiderGarrisoned.xml" type="all"/>
+		<Include source="traveler59\Units\T59Cultist.xml" type="all"/>
+		<Include type="all" source="New Objects/BlackHandRaiderTank.xml" />
+		<Include source="traveler59\Units\T59ShockTrooper.xml" type="all"/>
+		<Include source="traveler59\Units\T59Stalker.xml" type="all"/>
+		<Include source="GDI\Units\GDISniperSquad_Veteran.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMSniperSquad_Veteran.xml" type="all"/>
+		<Include source="GDI\Units\GDIMissileSoldier.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMMissileSoldier.xml" type="all"/>
+		<Include source="SteelTalons\Units\SteelTalonsMissileSoldier.xml" type="all"/>
+		<Include source="Nod\Units\NODMilitant.xml" type="all"/>
+		 -->
+		<!--
+		<Include source="ZOCOM\Units\ZOCOMImprovedSonicTankRubble.xml" type="all"/>
+		<Include type="all" source="RDrones.xml" />
+		<Include source="CGF\ZOCOMShatt.xml" type="all"/>
+		<Include source="GDI\Units\GDISonicTankRubble.xml" type="all"/>
+		<Include source="BlackHand\Structures\BlackHandShredderTurretHub.xml" type="all"/>	
+		<Include source="MarkedOfKane\Structures\MoKShredderTurretHub.xml" type="all"/>	
+		<Include source="Units\BlackHandConfessor.xml" type="all"/>	
+		<Include source="Nod\Units\NODMilitantSquad.xml" type="all"/>	
+		<Include source="Nod\Units\NodMilitantRocketSquad.xml" type="all"/>
+		<Include source="Nod\Units\NODConfessor.xml" type="all"/>
+		<Include source="BlackHand\Units\BlackHandMilitantRocketSquad.xml" type="all"/>
+		<Include source="BlackHand\Units\BlackHandConfessorSquad.xml" type="all"/>
+		<Include source="BlackHand\Units\BHDisciple.xml" type="all"/>
+		<Include source="Nod\Structures\NODShredderTurret.xml" type="all"/>
+		<Include source="GDI\Units\GDIMissileSoldier.xml" type="all"/>
+		<Include source="GDI\Units\GDIRifleSoldier.xml" type="all"/>
+		<Include source="GDI\Units\GDIRifleSoldierGarrisoned.xml" type="all"/>
+		<Include source="BlackHand\Units\BlackHandBunkerTruck.xml" type="all"/>
+		<Include source="GlobalData\SpecialPowerTemplates.xml" type="all"/>
+		<Include source="MarkedOfKane\Units\MarkedofKaneBunkerTruck.xml" type="all"/>
+		<Include source="Nod\Units\NodBunkerTruck.xml" type="all"/>
+		<Include source="SteelTalons\Units\STMammoth.xml" type="all"/>
+		<Include source="SteelTalons\Units\STTitan.xml" type="all"/>
+		<Include source="MarkedOfKane\Units\MarkedOfKaneFanatic.xml" type="all"/>
+		<Include source="MarkedOfKane\Units\MarkedOfKaneFanaticSquad.xml" type="all"/>
+		<Include source="MarkedOfKane\Units\MarkedOfKaneMilitantRocket.xml" type="all"/>
+		<Include source="MarkedOfKane\Units\MarkedOfKaneMilitantRocketSquad.xml" type="all"/>
+
+		<Include source="GlobalData\SpecialPowerTemplates.xml" type="all"/>
+		<Include source="BountyDummyEmitter.xml" type="all"/>
+		<Include source="BountyDummyShatterer.xml" type="all"/>
+		<Include source="CreateHuskEffect.xml" type="all"/>
+		<Include source="GlobalData\BountyOCL.xml" type="all"/>
+		<Include source="GlobalData\BountyWeapons.xml" type="all"/>
+		<Include source="PhaseDummy.xml" type="all"/>
+		<Include source="RageDummy.xml" type="all"/>
+		<Include source="GDI\Structures\GDITerraformingStation.xml" type="all"/>
+		<Include source="ZOCOM\Structures\ZOCOMTerraformingStation.xml" type="all"/>
+		<Include source="BlackHand\Units\blackhandmcv.xml" type="all"/>
+		<Include source="GDI\Units\GDIMCV.xml" type="all"/>
+		<Include source="MarkedOfKane\Units\markedofkanemcv.xml" type="all"/>
+		<Include source="Nod\Units\nodmcv.xml" type="all"/>
+		<Include source="SteelTalons\Units\SteelTalonsMCV.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMMCV.xml" type="all"/> -->
+
+		<!--
+		<Include source="BlackHand\Units\BHRedeemer.xml" type="all"/>
+		<Include source="MarkedOfKane\Units\MoKRedeemer.xml" type="all"/>
+		<Include source="GDI\Units\GDIGrenadeSoldierGarrisoned.xml" type="all"/>
+		<Include source="SteelTalons\Units\SteelTalonsGrenadeSoldierGarrisoned.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMGrenadeSoldierGarrisoned.xml" type="all"/>
+
+		<Include source="GDI\Units\GDIGrenadeSoldierSquad.xml" type="all"/>
+		<Include source="GlobalData\ExperienceLevelsR25.xml" type="all"/>
+		<Include source="SteelTalons\Units\SteelTalonsGrenadeSoldierSquad.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMGrenadeSoldierSquad.xml" type="all"/> -->
+		<!--
+		<Include source="BlackHand\Structures\BHLaserCannonHub.xml" type="all"/>
+		<Include source="BlackHand\Structures\BHRocketBunkerHub.xml" type="all"/>
+		<Include source="MarkedOfKane\Structures\MOKRocketBunkerHub.xml" type="all"/>
+		<Include source="MarkedOfKane\Structures\MoKLaserCannonHub.xml" type="all"/>
+		<Include source="Nod\Structures\NodLaserCannonHub.xml" type="all"/>
+		<Include source="Nod\Structures\NodRocketBunkerHub.xml" type="all"/>
+		<Include source="GDI\Structures\GDITerraformingStationRubble.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMMissileSoldierVeteranSquad.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMRifleSoldierVeteranSquad.xml" type="all"/>
+		<Include source="Alien/Units/AlienCustomizableVehicle.xml" type="all"/>
+		<Include source="Alien\Units\AlienMillipedeBody.xml" type="all"/>
+		<Include source="Alien/Units/AlienMillipedeHead.xml" type="all"/>
+		<Include source="GDI\Units\GDIMissileSoldierVeteranSquad.xml" type="all"/>
+		<Include source="GDI\Units\GDIRifleSoldierVeteranSquad.xml" type="all"/>
+		<Include source="GlobalData\ExperienceLevelsR25.xml" type="all"/>
+		<Include source="Reaper17\Units\R17CustomizableVehicle.xml" type="all"/>
+		<Include source="traveler59\Units\T59CustomizableVehicle.xml" type="all"/>
+		<Include source="Nod\Units\NODMilitant.xml" type="all"/>
+		<Include source="Nod\Units\NODMilitantRocket.xml" type="all"/>
+		<Include source="BlackHand\Units\BlackHandConfessor.xml" type="all"/>
+		<Include source="BlackHand\Units\BlackHandMilitantRocket.xml" type="all"/>
+		<Include source="GDI\Units\GDISniper.xml" type="all"/>
+		<Include source="GDI\Units\GDISpotter.xml" type="all"/>
+		<Include source="CGF\SniperSquads.xml" type="all"/>
+		<Include source="GDI\Units\GDISniperSquad_Veteran.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMSniperSquad_Veteran.xml" type="all"/>
+		<Include source="GDI\Units\GDIZoneInf.xml" type="all"/>
+		<Include source="GDI\Structures\GDIGolumCannon.xml" type="all"/>
+		<Include source="GDI\Units\GDICommando.xml" type="all"/>
+		<Include source="SteelTalons\Structures\STGolumCannon.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMCommando.xml" type="all"/>  -->
+
+		<!--
+		<Include source="ZOCOM\Units\ZOCOMZoneInf.xml" type="all"/>
+		<Include source="GlobalData\ZoneRaiderWeaponsR25.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMZoneRaiderGarrisoned.xml" type="all"/>
+
+
+		<Include source="CGF\ZOCOMRifleSoldierSquad.xml" type="all"/>
+		<Include source="Nod\Units\NodRedeemer.xml" type="all"/>
+		<Include source="RageDummy.xml" type="all"/>
+		<Include source="CGF\ZOCOMMissileSoldierSquad.xml" type="all"/>
+		<Include source="Neutral\Units\MutantMarauderSquad.xml" type="all"/>
+
+
+		<Include source="CGF\STRifleSoldierSquads.xml" type="all"/>
+		<Include source="CGF\STMissileSoldierSquads.xml" type="all"/>
+
+		<Include type="all" source="RDrones.xml" />
+		<Include source="CGF\ZOCOMShatt.xml" type="all"/>
+		<Include source="KillSonicObjectTimer.xml" type="all"/>
+		<Include source="GDI\Structures\GDITerraformingStationRubble.xml" type="all"/>
+		<Include source="GDI\Structures\GDITerraformingStation.xml" type="all"/>
+		<Include source="GDI\Structures\GDITerraformingStationDummy.xml" type="all"/>
+		<Include source="MarkedOfKane\Units\MoKAvatar.xml" type="all"/>
+		<Include source="Alien\Units\alienseekertank.xml" type="all"/>
+		<Include source="Alien/Units/alieneradicatorhexapod.xml" type="all"/>
+		<Include source="PhaseDummy.xml" type="all"/>
+		<Include source="CGF\GDIRifleSoldierSquad.xml" type="all"/>
+		<Include source="GDI\Units\GDIRifleSoldier.xml" type="all"/>
+		<Include source="GDI\Units\GDIRifleSoldierGarrisoned.xml" type="all"/>
+		<Include source="GDI\Units\GDIMissileSoldier.xml" type="all"/>
+		<Include source="GDI\Units\GDIMissileSoldierGarrisoned.xml" type="all"/>
+		<Include source="GDI\Units\GDIRifleSoldierVeteran.xml" type="all"/>
+		<Include source="GDI\Units\GDIMissileSoldierVeteran.xml" type="all"/>
+		<Include source="GDI\Units\GDIGrenadeSoldier.xml" type="all"/>
+
+		<Include source="ZOCOM\Units\ZOCOMRifleSoldier.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMRifleSoldierGarrisoned.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMMissileSoldier.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMMissileSoldierGarrisoned.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMRifleSoldierVeteran.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMMissileSoldierVeteran.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMGrenadeSoldier.xml" type="all"/>
+		<Include source="SteelTalons\Units\STRifleSoldier.xml" type="all"/>
+		<Include source="SteelTalons\Units\SteelTalonsRifleSoldierGarrisoned.xml" type="all"/>
+		<Include source="SteelTalons\Units\SteelTalonsMissileSoldier.xml" type="all"/>
+		<Include source="SteelTalons\Units\SteelTalonsMissileSoldierGarrisoned.xml" type="all"/>
+		<Include source="SteelTalons\Units\SteelTalonsGrenadeSoldier.xml" type="all"/>
+		<Include source="Neutral\Units\mutantmarauder.xml" type="all"/>
+		<Include source="Neutral\Units\MutantMarauderGarrisoned.xml" type="all"/>
+		<Include source="GlobalData\ZoneTrooperWeaponsR25.xml" type="all"/>
+		<Include source="GDI\Units\GDIAPC.xml" type="all"/>
+		<Include source="GDI\Units\GDIMCV.xml" type="all"/>
+		<Include source="GDI\Units\GDIZoneInf.xml" type="all"/>
+		<Include source="GDI\Units\GDISniper.xml" type="all"/>
+		<Include source="GDI\Units\GDISpotter.xml" type="all"/>
+		<Include source="Alien\Units\AlienRazorDrones.xml" type="all"/>
+
+		<Include source="CGF\GDIMissileSoldierSquad.xml" type="all"/>
+		<Include source="GlobalData\Armor.xml" type="all"/>
+		
+		 -->
+
+		<!-- NEW OBJECTS 
+		<Include source="Nod\Units\NODScorpionBuggy.xml" type="all"/>
+		<Include type="all" source="Alien\Units\AlienCrystalShield.xml" />
+		<Include type="all" source="Alien\Units\AlienCrystalShieldDummy.xml" />
+		<Include type="all" source="GlobalData\ObjectCreationLists.xml" />
+		<Include source="GlobalData\WeaponR23.xml" type="all"/>
+		<Include type="all" source="New Objects/AlienBuzzerHive.xml" />
+		<Include type="all" source="New Objects/GDISonicTank.xml" />
+		<Include type="all" source="New Objects/GDIWatchTower.xml" />
+		<Include type="all" source="New Objects/MarkedOfKaneRaiderTank.xml" />
+		<Include type="all" source="New Objects/NODRaiderTank.xml" />
+		<Include type="all" source="New Objects/Reaper17BuzzerHive.xml" />
+		<Include type="all" source="New Objects/SteelTalonsWatchTower.xml" />
+		<Include type="all" source="New Objects/Traveler59BuzzerHive.xml" />
+		<Include type="all" source="New Objects/ZOCOMSonicTank.xml" />
+		<Include type="all" source="New Objects/ZOCOMWatchTower.xml" />
+		<Include source="New Objects\AlienCorrupter.xml" type="all"/>
+		<Include source="New Objects\Reaper17Corrupter.xml" type="all"/>
+		<Include source="New Objects\Traveler59Corrupter.xml" type="all"/>
+		<Include source="New Objects\Traveler59SeekerTank.xml" type="all"/>
+		 -->
+
+
+		<!-- test assets to compile or to test in a map go here
+		<Include source="Nod/Units/NodMilitantRocketSquad.xml" type="all"/>
+
+		<Include source="ZOCOM/Structures/ZOCOMBattlebase.xml" type="all"/>
+		<Include source="GDI/Units/GDIMammoth.xml" type="all"/>
+		<Include source="ZOCOM/Units/ZOCOMMammoth.xml" type="all"/>
+		<Include source="SteelTalons/Units/STMammoth.xml" type="all"/>
+		
+		<Include source="GDI/Units/GDIJuggernaught.xml" type="all"/>
+		
+		<Include source="Nod/props/NODVertigoDisruptionStickyPod.xml" type="all"/>
+		<Include source="Nod/props/nodvertigodisruptionpod.xml" type="all"/>
+		<Include source="SteelTalons/Units/STBehemoth.xml" type="all"/>
+		<Include source="GlobalData/LogicCommandSet.xml" type="all"/>
+
+		
+		<Include source="Nod/Units/nodmobileartillery.xml" type="all"/>
+		<Include source="MarkedOfKane/Units/markedofkanebeamcannon.xml" type="all"/>
+		<Include source="Nod/Units/nodbeamcannon.xml" type="all"/>	 -->
+
+		<!--
+		<Include source="Nod\Units\NodRedeemer.xml" type="all"/>
+		<Include source="MarkedOfKane\Units\markedofkanemobileartillery.xml" type="all"/>
+		<Include source="MarkedOfKane\Units\MoKHarvester.xml" type="all"/>
+		<Include source="Nod\Units\nodmobileartillery.xml" type="all"/>
+		<Include source="Reaper17\Units\R17Harv.xml" type="all"/>
+		<Include source="SteelTalons\Units\STHarv.xml" type="all"/>
+		<Include source="traveler59\Units\T59Harv.xml" type="all"/>
+		<Include source="Nod/Units/NODAvatarHusk.xml" type="all"/>
+		<Include source="GlobalData\Weapon.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMHarv.xml" type="all"/>
+
+		<Include source="Nod/Units/NodAvatar.xml" type="all"/>
+		<Include source="BlackHand/Units/BlackHandCustomWarmech.xml" type="all"/>
+		<Include source="MarkedOfKane\Units\MoKAvatar.xml" type="all"/>
+		<Include source="GDI\Units\GDIHarvester.xml" type="all"/>
+
+		<Include source="GlobalData/Armor.xml" type="all"/>
+		<Include source="Nod/Units/NodAvatar.xml" type="all"/>
+		<Include source="Alien/Structures/AlienTripodHusk.xml" type="all"/>
+
+		<Include source="GDI\Units\GDIEngineer.xml" type="all"/>
+
+		<Include source="MultiplayerBeacon.xml" type="all"/>
+
+		<Include source="BlackHand\Units\BHHarvester.xml" type="all"/>
+		<Include source="GDI\Units\GDIHarvester.xml" type="all"/>
+		<Include source="GlobalData/LogicCommandSet.xml" type="all"/>
+		<Include source="Command.xml" type="all"/>
+		<Include source="GlobalData/UnitAbilityButtonTemplates.xml" type="all"/> -->
+
+		<!-- R23f
+		<Include source="MarkedOfKane/Units/markedofkanemobileartillery.xml" type="all"/>
+		<Include source="BlackHand/Units/blackhandmobileartillery.xml" type="all"/>
+		<Include source="Nod/Units/nodmobileartillery.xml" type="all"/>
+		<Include source="SteelTalons\Units\STBehemoth.xml" type="all"/>
+		<Include source="GDI\Units\GDIJuggernaught.xml" type="all"/>
+		<Include source="Nod\props\nodvertigodisruptionpod.xml" type="all"/>
+		<Include source="Nod\props\NODVertigoDisruptionStickyPod.xml" type="all"/>
+		<Include source="Nod\Units\nodmobileartillery.xml" type="all"/>
+
+		<Include source="Alien/Units/alieneradicatorhexapod.xml" type="all"/>
+		<Include source="traveler59\Units\t59eradicatorhexapod.xml" type="all"/>
+		<Include source="Reaper17\Units\r17eradicatorhexapod.xml" type="all"/>
+		<Include source="CreateHuskEffect.xml" type="all"/>
+		<Include source="traveler59\Structures\Traveler59TemporalWormhole.xml" type="all"/>
+		<Include source="GlobalData\WeaponR20.xml" type="all"/>
+		<Include source="CGF\Traveler59ShockTrooperSquad.xml" type="all"/>
+		<Include source="traveler59\Units\T59ShockTrooper.xml" type="all"/>
+		<Include source="Alien\Units\AlienCustomizableVehicle.xml" type="all"/>
+
+		<Include source="Alien\Units\AlienMillipedeHead.xml" type="all"/>
+		<Include source="Reaper17\Units\R17CustomizableVehicle.xml" type="all"/>
+		<Include source="traveler59\Units\T59CustomizableVehicle.xml" type="all"/>
+		<Include source="GlobalData\Armor.xml" type="all"/>
+		<Include source="GlobalData\Weapon.xml" type="all"/>
+		<Include source="Nod\Units\NODMilitantRocket.xml" type="all"/>
+		<Include source="BlackHand\Units\BlackHandMilitantRocket.xml" type="all"/>
+		<Include source="MarkedOfKane\Units\MarkedOfKaneMilitantRocket.xml" type="all"/>
+			-->
+
+		<!-- r23g
+	    <Include source="Nod\Units\NODCommando.xml" type="all"/>
+	    <Include source="MarkedOfKane/Units/MoKCommando.xml" type="all"/>
+		<Include source="BlackHand/Units/BHCommando.xml" type="all"/>
+		<Include source="Alien\Units\AlienHarv.xml" type="all"/>
+		<Include source="Tiberium/BlueTiberiumFieldFromHarvesterDeath.xml" type="all"/>
+		<Include source="Tiberium/TiberiumFieldBlue.xml" type="all"/>
+		<Include source="Tiberium/TiberiumFieldBlueSeeded.xml" type="all"/>
+		<Include source="GDI\Units\GDIHarvester.xml" type="all"/>
+		<Include source="Nod\Units\NODHarvester.xml" type="all"/>	 -->
+
+		<!-- post r23z changes
+		<Include source="ReverseDummy.xml" type="all"/>	 
+		<Include source="SteelTalons\Units\STMRT.xml" type="all"/>
+		<Include source="GDI\Units\GDIMARV.xml" type="all"/>
+		<Include source="BlackHand/Units/blackhandmobileartillery.xml" type="all"/>
+		<Include source="Nod/Units/nodmobileartillery.xml" type="all"/>
+		<Include source="MarkedOfKane/Units/markedofkanemobileartillery.xml" type="all"/> -->
+
+
+		<!--
+		<Include source="Tiberium/TiberiumCrystal.xml" type="all"/>
+		<Include source="Tiberium/TiberiumCrystalBlue.xml" type="all"/>
+		<Include source="Alien\Units\AlienCrystalShield.xml" type="all"/>
+		<Include source="GlobalData/ObjectCreationLists.xml" type="all"/>
+		<Include source="BlackHand/Units/BHCommando.xml" type="all"/>
+		<Include source="GlobalData/WeaponR23.xml" type="all"/>
+		<Include source="Alien\Units\AlienStalker.xml" type="all"/>
+		<Include source="Alien\Units\AlienStalkerSquad.xml" type="all"/>
+
+		<Include type="all" source="BlackHand\Units\BHFlametank.xml" />
+		<Include type="all" source="GlobalData/Weapon.xml" /> 	-->
+
+		<!-- 
+		
+
+		<Include type="all" source="GlobalData/Armor.xml" />
+		<Include type="all" source="GlobalData/WeaponR21.xml" />
+		 -->
+		<!-- Reverse move speed buff updated units 
+		<Include source="Alien/Units/alienseekertank.xml" type="all"/> 	
+		<Include source="GlobalData/AttributeModifier.xml" type="all" />
+		<Include source="Alien\Units\AlienDevourerTank.xml" type="all"/>
+		<Include source="BlackHand\Units\BHEmissary.xml" type="all"/>
+		<Include source="BlackHand\Units\BHFlametank.xml" type="all"/>
+		<Include source="BlackHand\Units\BHHarvester.xml" type="all"/>
+		<Include source="BlackHand\Units\BHMantis.xml" type="all"/>
+		<Include source="BlackHand\Units\blackhandbeamcannon.xml" type="all"/>
+		<Include source="BlackHand\Units\BlackHandBunkerTruck.xml" type="all"/>
+		<Include source="BlackHand\Units\BlackHandScorpionBuggy.xml" type="all"/>
+		<Include source="CGF\AlienGunwalker.xml" type="all"/>
+		<Include source="CGF\GDIPitbull.xml" type="all"/>
+		<Include source="CGF\GDIPred.xml" type="all"/>
+		<Include source="CGF\NodFlametank.xml" type="all"/>
+		<Include source="CGF\Slingshots.xml" type="all"/>
+		<Include source="CGF\STPitbull.xml" type="all"/>
+		<Include source="CGF\T59Gunwalker.xml" type="all"/>
+		<Include source="CGF\ZOCOMPitbull.xml" type="all"/>
+		<Include source="CGF\ZOCOMPred.xml" type="all"/>
+		<Include type="all" source="RDrones.xml" />
+		<Include source="CGF\ZOCOMShatt.xml" type="all"/>
+		<Include source="GDI\Units\GDIAPCVeteran.xml" type="all"/>
+		<Include source="GDI\Units\GDIHarvester.xml" type="all"/>
+		<Include source="GDI\Units\GDIMammoth.xml" type="all"/>
+		<Include source="GDI\Units\GDIMCV.xml" type="all"/>
+		<Include source="GDI\Units\GDIRig.xml" type="all"/>
+		<Include source="GDI\Units\GDISurveyor.xml" type="all"/>
+		<Include source="MarkedOfKane\Units\markedofkanebeamcannon.xml" type="all"/>
+		<Include source="MarkedOfKane\Units\MarkedofKaneBunkerTruck.xml" type="all"/>
+		<Include source="MarkedOfKane\Units\MarkedOfKaneScorpionBuggy.xml" type="all"/>
+		<Include source="MarkedOfKane\Units\markedofkanestealthtank.xml" type="all"/>
+		<Include source="MarkedOfKane\Units\MoKEmissary.xml" type="all"/>
+		<Include source="MarkedOfKane\Units\MoKHarvester.xml" type="all"/>
+		<Include source="New Objects\BlackHandRaiderTank.xml" type="all"/>
+		<Include source="New Objects\GDISonicTank.xml" type="all"/>
+		<Include source="New Objects\MarkedOfKaneRaiderTank.xml" type="all"/>
+		<Include source="New Objects\NODRaiderTank.xml" type="all"/>
+		<Include source="New Objects\ZOCOMSonicTank.xml" type="all"/>
+		<Include source="Nod\Units\nodbeamcannon.xml" type="all"/>
+		<Include source="Nod\Units\NODEmissary.xml" type="all"/>
+		<Include source="Nod\Units\NODHarvester.xml" type="all"/>
+		<Include source="Nod\Units\nodstealthtank.xml" type="all"/>
+		<Include source="Reaper17\Units\R17DevourerTank.xml" type="all"/>
+		<Include source="Reaper17\Units\reaper17seekertank.xml" type="all"/>
+		<Include source="SteelTalons\Units\SteelTalonsMCV.xml" type="all"/>
+		<Include source="SteelTalons\Units\STHarv.xml" type="all"/>
+		<Include source="SteelTalons\Units\STMammoth.xml" type="all"/>
+		<Include source="SteelTalons\Units\STMARV.xml" type="all"/>
+		<Include source="SteelTalons\Units\STRig.xml" type="all"/>
+		<Include source="SteelTalons\Units\STSurveyor.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMAPC.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMHarv.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMMammoth.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMMARV.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMMCV.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMRig.xml" type="all"/>
+		<Include source="ZOCOM\Units\ZOCOMSurveyor.xml" type="all"/> -->
+
+		<!-- Edited squad files (R24 AILuaEventsList)
+		<Include source="Alien\Units\AlienStalkerSquad.xml" type="all"/>
+		<Include source="BlackHand\Units\BHBlackhandSquad.xml" type="all"/>
+		<Include source="BlackHand\Units\BlackHandConfessorSquad.xml" type="all"/>
+		<Include source="BlackHand\Units\BlackHandFanaticSquad.xml" type="all"/>
+		<Include source="CGF\AlienShockTrooperSquad.xml" type="all"/>
+		<Include source="CGF\AlienShockTrooperSquad_Veteran.xml" type="all"/>
+		<Include source="CGF\GDIRifleSoldierSquad.xml" type="all"/>
+		<Include source="CGF\MOKTibTrooperSquad.xml" type="all"/>
+		<Include source="CGF\NodBlackhandSquad.xml" type="all"/>
+		<Include source="CGF\RazorDroneSquads.xml" type="all"/>
+		<Include source="CGF\Reaper17ShockTrooperSquad.xml" type="all"/>
+		<Include source="CGF\SniperSquads.xml" type="all"/>
+		<Include source="CGF\T59CultistSquad.xml" type="all"/>
+		<Include source="CGF\Traveler59ShockTrooperSquad.xml" type="all"/>
+		<Include source="MarkedOfKane\Units\MarkedOfKaneFanaticSquad.xml" type="all"/>
+		<Include source="MarkedOfKane\Units\MarkedOfKaneMilitantRocketSquad.xml" type="all"/>
+		<Include source="MarkedOfKane\Units\MOKAwakenedSquad.xml" type="all"/>
+		<Include source="MarkedOfKane\Units\MOKEnlightenedSquad.xml" type="all"/>
+		<Include source="MarkedOfKane\Units\MOKShadowSquad.xml" type="all"/>
+		<Include source="MarkedOfKane\Units\MOKShadowSquad_Veteran.xml" type="all"/>
+		<Include source="Nod\Units\NodCyborgSquad.xml" type="all"/>
+		<Include source="Nod\Units\NODFanaticSquad.xml" type="all"/>
+		<Include source="Nod\Units\NodMilitantRocketSquad.xml" type="all"/>
+		<Include source="Nod\Units\NODMilitantSquad.xml" type="all"/>
+		<Include source="Nod\Units\NODShadowSquad.xml" type="all"/>
+		<Include source="Nod\Units\NODShadowSquad_Veteran.xml" type="all"/>
+		<Include source="Reaper17\Units\R17StalkerSquad.xml" type="all"/>
+
+		<Include source="traveler59\Units\T59StalkerSquad.xml" type="all"/>
+
+		<Include source="ZOCOM\Units\ZOCOMZoneInf.xml" type="all"/>  -->
+
+	</Includes>
+
+</AssetDeclaration>
