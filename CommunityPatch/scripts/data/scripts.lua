@@ -4295,7 +4295,6 @@ StructureGeometryTable = {
 	["33B40C6F"] = 2, -- GDIArmory
 	["E1659649"] = 6, -- GDICommandPost
 	["115E0E31"] = 8, -- GDIMedicalBay
-	["3BEFFBCD"] = 1, -- GDIDigInBuilding
 	-- MarkedOfKane
 	["F2A73707"] = 32, -- MG_MarkedOfKane_WarmechFacility
 	["40DCA116"] = 8, -- MarkedOfKaneRefinery

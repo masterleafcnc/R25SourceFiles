@@ -2,7 +2,7 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Tags></Tags>
   <Includes>
-  	<Include type="all" source="DATA:maps\official\CM_1_3_Brother_Marcion\CM_1_3_AIS_MarcionsBase_Main.xml"/>
+  	<Include type="all" source="DATA:SkirmishAI\Campaign\CM_1_3_Brother_Marcion\CM_1_3_AIS_MarcionsBase_Main.xml"/>
   </Includes>
   <AIPersonalityDefinition
 		id="AIP_CM13_Marcions_Blackhand_Base"

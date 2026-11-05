@@ -44,7 +44,6 @@
 		<Include source="GDI\Structures\GDITiberiumSiloDestroyed.xml" type="all"/>
 		<Include source="GDI\Structures\GDIWarfactoryDestroyed.xml" type="all"/>
 		<Include source="GDI\Structures\MG_GDI_ReclamatorHubDestroyed.xml" type="all"/>
-		<Include source="GDI\Units\GDIDigInBuildingDestroyed.xml" type="all"/>
 		<Include source="GDI\Units\GDIGrenadeSoldierGarrisoned.xml" type="all"/>
 		<Include source="GDI\Units\GDIMissileSoldierGarrisoned.xml" type="all"/>
 		<Include source="GDI\Units\GDIRifleSoldierGarrisoned.xml" type="all"/>
@@ -322,7 +321,6 @@
 		<Include source="GDI\Structures\GDITiberiumSiloDestroyed.xml" type="all"/>
 		<Include source="GDI\Structures\GDIWarfactoryDestroyed.xml" type="all"/>
 		<Include source="GDI\Structures\MG_GDI_ReclamatorHubDestroyed.xml" type="all"/>
-		<Include source="GDI\Units\GDIDigInBuildingDestroyed.xml" type="all"/>
 		<Include source="New Objects\GDISonicTank.xml" type="all"/>
 		<Include source="Nod\Structures\MG_NOD_WarmechFacilityDestroyed.xml" type="all"/>
 		<Include source="Nod\Structures\NODCraneDestroyed.xml" type="all"/>
@@ -420,7 +418,6 @@
 		<Include source="GDI\Structures\gdicommandpostDestroyed.xml" type="all"/>
 		<Include source="SteelTalons\Structures\steeltalonscommandpostDestroyed.xml" type="all"/>
 		<Include source="GDI\Structures\gdimedicalbayDestroyed.xml" type="all"/>
-		<Include source="GDI\Units\GDIDigInBuildingDestroyed.xml" type="all"/>
 		<Include source="Nod\Structures\NODCraneDestroyed.xml" type="all"/>
 		<Include source="Nod\Structures\NODDisruptionTowerDestroyed.xml" type="all"/>
 		<Include source="Nod\Structures\NODPropagandaTowerDestroyed.xml" type="all"/>

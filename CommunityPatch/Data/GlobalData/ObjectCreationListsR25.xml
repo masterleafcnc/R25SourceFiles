@@ -281,15 +281,6 @@
 	</ObjectCreationList>
 
 	<ObjectCreationList
-		id="OCL_GDIDestroyedDigInBuilding">
-		<CreateObject
-			Options="IGNORE_ALL_OBJECTS"
-			Disposition="LIKE_EXISTING">
-			<CreateObject>GDIDigInBuildingDestroyed</CreateObject>
-		</CreateObject>
-	</ObjectCreationList>
-
-	<ObjectCreationList
 		id="OCL_NODDestroyedCrane">
 		<CreateObject
 			Options="IGNORE_ALL_OBJECTS"
