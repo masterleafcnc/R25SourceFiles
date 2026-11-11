@@ -142,7 +142,7 @@
 		<Include type="all" source="ART:Models/NBDHub_QSBLD_AAN.w3x" />
 		<Include type="all" source="ART:Models/NBDHub_QSBld_SKL.w3x" />
 		<Include type="all" source="ART:Models/NBDHub_QSBLD_SKN.w3x" />
-		<Include type="all" source="ART:Models/NBDHUB_UGTCMBLD_SKL..w3x" />
+		<Include type="all" source="ART:Models/NBDHUB_UGTCMBLD_SKL.w3x" />
 		<Include type="all" source="ART:Models/NBDHUB_UGTCMBLD2_SKN.w3x" />
 		<Include type="all" source="ART:Models/NBENGFABLD_AAN.w3x" />
 		<Include type="all" source="ART:Models/NBENGFABLD_SKL.w3x" />

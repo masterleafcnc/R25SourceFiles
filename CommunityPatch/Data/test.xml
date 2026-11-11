@@ -2,8 +2,8 @@
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
 
 	<Includes>
-		<!-- Central include for all SkirmishAI definitions. -->
-		<Include source="SkirmishAI/SkirmishAIIncludes.xml" type="all"/>
+		<!-- Central include for all SkirmishAI definitions. 
+		<Include source="SkirmishAI/SkirmishAIIncludes.xml" type="all"/>-->
 
 		<!-- R25i to R25k: active additions not already included below.
 		     Includes in CDATA and XML comments remain inactive.

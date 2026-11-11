@@ -411,12 +411,6 @@
 												
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING">
-					<Model
-						Name="" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="DAMAGED">
 					<Model
 						Name="W3DContainer:AUDevWar_SKN" />
@@ -525,6 +519,12 @@
 						BoneName="FXFire05"
 						FXParticleSystemTemplate="AlienDamageFlyingIchor"
 						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Model
+						Name="" />
 				</ModelConditionState>
 
 				<ModelConditionState

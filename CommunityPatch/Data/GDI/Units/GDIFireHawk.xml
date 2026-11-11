@@ -94,6 +94,27 @@
 
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED USER_1 LOCOMOTOR_TAXIING USER_5">
+					<Model
+						Name="W3DContainer:GUFireHwk_SKN" />
+					<Texture
+						Original="GU_FireHawk"
+						New="GU_FireHawk_K" />
+					<ParticleSysBone
+						BoneName="exhaust01"
+						FXParticleSystemTemplate="GDIFireHawkUpgrade02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="exhaust02"
+						FXParticleSystemTemplate="GDIFireHawkUpgrade02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="REALLYDAMAGED USER_1 LOCOMOTOR_TAXIING USER_5">
 					<Model
 						Name="W3DContainer:GUFireHwk_SKN" />
@@ -115,12 +136,12 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DAMAGED USER_1 LOCOMOTOR_TAXIING USER_5">
+					ConditionsYes="DAMAGED USER_1 USER_5">
 					<Model
 						Name="W3DContainer:GUFireHwk_SKN" />
 					<Texture
 						Original="GU_FireHawk"
-						New="GU_FireHawk_K" />						
+						New="GU_FireHawk_K" />
 					<ParticleSysBone
 						BoneName="exhaust01"
 						FXParticleSystemTemplate="GDIFireHawkUpgrade02"
@@ -168,33 +189,6 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DAMAGED USER_1 USER_5">
-					<Model
-						Name="W3DContainer:GUFireHwk_SKN" />
-					<Texture
-						Original="GU_FireHawk"
-						New="GU_FireHawk_K" />								
-					<ParticleSysBone
-						BoneName="exhaust01"
-						FXParticleSystemTemplate="GDIFireHawkUpgrade02"
-						FollowBone="true" />
-					<ParticleSysBone
-						BoneName="exhaust02"
-						FXParticleSystemTemplate="GDIFireHawkUpgrade02"
-						FollowBone="true" />
-					<ParticleSysBone
-						BoneName="ROOTTRANSFORM"
-						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
-						FollowBone="true" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING USER_5">
-					<Model
-						Name="" />		
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="DAMAGED USER_5">
 					<Model
 						Name="W3DContainer:GUFireHwk_SKN" />
@@ -229,6 +223,12 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING USER_5">
+					<Model
+						Name="" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="USER_1 LOCOMOTOR_TAXIING USER_5">
 					<Model
 						Name="W3DContainer:GUFireHwk_SKN"/>
@@ -256,6 +256,24 @@
 <!-- -->				
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DAMAGED USER_1 LOCOMOTOR_TAXIING">
+					<Model
+						Name="W3DContainer:GUFireHwk_SKN" />
+					<ParticleSysBone
+						BoneName="exhaust01"
+						FXParticleSystemTemplate="GDIFireHawkUpgrade02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="exhaust02"
+						FXParticleSystemTemplate="GDIFireHawkUpgrade02"
+						FollowBone="true" />
+					<ParticleSysBone
+						BoneName="ROOTTRANSFORM"
+						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
+						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="REALLYDAMAGED USER_1 LOCOMOTOR_TAXIING">
 					<Model
 						Name="W3DContainer:GUFireHwk_SKN" />
@@ -278,7 +296,7 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DAMAGED USER_1 LOCOMOTOR_TAXIING">
+					ConditionsYes="DAMAGED USER_1">
 					<Model
 						Name="W3DContainer:GUFireHwk_SKN" />
 					<ParticleSysBone
@@ -325,30 +343,6 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DAMAGED USER_1">
-					<Model
-						Name="W3DContainer:GUFireHwk_SKN" />
-					<ParticleSysBone
-						BoneName="exhaust01"
-						FXParticleSystemTemplate="GDIFireHawkUpgrade02"
-						FollowBone="true" />
-					<ParticleSysBone
-						BoneName="exhaust02"
-						FXParticleSystemTemplate="GDIFireHawkUpgrade02"
-						FollowBone="true" />
-					<ParticleSysBone
-						BoneName="ROOTTRANSFORM"
-						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
-						FollowBone="true" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING">
-					<Model
-						Name="" />
-				</ModelConditionState>
-				<ModelConditionState
-					ParseCondStateType="PARSE_NORMAL"
 					ConditionsYes="DAMAGED">
 					<Model
 						Name="W3DContainer:GUFireHwk_SKN" />
@@ -377,6 +371,12 @@
 						BoneName="ROOTTRANSFORM"
 						FXParticleSystemTemplate="GDIDebrisSmallSmoke"
 						FollowBone="true" />
+				</ModelConditionState>
+				<ModelConditionState
+					ParseCondStateType="PARSE_NORMAL"
+					ConditionsYes="DYING">
+					<Model
+						Name="" />
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"

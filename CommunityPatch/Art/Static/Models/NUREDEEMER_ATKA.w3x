@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AssetDeclaration xmlns="uri:ea.com:eala:asset">
-    <W3DAnimation id="NUREDEEMER_ATKA2" Hierarchy="NUREDEEMER_SKL" NumFrames="91" FrameRate="30">
+    <W3DAnimation id="NUREDEEMER_ATKA2" Hierarchy="NUREDEEMER_SKL3" NumFrames="91" FrameRate="30">
         <Channels>
             <ChannelScalar Pivot="1" Type="XTranslation" FirstFrame="0">
                 <Frame>6.051004</Frame>

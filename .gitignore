@@ -30,6 +30,7 @@ CommunityPatch/KanesWrathXMLFiles/**
 CommunityPatch/[\.tmp]*
 CommunityPatch/Data/test2.xml
 CommunityPatch/Data/TODO.txt
+!102texturefix/
 
 CommunityPatch/.tmp.drivedownload/26449.1744834794173447
 CommunityPatch/scripts/data/codex-x86_64-pc-windows-msvc.exe
@@ -54,3 +55,4 @@ CommunityPatch/Assets Removed/Static/ObjectCreationList.OCL_DestroyedElectroMagn
 CommunityPatch/Assets Removed/Static/ObjectCreationList.OCL_DestroyedMutantHovel.asset
 CommunityPatch/Assets Removed/Static/ObjectCreationList.OCL_DestroyedTiberiumSilo.asset
 CommunityPatch/Assets Removed/Static/ObjectCreationList.OCL_DestroyedTiberiumSpike.asset
+CommunityPatch/Data/StringHashes.xml

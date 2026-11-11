@@ -139,9 +139,25 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING USER_6">
+					ConditionsYes="DAMAGED USER_6">
 					<Model
-						Name="" />
+						Name="W3DContainer:GUOrca_SKN" />
+					<Texture
+						Original="GUOrca_07"
+						New="GUOrca_UGCA" />
+					<Texture
+						Original="GUOrca_07_NRM"
+						New="GUOrca_UGCA_NRM" />
+					<Texture
+						Original="GUOrca_07_SPM"
+						New="GUOrca_UGCA_SPM" />
+					<Texture
+						Original="HC_GUOrca_07"
+						New="HC_GUOrca_UGCA" />
+					<ParticleSysBone
+						BoneName="FX_Rfan"
+						FXParticleSystemTemplate="orcadamagesmoke"
+						FollowBone="true" />
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
@@ -171,25 +187,9 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DAMAGED USER_6">
+					ConditionsYes="DYING USER_6">
 					<Model
-						Name="W3DContainer:GUOrca_SKN" />
-					<Texture
-						Original="GUOrca_07"
-						New="GUOrca_UGCA" />
-					<Texture
-						Original="GUOrca_07_NRM"
-						New="GUOrca_UGCA_NRM" />
-					<Texture
-						Original="GUOrca_07_SPM"
-						New="GUOrca_UGCA_SPM" />
-					<Texture
-						Original="HC_GUOrca_07"
-						New="HC_GUOrca_UGCA" />
-					<ParticleSysBone
-						BoneName="FX_Rfan"
-						FXParticleSystemTemplate="orcadamagesmoke"
-						FollowBone="true" />
+						Name="" />
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
@@ -212,9 +212,13 @@
 				
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DYING">
+					ConditionsYes="DAMAGED">
 					<Model
-						Name="" />
+						Name="W3DContainer:GUOrca_SKN" />
+					<ParticleSysBone
+						BoneName="FX_Rfan"
+						FXParticleSystemTemplate="orcadamagesmoke"
+						FollowBone="true" />
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
@@ -235,13 +239,9 @@
 				</ModelConditionState>
 				<ModelConditionState
 					ParseCondStateType="PARSE_NORMAL"
-					ConditionsYes="DAMAGED">
+					ConditionsYes="DYING">
 					<Model
-						Name="W3DContainer:GUOrca_SKN" />
-					<ParticleSysBone
-						BoneName="FX_Rfan"
-						FXParticleSystemTemplate="orcadamagesmoke"
-						FollowBone="true" />
+						Name="" />
 				</ModelConditionState>
 				<AnimationState
 					ParseCondStateType="PARSE_DEFAULT">
